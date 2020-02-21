@@ -10212,3 +10212,28 @@ body {
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
 }
+
+
+/*MY CSS*/ 
+
+
+
+.btn-group{
+  height: 70px;
+}
+.form-control:focus {
+  outline: 0 !important;
+  border-color: initial;
+  box-shadow: none;
+}
+.input-group{
+  width: 50%;
+}
+#table{
+  border: none;
+}
+
+
+
+
+
