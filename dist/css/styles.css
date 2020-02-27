@@ -10214,7 +10214,7 @@ body {
 }
 
 
-/*MY CSS*/ 
+/*MY CSS*/
 
 
 
@@ -10232,7 +10232,19 @@ body {
 #table{
   border: none;
 }
+#layoutSidenav ul {
+  margin: 10px;
+  padding: 40px;
+}
+#layoutSidenav li {
+  text-align: center;
+}
+#layoutSidenav a{
+width:100%;
+height:100%;
+display:block;
 
+}
 
 
 
