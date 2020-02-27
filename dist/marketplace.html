@@ -14,51 +14,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
     </script>
 </head>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-    google.charts.load('current', {
-        'packages': ['corechart']
-    });
-    google.charts.setOnLoadCallback(drawSarahChart);
-    google.charts.setOnLoadCallback(drawAnthonyChart);
-
-    function drawSarahChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-            ['Pagas', 4],
-            ['Não pagas', 1],
-            ['Andamento', 2],
-        ]);
-        var options = {
-            title: 'Notas fiscais',
-            width: 500,
-            height: 500
-        };
-        var chart = new google.visualization.PieChart(document.getElementById('Pie_chart_div'));
-        chart.draw(data, options);
-    }
-
-    function drawAnthonyChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', );
-        data.addColumn('number', );
-        data.addRows([
-            ['Pagas', 4],
-            ['Não pagas', 1],
-            ['Andamento', 2],
-        ]);
-        var options = {
-            title: 'Notas fiscais but em barras',
-            width: 500,
-            height: 500
-        };
-        var chart = new google.visualization.BarChart(document.getElementById('Bar_chart_div'));
-        chart.draw(data, options);
-    }
-</script>
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
@@ -116,7 +71,7 @@
                     <ul class="nav navbar-nav navbar-right ml-auto">
                         <a class="nav-link" href="#">
                             <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="#" class="nav-link"><i
+                                <li class="nav-item"><a href="charts.html" class="nav-link"><i
                                             class="fas fa-user-cog"></i><span>Definições</span></a></li>
                         </a>
                 </div>
@@ -137,17 +92,8 @@
     </nav> <a class="btn btn-primary" href="#" role="button">Link</a>
     </div>
     <div id="layoutSidenav_content">
-=
-        <table class="columns">
-            <tr>
-                <td>
-                    <div id="Pie_chart_div"></div>
-                </td>
-                <td>
-                    <div id="Bar_chart_div"></div>
-                </td>
-            </tr>
-        </table>
+        <div class="container-fluid">
+            <h3 class="mt-4 mb-3 pt-5"><strong>Apps e Marketplace</strong></h3>
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid">
                 <div class="d-flex align-items-center justify-content-between small">
