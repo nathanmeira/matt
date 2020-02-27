@@ -54,7 +54,7 @@
                     <ul class="nav navbar-nav navbar-right ml-auto text-center">
                         <a class="nav-link" href="#">
                             <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="marketplace.html" class="nav-link"><i class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
+                                <li class="nav-item"><a href="installed.html" class="nav-link"><i class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
                         </a>
                 </div>
                 <div class="sb-sidenav-menu">
@@ -121,7 +121,7 @@
 
                     </div>
                     <div class="col-xl-8 pb-5 text-right">
-                        Última atualização hoje, às 17h30<button class="btn btn-dark mr-2 ml-3"><i
+                        Última atualização hoje, às <p id="datebtn">17h30</p><button type="button" onclick="time()" class="btn btn-dark mr-2 ml-3"><i
                                 class="fas fa-sync"></i>
                             <button class="btn btn-dark">Acessar DF-e</button>
                     </div>
@@ -695,6 +695,27 @@
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/datatables-demo.js"></script>
+    <script>
+        function checkTime(i) {
+            if (i < 10) {
+              i = "0" + i;
+            }
+            return i;
+          }
+
+          function time() {
+            var date = new Date();
+            var hh = date.getHours();
+            var mm = date.getMinutes();
+            var ss = date.getSeconds();
+
+            // adding 0 for single digits
+
+            mm = checkTime(mm);
+            ss = checkTime(ss);
+            document.getElementById('datebtn').innerHTML = hh + ":" + mm + ":" + ss;
+          }
+        </script>
 </body>
 
 </html>
