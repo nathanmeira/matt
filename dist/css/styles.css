@@ -10232,20 +10232,20 @@ body {
 #table{
   border: none;
 }
-#layoutSidenav ul {
-  margin: 10px;
-  padding: 40px;
+.icon_middle {
+  width:50px;
+float: right;
+width: 100px;
+height: 85px;
 }
-#layoutSidenav li {
-  text-align: center;
+#layoutSidenav_nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  font-size: 20px;
+  text-decoration: none;
 }
-#layoutSidenav a{
-width:100%;
-height:100%;
-display:block;
-
-}
-
-
 
 
