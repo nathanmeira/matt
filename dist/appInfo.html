@@ -15,7 +15,8 @@
     </script>
 </head>
 
-<body class="sb-nav-fixed">
+
+<body id="body" class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
         <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
         <form class="mx-auto col-xl-6">
@@ -56,7 +57,8 @@
                         <a class="nav-link" href="#">
                             <div class="d-flex justify-content-center">
                                 <li class="nav-item"><a href="installed.html" class="nav-link"><i
-                                            class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
+                                            class="fas fa-store"></i><span>Apps
+                                            e<br>Marketplace</span></a></li>
                         </a>
                 </div>
                 <div class="sb-sidenav-menu">
@@ -71,7 +73,7 @@
                     <ul class="nav navbar-nav navbar-right ml-auto">
                         <a class="nav-link" href="#">
                             <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="charts.html" class="nav-link"><i
+                                <li class="nav-item"><a href="#" class="nav-link"><i
                                             class="fas fa-user-cog"></i><span>Definições</span></a></li>
                         </a>
                 </div>
@@ -87,56 +89,65 @@
                         </div>
                     </nav>
                 </div>
+
         </div>
     </div>
     </nav> <a class="btn btn-primary" href="#" role="button">Link</a>
     </div>
     <div id="layoutSidenav_content">
-        <div class="container-fluid">
-            <h3 class="mt-4 mb-3 pt-5"><strong>Apps e Marketplace</strong></h3>
-            <div class="col-xl-3 pt-3">
-                <a href="marketplace.html">tabs</a>
-            </div>
-            <h4 class="pt-3 pb-3">Apps instalados</h4>
-            <div class="card flex-row flex-wrap mb-3">
-                <div class="card-header border-0">
-                    <img src="https://img.icons8.com/dotty/80/000000/business-e-mail.png">
+        <div class="container-fluid ml-5 mr-5">
+            <h3 class="mt-4 mb-3 pt-5"><a href="marketplace.html"><i class="fas fa-arrow-left"></i></a> <strong>Nome do app</strong></h3>
+            <div class="row">
+                <div id="nomeApp" class="card' flex-row flex-wrap mb-3 mt-4 col-xl-3 border-0">
+                    <img class="ml-5 mt-1" src="https://img.icons8.com/dotty/70/000000/business.png">
+                    <div class="card-block px-3 my-auto float-right">
+                        <div class="card-title"><strong>Nome do app </strong>
+                            <div class="badge badge-secondary mt-3 ml-5">Categoria</div>
+
+                        <p>Feito por:<strong> Fulano F.</strong></p>
+                    </div>
                 </div>
-                <div class="card-block px-3 my-auto">
-                    <h4 class="card-title"><strong>BKPS DF-e</strong></h4>
-                    <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro
-                        adapare dorime. Ameno Ameno. Latire. Latire.</p>
                 </div>
-                <div class="card-body text-right my-auto">
-                    <a href="dfe.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Acessar DF-e</strong></button></a>
-                </div>
-            </div>
-            <div class="card flex-row flex-wrap mb-3">
-                <div class="card-header border-0">
-                    <img src="https://img.icons8.com/wired/80/000000/chat.png">
-                </div>
-                <div class="card-block px-3 my-auto">
-                    <h4 class="card-title"><strong>BKPS Messages</strong></h4>
-                    <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro
-                        adapare dorime. Ameno Ameno. Latire. Latire.</p>
-                </div>
-                <div class="card-body text-right my-auto">
-                    <button id="mktbtn" class="btn btn-dark float-right"><strong>Acessar Messages</strong></button>
+                <div class="col-xl-9 text-right float-right mt-5">
+                    <div class="mr-5 pr-5">
+                        <h4><strong>R$19,90</strong>/mês
+                            <button class="btn btn-outline-secondary ml-2"><strong>Teste gratuitamente</strong></button>
+                            <button class="btn btn-secondary ml-2"><strong>Adquirir módulo</strong></button></h4>
+                    </div>
                 </div>
             </div>
-            <div class="card flex-row flex-wrap mb-3">
-                <div class="card-header border-0">
-                    <img src="https://img.icons8.com/dotty/80/000000/refund.png">
+            <div class="row">
+                <div class="col-xl-4 ml-5 mt-4">
+                    Dori me, interimo Dori me Ameno Latire, latiremo Dori me Ameno Omenare imperavi ameno Dimere, dimere
+                    mantiro Mantiremo, ameno Omenare imperavi emulari Ameno Omenare imperavi emulari Ameno Ameno dore
+                    Ameno dori me Ameno dori me
+                    <br>
+                    <br>
+                    -Dorime
+                    <br>
+                    -Intemiro
+                    <br>
+                    -Adapare
+                    <br>
+                    -Dorime
                 </div>
-                <div class="card-block px-3 my-auto">
-                    <h4 class="card-title"><strong>BKPS PerdComp</strong></h4>
-                    <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro
-                        adapare dorime. Ameno Ameno. Latire. Latire.</p>
+                <div class="col-xl-7 mt-4">
+                <div class="container-flex text-right">
+                    <img src="https://dummyimage.com/700x350/000/9ea0b8">
+            <div class="row pt-3">
+                <div class="col-xl-3 ml-auto">
+                    <img src="https://dummyimage.com/204x150/000/9ea0b8">
                 </div>
-                <div class="card-body text-right my-auto">
-                    <button id="mktbtn" class="btn btn-dark float-right"><strong>Acessar PerdComp</strong></button>
+                <div class="col-xl-3 ml-1">
+                    <img src="https://dummyimage.com/210x150/000/9ea0b8">
+                </div>
+                <div class="col-xl-3 ml-1">
+                    <img src="https://dummyimage.com/210x150/000/9ea0b8">
                 </div>
             </div>
+        </div>
+    </div>
+</div>
         </div>
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid">
@@ -149,18 +160,20 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-    </script>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/chart-area-demo.js"></script>
-    <script src="assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/datatables-demo.js"></script>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous">
+        </script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous">
+        </script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous">
+        </script>
+        <script src="assets/demo/datatables-demo.js"></script>
 </body>
 
 </html>

@@ -10250,4 +10250,30 @@ height: 85px;
 #mktbtn{
   width: 200px;
 }
-
+#searchMkt{
+  width: 100%;
+}
+#searchMktInput{
+  height: 50px;
+}
+#body {
+  overflow:hidden;
+}
+#nomeApp{
+  padding-right: 37px;
+}
+#btnFilter{
+  width: 120px;
+}
+#selectAll{
+  max-height: 40px;
+}
+#radioTable{
+  color: var(--blue);
+}
+a{
+  color: black;
+}
+a :hover{
+  color: gray
+}
