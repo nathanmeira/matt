@@ -61,7 +61,8 @@
                         <a class="nav-link" href="#">
                             <div class="d-flex justify-content-center">
                                 <li class="nav-item"><a href="installed.html" class="nav-link"><i
-                                            class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
+                                            class="fas fa-store"></i><span>Apps
+                                            e<br>Marketplace</span></a></li>
                         </a>
                 </div>
                 <div class="sb-sidenav-menu">
@@ -74,7 +75,7 @@
                 </div>
                 <div class="sb-sidenav-menu">
                     <ul class="nav navbar-nav navbar-right ml-auto">
-                        <a class="nav-link" href="settings.html">
+                        <a class="nav-link" href="#">
                             <div class="d-flex justify-content-center">
                                 <li class="nav-item"><a href="settings.html" class="nav-link"><i
                                             class="fas fa-user-cog"></i><span>Definições</span></a></li>
@@ -98,50 +99,85 @@
     </div>
     <div id="layoutSidenav_content">
         <div class="container-fluid">
-            <h3 class="mt-4 mb-3 pt-5"><strong>Apps e Marketplace</strong></h3>
-            <div class="col-xl-3 pt-3">
-                <a href="marketplace.html">tabs</a>
+            <h3 class="mt-4 mb-5 pt-5"><strong class="pl-5"> Definições</strong></h3>
+            <div class="col-xl-12">
+                <div class="row">
+                    <div id="btnGroup" class="btn-group btn-block" role="group">
+                        <a href="settings.html" class="btn btn-secondary active">Minha conta</a>
+                        <a href="companiesAndBranches.html" class="btn btn-secondary">Empresas e filiais</a>
+                        <a href="users.html" class="btn btn-secondary">Usuários</a>
+                        <a href="billing.html" class="btn btn-secondary">Faturamento</a>
+                        <a href="api.html" class="btn btn-secondary">API</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="card mt-4">
+                        <div id="accountAndSignature" class="card-header">
+                          <strong>Conta e Assinatura</strong>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text"><strong>José Adilson Rodrigues dos Santos </strong><span class="badge badge-secondary"> ASSINATURA ATIVA</span></p>
+                          <p class="card-text">welcome@maguila.com</p>
+                          <p class="card-text"><strong>Criado por: </strong>Boomer Joking Smith.</p>
+                          <p class="card-text"><strong>Data de criação: </strong>07/11/2077</p>
+                          <p class="card-text"><strong>Tipo de assinatura: </strong>Premium Golden Platinum Executive</p>
+                          <p class="card-text"><strong>Data da contratação: </strong>25/12/2020</p>
+                        </div>
+                    </div>
+                      </div>
+                </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="card mt-4">
+                            <div id="accountAndSignature" class="card-header">
+                              <strong>Apps contratados</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="card flex-row flex-wrap mb-3">
+                                    <div class="card-header border-0">
+                                        <img src="https://img.icons8.com/dotty/80/000000/business-e-mail.png">
+                                    </div>
+                                    <div class="card-block px-3 my-auto">
+                                        <h4 class="card-title"><strong>BKPS DF-e</strong></h4>
+                                        <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro
+                                            adapare dorime. Ameno Ameno. Latire. Latire.</p>
+                                    </div>
+                                    <div class="card-body text-right my-auto">
+                                        <a href="#"><button id="mktbtn" class="btn btn-outline-dark float-right"><strong>Desativar</strong></button></a>
+                                    </div>
+                                </div>
+                                <div class="card flex-row flex-wrap mb-3">
+                                    <div class="card-header border-0">
+                                        <img src="https://img.icons8.com/wired/80/000000/chat.png">
+                                    </div>
+                                    <div class="card-block px-3 my-auto">
+                                        <h4 class="card-title"><strong>BKPS Messages</strong></h4>
+                                        <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro
+                                            adapare dorime. Ameno Ameno. Latire. Latire.</p>
+                                    </div>
+                                    <div class="card-body text-right my-auto">
+                                        <a href="#"><button id="mktbtn" class="btn btn-outline-dark float-right"><strong>Desativar</strong></button></a>
+                                    </div>
+                                </div>
+                                <div class="card flex-row flex-wrap mb-3">
+                                    <div class="card-header border-0">
+                                        <img src="https://img.icons8.com/dotty/80/000000/refund.png">
+                                    </div>
+                                    <div class="card-block px-3 my-auto">
+                                        <h4 class="card-title"><strong>BKPS PerdComp</strong></h4>
+                                        <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro
+                                            adapare dorime. Ameno Ameno. Latire. Latire.</p>
+                                    </div>
+                                    <div class="card-body text-right my-auto">
+                                       <a href="#"><button id="mktbtn" class="btn btn-outline-dark float-right"><strong>Desativar</strong></button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                </div>
             </div>
-            <h4 class="pt-3 pb-3">Apps instalados</h4>
-            <div class="card flex-row flex-wrap mb-3">
-                <div class="card-header border-0">
-                    <img src="https://img.icons8.com/dotty/80/000000/business-e-mail.png">
-                </div>
-                <div class="card-block px-3 my-auto">
-                    <h4 class="card-title"><strong>BKPS DF-e</strong></h4>
-                    <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro
-                        adapare dorime. Ameno Ameno. Latire. Latire.</p>
-                </div>
-                <div class="card-body text-right my-auto">
-                    <a href="dfe.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Acessar DF-e</strong></button></a>
-                </div>
-            </div>
-            <div class="card flex-row flex-wrap mb-3">
-                <div class="card-header border-0">
-                    <img src="https://img.icons8.com/wired/80/000000/chat.png">
-                </div>
-                <div class="card-block px-3 my-auto">
-                    <h4 class="card-title"><strong>BKPS Messages</strong></h4>
-                    <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro
-                        adapare dorime. Ameno Ameno. Latire. Latire.</p>
-                </div>
-                <div class="card-body text-right my-auto">
-                    <a href="bkpsMessages.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Acessar Messages</strong></button></a>
-                </div>
-            </div>
-            <div class="card flex-row flex-wrap mb-3">
-                <div class="card-header border-0">
-                    <img src="https://img.icons8.com/dotty/80/000000/refund.png">
-                </div>
-                <div class="card-block px-3 my-auto">
-                    <h4 class="card-title"><strong>BKPS PerdComp</strong></h4>
-                    <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro
-                        adapare dorime. Ameno Ameno. Latire. Latire.</p>
-                </div>
-                <div class="card-body text-right my-auto">
-                   <a href="bkpsPerdComp.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Acessar PerdComp</strong></button></a>
-                </div>
-            </div>
+        </div>
         </div>
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid">
@@ -154,8 +190,9 @@
                     </div>
                 </div>
             </div>
+        </footer>
     </div>
-    </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>

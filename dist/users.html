@@ -14,51 +14,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
     </script>
 </head>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-    google.charts.load('current', {
-        'packages': ['corechart']
-    });
-    google.charts.setOnLoadCallback(drawSarahChart);
-    google.charts.setOnLoadCallback(drawAnthonyChart);
-
-    function drawSarahChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-            ['Pagas', 4],
-            ['Não pagas', 1],
-            ['Andamento', 2],
-        ]);
-        var options = {
-            title: 'Notas fiscais',
-            width: 500,
-            height: 500
-        };
-        var chart = new google.visualization.PieChart(document.getElementById('Pie_chart_div'));
-        chart.draw(data, options);
-    }
-
-    function drawAnthonyChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', );
-        data.addColumn('number', );
-        data.addRows([
-            ['Pagas', 4],
-            ['Não pagas', 1],
-            ['Andamento', 2],
-        ]);
-        var options = {
-            title: 'Notas fiscais but em barras',
-            width: 500,
-            height: 500
-        };
-        var chart = new google.visualization.BarChart(document.getElementById('Bar_chart_div'));
-        chart.draw(data, options);
-    }
-</script>
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
@@ -73,10 +28,15 @@
                 </span>
             </div>
         </form>
+        <div id="iconsNav">
+            <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted"></i></a>
+            <a href="#"><i class="far fa-bell fa-lg mr-3 text-muted"></i></a>
+        </div>
+
         <ul class="navbar-nav ml-auto ml-md-0">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle btn btn-outline-secondary" id="userDropdown" href="#" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Matheus Meira</a>
+                <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                     <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
                     <div class="dropdown-divider"></div>
@@ -100,7 +60,8 @@
                     <ul class="nav navbar-nav navbar-right ml-auto text-center">
                         <a class="nav-link" href="#">
                             <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="installed.html" class="nav-link"><i class="fas fa-store"></i><span>Apps
+                                <li class="nav-item"><a href="installed.html" class="nav-link"><i
+                                            class="fas fa-store"></i><span>Apps
                                             e<br>Marketplace</span></a></li>
                         </a>
                 </div>
@@ -116,7 +77,7 @@
                     <ul class="nav navbar-nav navbar-right ml-auto">
                         <a class="nav-link" href="#">
                             <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="#" class="nav-link"><i
+                                <li class="nav-item"><a href="settings.html" class="nav-link"><i
                                             class="fas fa-user-cog"></i><span>Definições</span></a></li>
                         </a>
                 </div>
@@ -137,40 +98,67 @@
     </nav> <a class="btn btn-primary" href="#" role="button">Link</a>
     </div>
     <div id="layoutSidenav_content">
-=
-        <table class="columns">
-            <tr>
-                <td>
-                    <div id="Pie_chart_div"></div>
-                </td>
-                <td>
-                    <div id="Bar_chart_div"></div>
-                </td>
-            </tr>
-        </table>
-        <footer class="py-4 bg-light mt-auto">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Your Website 2019</div>
-                    <div>
-                        <a href="#">Privacy Policy</a>
-                        &middot;
-                        <a href="#">Terms &amp; Conditions</a>
+        <div class="container-fluid">
+            <h3 class="mt-4 mb-5 pt-5"><strong class="pl-5"> Definições</strong></h3>
+            <div class="col-xl-12">
+                <div class="row">
+                    <div id="btnGroup" class="btn-group btn-block" role="group">
+                        <a href="settings.html" class="btn btn-secondary active">Minha conta</a>
+                        <a href="companiesAndBranches.html" class="btn btn-secondary">Empresas e filiais</a>
+                        <a href="users.html" class="btn btn-secondary">Usuários</a>
+                        <a href="billing.html" class="btn btn-secondary">Faturamento</a>
+                        <a href="api.html" class="btn btn-secondary">API</a>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
+            <div class="container-fluid">
+                <div class="row">
+                <div class="col-xl-4">
+                        <div id="searchMkt" class="input-group pb-4 pt-5"><input id="searchMktInput" class="form-control" type="search" placeholder="Pesquisar por Nome ou Email" aria-label="Search">
+                            <div class="input-group-append"><span class="input-group-text" id="basic-text1"><button class="btn btn-sm"><i class="fas fa-search text-grey" aria-hidden="true"></i></span></div>
+                        </div>
+                </div>
+                    <div class="col-xl-6 my-auto">
+                            <button id="CompaniesBranchesButtons" class="btn btn-dark mt-4">Cadastrar usuário</button>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Tipo de perfil</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>José Adilson Rodrigues dos Santos</td>
+                                <td>welcome@maguila.com</td>
+                                <td>Administrador</td>
+                            </tr>
+                            <tr>
+                                <td>José Adilson Rodrigues dos Santos</td>
+                                <td>welcome@maguila.com</td>
+                                <td>Administrador</td>
+                            </tr>
+
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
     <script src="js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous">
+    </script>
     <script src="assets/demo/chart-area-demo.js"></script>
     <script src="assets/demo/chart-bar-demo.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous">
+    </script>
     <script src="assets/demo/datatables-demo.js"></script>
 </body>
+
 </html>

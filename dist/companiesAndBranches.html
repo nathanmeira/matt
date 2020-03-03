@@ -15,8 +15,7 @@
     </script>
 </head>
 
-
-<body id="body" class="sb-nav-fixed">
+<body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
         <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
         <form class="mx-auto col-xl-6">
@@ -94,91 +93,93 @@
                         </div>
                     </nav>
                 </div>
-
         </div>
     </div>
     </nav> <a class="btn btn-primary" href="#" role="button">Link</a>
     </div>
     <div id="layoutSidenav_content">
-        <div class="container-fluid ml-5 mr-5">
-            <h3 class="mt-4 mb-3 pt-5"><a href="marketplace.html"><i class="fas fa-arrow-left"></i></a> <strong>Nome do app</strong></h3>
-            <div class="row">
-                <div id="nomeApp" class="card' flex-row flex-wrap mb-3 mt-4 col-xl-3 border-0">
-                    <img class="ml-5 mt-1" src="https://img.icons8.com/dotty/70/000000/business.png">
-                    <div class="card-block px-3 my-auto float-right">
-                        <div class="card-title"><strong>Nome do app </strong>
-                            <div class="badge badge-secondary mt-3 ml-5">Categoria</div>
-
-                        <p>Feito por:<strong> Fulano F.</strong></p>
-                    </div>
-                </div>
-                </div>
-                <div class="col-xl-9 text-right float-right mt-5">
-                    <div class="mr-5 pr-5">
-                        <h4><strong>R$19,90</strong>/mês
-                            <button class="btn btn-outline-secondary ml-2"><strong>Teste gratuitamente</strong></button>
-                            <button class="btn btn-secondary ml-2"><strong>Adquirir módulo</strong></button></h4>
+        <div class="container-fluid">
+            <h3 class="mt-4 mb-5 pt-5"><strong class="pl-5"> Definições</strong></h3>
+            <div class="col-xl-12">
+                <div class="row">
+                    <div id="btnGroup" class="btn-group btn-block" role="group">
+                        <a href="settings.html" class="btn btn-secondary active">Minha conta</a>
+                        <a href="companiesAndBranches.html" class="btn btn-secondary">Empresas e filiais</a>
+                        <a href="users.html" class="btn btn-secondary">Usuários</a>
+                        <a href="billing.html" class="btn btn-secondary">Faturamento</a>
+                        <a href="api.html" class="btn btn-secondary">API</a>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-4 ml-5 mt-4">
-                    Dori me, interimo Dori me Ameno Latire, latiremo Dori me Ameno Omenare imperavi ameno Dimere, dimere
-                    mantiro Mantiremo, ameno Omenare imperavi emulari Ameno Omenare imperavi emulari Ameno Ameno dore
-                    Ameno dori me Ameno dori me
-                    <br>
-                    <br>
-                    -Dorime
-                    <br>
-                    -Intemiro
-                    <br>
-                    -Adapare
-                    <br>
-                    -Dorime
+            <div class="container-fluid">
+                <div class="row">
+                <div class="col-xl-4">
+                        <div id="searchMkt" class="input-group pb-4 pt-5"><input id="searchMktInput" class="form-control" type="search" placeholder="Pesquisar por Razão Social ou CNPJ" aria-label="Search">
+                            <div class="input-group-append"><span class="input-group-text" id="basic-text1"><button class="btn btn-sm"><i class="fas fa-search text-grey" aria-hidden="true"></i></span></div>
+                        </div>
                 </div>
-                <div class="col-xl-7 mt-4">
-                <div class="container-flex text-right">
-                    <img src="https://dummyimage.com/700x350/000/9ea0b8">
-            <div class="row pt-3">
-                <div class="col-xl-3 ml-auto">
-                    <img src="https://dummyimage.com/204x150/000/9ea0b8">
+                    <div class="col-xl-6 my-auto">
+                            <button id="CompaniesBranchesButtons" class="btn btn-dark mt-4">Cadastrar empresa</button>
+                            <button id="CompaniesBranchesButtons" class="btn btn-dark mt-4">Importar arquivo</button>
+                            <button id="CompaniesBranchesButtons" class="btn btn-dark mt-4">Arquivo modelo</button>
+                    </div>
                 </div>
-                <div class="col-xl-3 ml-1">
-                    <img src="https://dummyimage.com/210x150/000/9ea0b8">
-                </div>
-                <div class="col-xl-3 ml-1">
-                    <img src="https://dummyimage.com/210x150/000/9ea0b8">
-                </div>
+                <div class="col-xl-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Eventos</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Número</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Emitente</th>
+                                <th scope="col">Destinatário</th>
+                                <th scope="col">Chave</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>NFSe</td>
+                                <td>400.289.22</td>
+                                <td>R$40,00</td>
+                                <td>José Adilson Rodrigues dos Santos
+                                    <br>
+                                    CNPJ: 40.028.922/6669-69</td>
+                                <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                    <br>
+                                    CNPJ: 13.131.313/1313-13
+                                </td>
+                                <td>12345678901234567890</td>
+                            </tr>
+                            <tr>
+                                <td>NFSe</td>
+                                <td>400.289.22</td>
+                                <td>R$4,00</td>
+                                <td>José Adilson Rodrigues dos Santos
+                                    <br>
+                                    CNPJ: 40.028.922/6669-69</td>
+                                <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                    <br>
+                                    CNPJ: 13.131.313/1313-13
+                                </td>
+                                <td>12345678901234567890</td>
+                            </tr>
+
             </div>
         </div>
     </div>
-</div>
-        </div>
-        <footer class="py-4 bg-light mt-auto">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Your Website 2019</div>
-                    <div>
-                        <a href="#">Privacy Policy</a>
-                        &middot;
-                        <a href="#">Terms &amp; Conditions</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-            crossorigin="anonymous">
-        </script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous">
-        </script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous">
-        </script>
-        <script src="assets/demo/datatables-demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    </script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous">
+    </script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous">
+    </script>
+    <script src="assets/demo/datatables-demo.js"></script>
 </body>
 
 </html>
