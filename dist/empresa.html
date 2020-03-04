@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>BKPS</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
+            <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
+            <form class="mx-auto col-xl-6">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
+                    <span class="input-group-append">
+                    <button class="btn btn-outline-dark" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+                </div>
+            </form>
+            <div id="iconsNav">
+                <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted"></i></a>
+                <a href="#"><i class="far fa-bell fa-lg mr-3 text-muted"></i></a>
+            </div>
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <ul class="nav navbar-nav navbar-right ml-auto">
+                            <a class="nav-link" href="#">
+                                <div class="d-flex justify-content-center">
+                                    <li class="nav-item active"><a href="index.html" class="nav-link"><i
+                                            class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
+                            </a>
+                            </div>
+                            <div class="sb-sidenav-menu">
+                                <ul class="nav navbar-nav navbar-right ml-auto text-center">
+                                    <a class="nav-link" href="#">
+                                        <div class="d-flex justify-content-center">
+                                            <li class="nav-item"><a href="installed.html" class="nav-link"><i
+                                            class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
+                                    </a>
+                                    </div>
+                                    <div class="sb-sidenav-menu">
+                                        <ul class="nav navbar-nav navbar-right ml-auto">
+                                            <a class="nav-link" href="#">
+                                                <div class="d-flex justify-content-center">
+                                                    <li class="nav-item"><a href="#" class="nav-link"><i
+                                            class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
+                                            </a>
+                                            </div>
+                                            <div class="sb-sidenav-menu">
+                                                <ul class="nav navbar-nav navbar-right ml-auto">
+                                                    <a class="nav-link" href="#">
+                                                        <div class="d-flex justify-content-center">
+                                                            <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fas fa-user-cog"></i><span>Definições</span></a></li>
+                                                    </a>
+                                                    </div>
+                                                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                                    </div>
+                                                    <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
+                                                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
+                                                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                                            </div>
+                                                        </nav>
+                                                    </div>
+                                            </div>
+                                    </div>
+                </nav> <a class="btn btn-primary" href="#" role="button">Link</a>
+                </div>
+                <div id="layoutSidenav_content">
+                    <div class="container-fluid">
+                        <h3 class="mt-4 mb-5 pt-5"><strong class="pl-5"> Definições</strong></h3>
+                        <div class="col-xl-12">
+                            <div class="row">
+                                <div id="btnGroup" class="btn-group btn-block" role="group">
+                                    <a href="settings.html" class="btn btn-secondary">Minha conta</a>
+                                    <a href="companiesAndBranches.html" class="btn btn-secondary active">Empresas e filiais</a>
+                                    <a href="users.html" class="btn btn-secondary">Usuários</a>
+                                    <a href="billing.html" class="btn btn-secondary">Faturamento</a>
+                                    <a href="api.html" class="btn btn-secondary"> API</a>
+                                </div>
+                            </div>
+                            <h5 class="mt-4"><strong><a href="companiesAndBranches.html"><i class="fas fa-arrow-left mr-2"></i></a> Voltar para a listagem de empresas</strong></h5>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="card mt-4">
+                                        <div id="accountAndSignature" class="card-header">
+                                            <strong>Empresa</strong>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>BOOKEEPERS LTDA.</strong></p>
+                                            <p class="card-text"><strong>CNPJ: </strong>13.131.313/1313-13</p>
+                                            <p class="card-text"><strong>I.E: </strong>Isento</p>
+                                            <p class="card-text"><strong>UF: </strong>SP</p>
+                                            <p class="card-text"><strong>Matriz: </strong>Sim</p>
+                                            <p class="card-text"><strong>Certificado Digital: </strong>Válido - Vence em 20/12/2020 - 13:04:00</p>
+                                            <p class="card-text"><strong>Data de criação: </strong>25/12/2018</p>
+                                            <p class="card-text"><strong>Email: </strong>contato@bkps.com.br</p>
+                                            <p class="card-text"><strong>Telefone: </strong>(11) 1234-5678</p>
+                                            <p class="card-text"><strong>Telefone: </strong>(11) 1234-5678</p>
+                                            <div class="row">
+                                                <button class="btn btn-outline-dark mr-3 ml-2 mt-2" data-toggle="modal" data-target="#myModal5">Editar</button>
+                                                <button class="btn btn-dark mt-2" data-toggle="modal" data-target="#myModal6">Excluir empresa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="card mt-4">
+                                <div id="accountAndSignature" class="card-header">
+                                    <strong>Filiais</strong>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-center mt-4"><strong>Não existe nenhuma filial cadastrada</strong></p>
+                                    <div class="row">
+                                        <button class="btn btn-dark mt-2 mb-4 mx-auto" data-toggle="modal" data-target="#myModal7">Adicionar filial</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="card mt-4">
+                                <div id="accountAndSignature" class="card-header">
+                                    <strong>Usuários dessa empresa</strong>
+                                </div>
+                                <div class="card-body">
+                                    <button id="addUser" class="btn btn-dark mt-2 mb-4">Adicionar usuário</button>
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Eventos</th>
+                                                <th scope="col">Tipo</th>
+                                                <th scope="col">Número</th>
+                                                <th scope="col">Valor</th>
+                                                <th scope="col">Emitente</th>
+                                                <th scope="col">Destinatário</th>
+                                                <th scope="col">Chave</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="clickable-row" data-href="empresa.html">
+                                                <td>NFSe</td>
+                                                <td>400.289.22</td>
+                                                <td>R$40,00</td>
+                                                <td>José Adilson Rodrigues dos Santos
+                                                    <br> CNPJ: 40.028.922/6669-69</td>
+                                                <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                    <br> CNPJ: 13.131.313/1313-13
+                                                </td>
+                                                <td>12345678901234567890</td>
+                                            </tr>
+                                            <tr class="clickable-row" data-href="empresa.html">
+                                                <td>NFSe</td>
+                                                <td>400.289.22</td>
+                                                <td>R$4,00</td>
+                                                <td>José Adilson Rodrigues dos Santos
+                                                    <br> CNPJ: 40.028.922/6669-69</td>
+                                                <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                    <br> CNPJ: 13.131.313/1313-13
+                                                </td>
+                                                <td>12345678901234567890</td>
+                                            </tr>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="myModal5">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Editar empresa</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div id="modalBg">
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-xl-7 form-group">
+                                                    <label for="inputEstabelecimento">Razão Social</label>
+                                                    <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-7 form-group">
+                                                    <label for="inputCNPJ">CNPJ</label>
+                                                    <input type="CNPJ" class="form-control" id="inputCNPJ">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-7 form-group">
+                                                    <label for="inputCNPJ">I.E</label>
+                                                    <input type="I.E" class="form-control" id="inputI.E">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-7 form-group">
+                                                    <label for="inputEstado">U.F</label>
+                                                    <select id="inputEstado" class="form-control"> 
+                                                            <option selected>SP</option>
+                                                            <option>BA</option>
+                                                            <option>RJ</option>
+                                                            <option>BH</option>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-7 form-group">
+                                                    <label for="inputTel">Telefone</label>
+                                                    <input type="Tel" class="form-control" id="inputTel">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-7 form-group">
+                                                    <label for="inputEmail">Email</label>
+                                                    <input type="Email" class="form-control" id="inputEmail">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-5">
+                                                <div id="dragNdrop2" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="modalImg2" src="https://img.icons8.com/ios/30/999999/cloud.png">
+                                                    <p class="text-muted" id="dragTxt">Selecione ou arraste o seu<br>arquivo de certificado aqui</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="myModal6">
+                            <div class="modal-dialog modal-md">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Excluir empresa</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div id="modalBg">
+                                        <div class="modal-body">
+                                            <p class="text-center pt-3">Deseja realmente excluir a empresa<br><strong>BOOKEEPERS LTDA.?</strong></p>
+                                            <div class="row mb-3">
+                                                <button id="deleteBtn" class=" btn btn-outline-dark mt-4">Agora não</button>
+                                                <button id="deleteBtn2" class="btn btn-dark mt-4">Excluir</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal7">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Cadastrar nova filial</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div id="modalBg">
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-xl-12 form-group">
+                                                <label for="inputEstabelecimento">Nome</label>
+                                                <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12 form-group">
+                                                <label for="inputCNPJ">CNPJ</label>
+                                                <input type="CNPJ" class="form-control" id="inputCNPJ">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12 form-group">
+                                                <label for="inputCNPJ">I.E</label>
+                                                <input type="I.E" class="form-control" id="inputI.E">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12 form-group">
+                                                <label for="inputEstado">U.F</label>
+                                                <select id="inputEstado" class="form-control"> 
+                                                        <option selected>SP</option>
+                                                        <option>BA</option>
+                                                        <option>RJ</option>
+                                                        <option>BH</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4">
+                                                <button class="btn btn-outline-dark ml-4 mr-3">Cancelar</button>
+                                                <button class="btn btn-dark">Cadastrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script src=" https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous ">
+                    </script>
+                    <script src="js/scripts.js "></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js " crossorigin="anonymous ">
+                    </script>
+                    <script src="assets/demo/chart-area-demo.js "></script>
+                    <script src="assets/demo/chart-bar-demo.js "></script>
+                    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous "></script>
+                    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js " crossorigin="anonymous ">
+                    </script>
+                    <script src="assets/demo/datatables-demo.js "></script>
+    </body>
+
+</html>
