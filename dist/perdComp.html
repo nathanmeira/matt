@@ -115,7 +115,7 @@
                 <div class="col-xl-8 row">
                     <div id="searchMkt" class="input-group pb-4">
                         <input id="searchMktInput" class="form-control" type="search"
-                            placeholder="Pesquisar por CNPJ ou assunto" aria-label="Search">
+                            placeholder="Pesquisar por CNPJ, Número do PErdComp ou Informação Complementar" aria-label="Search">
                         <div class="input-group-append">
                             <span class="input-group-text" id="basic-text1">
                                 <button class="btn btn-sm"><i class="fas fa-search text-grey"
@@ -172,16 +172,11 @@
                     </button>
                 </div>
                 <div class="row mt-3">
-                    <button class="btn btn-dark ml-3 dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownDfe" aria-haspopup="true" aria-expanded="false"><strong>Consultar agora</strong></button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownDfe">
-                        <p class="ml-2">Todos</p>
-                        <p class="ml-2">Federal</p>
-                        <p class="ml-2">Estadual</p>
-                        <p class="ml-2">Municipal</p>
-                    </div>
-                    <a href="messagesSettings.html"><button class="btn btn-dark ml-2"><strong>Configurações</strong></button></a>
-                    <a href="messagesConsultas.html"><button class="btn btn-dark ml-2"><strong>Histórico de consultas</strong></button></a>
-                    <button class="btn btn-dark ml-2"><strong>Exportar</strong></button>
+                    <a href="#"><button class="btn btn-dark ml-2"><strong>Consultar PerdComp</strong></button></a>
+                    <a href="perdCompSettings.html"><button class="btn btn-dark ml-2"><strong>Configurar</strong></button></a>
+                    <button class="btn btn-dark ml-2"><strong>Adicionar</strong></button>
+                    <button class="btn btn-dark ml-2"><strong>Histórico de Consultas</strong></button>
+                    <button class="btn btn-dark ml-2"><strong>Exportar para Excel</strong></button>
                 </div>
                 <div class="row pt-4">
                     <p class="pt-2 pb-3 ml-4"><strong>Mostrando de 1 até 10 de 1312 registros. | Última consulta
@@ -202,9 +197,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><button class="btn btn-outline-dark mr-1">Ignorar</button><button
-                                        class="btn btn-dark" data-toggle="modal"
-                                        data-target="#modalAtribuir">Atribuir</button></td>
+                                <td><i class="fas fa-search"></i></td>
                                 <td><strong>26.549.883/0001-87...</strong></td>
                                 <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                 <td><strong>IMPORTANTE: Expiração.....</strong></td>
@@ -213,9 +206,7 @@
                                 <td><strong>17/12/2019 08:10</strong></td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-outline-dark mr-1">Ignorar</button><button
-                                    class="btn btn-dark" data-toggle="modal"
-                                    data-target="#modalAtribuir">Atribuir</button></td>
+                                <td><i class="fas fa-search"></i></td>
                                 <td><strong>26.549.883/0001-87...</strong></td>
                                 <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                 <td><strong>IMPORTANTE: Expiração.....</strong></td>
@@ -224,36 +215,7 @@
                                 <td><strong>17/12/2019 08:10</strong></td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-dark">Finalizado</button></td>
-                                <td>26.549.883/0001-87...</td>
-                                <td>RECEITA FEDERAL DO BRASIL</td>
-                                <td>IMPORTANTE: Expiração.....</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019 08:10</td>
-                            </tr>
-                            <tr>
-                                <td><button class="btn btn-outline-dark">Em andamento</button></td>
-                                <td>26.549.883/0001-87...</td>
-                                <td>RECEITA FEDERAL DO BRASIL</td>
-                                <td>IMPORTANTE: Expiração.....</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019 08:10</td>
-                            </tr>
-                            <tr>
-                                <td><button class="btn btn-outline-dark">Em andamento</button></td>
-                                <td>26.549.883/0001-87...</td>
-                                <td>RECEITA FEDERAL DO BRASIL</td>
-                                <td>IMPORTANTE: Expiração.....</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019 08:10</td>
-                            </tr>
-                            <tr>
-                                <td><button class="btn btn-outline-dark mr-1">Ignorar</button><button
-                                    class="btn btn-dark" data-toggle="modal"
-                                    data-target="#modalAtribuir">Atribuir</button></td>
+                                <td><i class="fas fa-search"></i></td>
                                 <td><strong>26.549.883/0001-87...</strong></td>
                                 <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                 <td><strong>IMPORTANTE: Expiração.....</strong></td>
@@ -262,8 +224,7 @@
                                 <td><strong>17/12/2019 08:10</strong></td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-outline-dark mr-1">Ignorar</button><button
-                                        class="btn btn-dark">Atribuir</button></td>
+                                <td><i class="fas fa-search"></i></td>
                                 <td><strong>26.549.883/0001-87...</strong></td>
                                 <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                 <td><strong>IMPORTANTE: Expiração.....</strong></td>
@@ -272,27 +233,7 @@
                                 <td><strong>17/12/2019 08:10</strong></td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-dark">Finalizado</button></td>
-                                <td>26.549.883/0001-87...</td>
-                                <td>RECEITA FEDERAL DO BRASIL</td>
-                                <td>IMPORTANTE: Expiração.....</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019 08:10</td>
-                            </tr>
-                            <tr>
-                                <td><button class="btn btn-outline-dark">Em andamento</button></td>
-                                <td>26.549.883/0001-87...</td>
-                                <td>RECEITA FEDERAL DO BRASIL</td>
-                                <td>IMPORTANTE: Expiração.....</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019 08:10</td>
-                            </tr>
-                            <tr>
-                                <td><button class="btn btn-outline-dark mr-1">Ignorar</button><button
-                                    class="btn btn-dark" data-toggle="modal"
-                                    data-target="#modalAtribuir">Atribuir</button></td>
+                                <td><i class="fas fa-search"></i></td>
                                 <td><strong>26.549.883/0001-87...</strong></td>
                                 <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                 <td><strong>IMPORTANTE: Expiração.....</strong></td>
@@ -300,6 +241,96 @@
                                 <td><strong>17/12/2019</strong></td>
                                 <td><strong>17/12/2019 08:10</strong></td>
                             </tr>
+                            <tr>
+                                <td><i class="fas fa-search"></i></td>
+                                <td><strong>26.549.883/0001-87...</strong></td>
+                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019 08:10</strong></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-search"></i></td>
+                                <td><strong>26.549.883/0001-87...</strong></td>
+                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019 08:10</strong></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-search"></i></td>
+                                <td><strong>26.549.883/0001-87...</strong></td>
+                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019 08:10</strong></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-search"></i></td>
+                                <td><strong>26.549.883/0001-87...</strong></td>
+                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019 08:10</strong></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-search"></i></td>
+                                <td><strong>26.549.883/0001-87...</strong></td>
+                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019 08:10</strong></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-search"></i></td>
+                                <td><strong>26.549.883/0001-87...</strong></td>
+                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019 08:10</strong></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-search"></i></td>
+                                <td><strong>26.549.883/0001-87...</strong></td>
+                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019 08:10</strong></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-search"></i></td>
+                                <td><strong>26.549.883/0001-87...</strong></td>
+                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019 08:10</strong></td>
+                            </tr><tr>
+                                <td><i class="fas fa-search"></i></td>
+                                <td><strong>26.549.883/0001-87...</strong></td>
+                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019 08:10</strong></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-search"></i></td>
+                                <td><strong>26.549.883/0001-87...</strong></td>
+                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019</strong></td>
+                                <td><strong>17/12/2019 08:10</strong></td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -313,7 +344,7 @@
                         <a href="#">Privacy Policy</a> &middot;
                         <a href="#">Terms &amp; Conditions</a>
                     </div>
-                </div>
+                </div> 
             </div>
         </footer>
         <div class="modal fade" id="modalAtribuir">

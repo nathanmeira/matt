@@ -20,3 +20,52 @@
         $("body").toggleClass("sb-sidenav-toggled");
     });
 })(jQuery);
+
+
+
+
+// Matt's Js
+
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
+
+
+
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+
+
+
+
+
+$(document).ready(function () {
+    $("#deleteBtn3").click(function () {
+        $("#user1").remove();
+    });
+});
+
+
+
+
+$(document).ready(function () {
+    $('#filter').hide();
+    $('#btnFilter').click(function () {
+        $('#filter').toggle();
+    });
+});
+
+

@@ -110,15 +110,15 @@
     </div>
     <div id="layoutSidenav_content">
         <div class="container-fluid">
-            <h3 class="mt-4 mb-5 pt-5"><a href="installed.html"><i class="fas fa-arrow-left"></i></a> <strong class="pl-2"> Apps</strong></h3>
+            <h3 class="mt-4 mb-5 pt-5"><a href="messages.html"><p class="pl-2"> <i class="fas fa-arrow-left"></i></a> Messages <strong>/ Consultas</strong></p></h3>
             <div class="container-fluid">
                 <div class="col-xl-8 row">
                     <div id="searchMkt" class="input-group pb-4">
                         <input id="searchMktInput" class="form-control" type="search"
-                            placeholder="Pesquisar por CNPJ ou assunto" aria-label="Search">
+                            placeholder="Todos" aria-label="Search">
                         <div class="input-group-append">
                             <span class="input-group-text" id="basic-text1">
-                                <button class="btn btn-sm"><i class="fas fa-search text-grey"
+                                <button class="btn btn-sm"><i class="fas fa-angle-down text-grey"
                                         aria-hidden="true"></i></span>
                         </div>
                         <button id="btnFilter" class="btn btn-outline-dark ml-2">Filtros</button>
@@ -126,184 +126,142 @@
                 </div>
                 <div id="filter">
                     <div class="row">
-                        <div class="col-xl-4 form-group">
+                        <div class="col-xl-3 form-group">
                             <label for="inputEstabelecimento">Estabelecimento</label>
                             <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
                         </div>
-                        <div class="col-xl-4 form-group">
-                            <label for="inputRemetente">Remetente</label>
-                            <input type="Remetente" class="form-control" id="inputRemetente">
-                        </div>
-                        <div class="col-xl-4 form-group">
-                            <label for="inputDocumento">Status</label>
-                            <select id="inputDocumento" class="form-control">
-                                <option selected>NF-e</option>
-                                <option>Não.</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-4 form-group">
-                            <label for="inputDataInicial">Data Inicial</label>
+                        <div class="col-xl-3 form-group">
+                            <label for="inputDataInicial"><strong>Data Inicial</strong></label>
                             <input type="date" id="inputDataInicial" class="form-control">
                         </div>
-                        <div class="col-xl-4 form-group">
-                            <label for="inputDataFinal">Data final</label>
+                        <div class="col-xl-3 form-group">
+                            <label for="inputDataFinal"><strong>Data Final</strong></label>
                             <input type="date" id="inputDataFinal" class="form-control">
                         </div>
-                        <div class="col-xl-4 form-group">
-                            <label for="inputOrigem">Enviado em</label>
-                            <select id="inputOrigem" class="form-control">
-                                <option selected>abc</option>
-                                <option>123</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-4"></div>
-                        <div class="col-xl-4"></div>
-                        <div class="col-xl-4 my-auto text-right">
+
+                        <div class="col-xl-3 my-auto text-right">
                             <button id="btnFilter2" class="btn btn-outline-dark">Limpar filtros</button>
                             <button id="btnFilter2" class="btn btn-dark ">Aplicar</button>
                         </div>
                     </div>
-
-                    <strong>Este mês</strong>
-                    </button>
                 </div>
-                <div class="row mt-3">
-                    <button class="btn btn-dark ml-3 dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownDfe" aria-haspopup="true" aria-expanded="false"><strong>Consultar agora</strong></button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownDfe">
-                        <p class="ml-2">Todos</p>
-                        <p class="ml-2">Federal</p>
-                        <p class="ml-2">Estadual</p>
-                        <p class="ml-2">Municipal</p>
-                    </div>
-                    <a href="messagesSettings.html"><button class="btn btn-dark ml-2"><strong>Configurações</strong></button></a>
-                    <a href="messagesConsultas.html"><button class="btn btn-dark ml-2"><strong>Histórico de consultas</strong></button></a>
-                    <button class="btn btn-dark ml-2"><strong>Exportar</strong></button>
                 </div>
                 <div class="row pt-4">
-                    <p class="pt-2 pb-3 ml-4"><strong>Mostrando de 1 até 10 de 1312 registros. | Última consulta
-                            realizada em: 17/02/2020 08:10</strong></p>
+                    <p class="pt-2 pl-2 pb-3 ml-4"><strong>Mostrando de 1 até 10 de 1312 registros. | Última consulta realizada em: 17/02/2020 08:10</strong></p>
                 </div>
                 <div class="col-xl-12">
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">Ação</th>
                                 <th scope="col">Empresa</th>
-                                <th scope="col">Remetente</th>
-                                <th scope="col">Assunto</th>
-                                <th scope="col">Enviado em</th>
-                                <th scope="col">Lido em</th>
-                                <th scope="col">Data de inclusão</th>
+                                <th scope="col">Origem</th>
+                                <th scope="col">Serviço</th>
+                                <th scope="col">Mensagens</th>
+                                <th scope="col">Criado em</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><button class="btn btn-outline-dark mr-1">Ignorar</button><button
-                                        class="btn btn-dark" data-toggle="modal"
-                                        data-target="#modalAtribuir">Atribuir</button></td>
-                                <td><strong>26.549.883/0001-87...</strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-outline-dark mr-1">Ignorar</button><button
-                                    class="btn btn-dark" data-toggle="modal"
-                                    data-target="#modalAtribuir">Atribuir</button></td>
-                                <td><strong>26.549.883/0001-87...</strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-dark">Finalizado</button></td>
-                                <td>26.549.883/0001-87...</td>
-                                <td>RECEITA FEDERAL DO BRASIL</td>
-                                <td>IMPORTANTE: Expiração.....</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019 08:10</td>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-outline-dark">Em andamento</button></td>
-                                <td>26.549.883/0001-87...</td>
-                                <td>RECEITA FEDERAL DO BRASIL</td>
-                                <td>IMPORTANTE: Expiração.....</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019 08:10</td>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-outline-dark">Em andamento</button></td>
-                                <td>26.549.883/0001-87...</td>
-                                <td>RECEITA FEDERAL DO BRASIL</td>
-                                <td>IMPORTANTE: Expiração.....</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019 08:10</td>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-outline-dark mr-1">Ignorar</button><button
-                                    class="btn btn-dark" data-toggle="modal"
-                                    data-target="#modalAtribuir">Atribuir</button></td>
-                                <td><strong>26.549.883/0001-87...</strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-outline-dark mr-1">Ignorar</button><button
-                                        class="btn btn-dark">Atribuir</button></td>
-                                <td><strong>26.549.883/0001-87...</strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-dark">Finalizado</button></td>
-                                <td>26.549.883/0001-87...</td>
-                                <td>RECEITA FEDERAL DO BRASIL</td>
-                                <td>IMPORTANTE: Expiração.....</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019 08:10</td>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-outline-dark">Em andamento</button></td>
-                                <td>26.549.883/0001-87...</td>
-                                <td>RECEITA FEDERAL DO BRASIL</td>
-                                <td>IMPORTANTE: Expiração.....</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019</td>
-                                <td>17/12/2019 08:10</td>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
                             </tr>
                             <tr>
-                                <td><button class="btn btn-outline-dark mr-1">Ignorar</button><button
-                                    class="btn btn-dark" data-toggle="modal"
-                                    data-target="#modalAtribuir">Atribuir</button></td>
-                                <td><strong>26.549.883/0001-87...</strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
+                            </tr>
+                            <tr>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
+                            </tr>
+                            <tr>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
+                            </tr>
+                            <tr>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
+                            </tr>
+                            <tr>
+                                <td>26.549.883/0001-87</td>
+                                <td>MUN-SP</strong></td>
+                                <td>prefeitura/sp/dec/caixa-postal</td>
+                                <td>0</td>
+                                <td>18/02/2020 16:18</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
         </div>
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid">
@@ -369,8 +327,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
@@ -383,6 +339,29 @@
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous">
     </script>
     <script src="assets/demo/datatables-demo.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#filter').hide();
+            $('#btnFilter').click(function () {
+                $('#filter').toggle();
+            });
+        });
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+    </script>
+    <script>
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
 
 </body>
 

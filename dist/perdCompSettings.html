@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>BKPS</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
+        <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
+        <form class="mx-auto col-xl-6">
+            <div class="input-group">
+                <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-dark" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        <div id="iconsNav">
+            <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted"></i></a>
+            <a href="#"><i class="far fa-bell fa-lg mr-3 text-muted"></i></a>
+        </div>
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+                        <a class="nav-link" href="#">
+                            <div class="d-flex justify-content-center">
+                                <li class="nav-item active"><a href="index.html" class="nav-link"><i
+                                            class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
+                        </a>
+                </div>
+                <div class="sb-sidenav-menu">
+                    <ul class="nav navbar-nav navbar-right ml-auto text-center">
+                        <a class="nav-link" href="#">
+                            <div class="d-flex justify-content-center">
+                                <li class="nav-item"><a href="installed.html" class="nav-link"><i
+                                            class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
+                        </a>
+                </div>
+                <div class="sb-sidenav-menu">
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+                        <a class="nav-link" href="#">
+                            <div class="d-flex justify-content-center">
+                                <li class="nav-item"><a href="#" class="nav-link"><i
+                                            class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
+                        </a>
+                </div>
+                <div class="sb-sidenav-menu">
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+                        <a class="nav-link" href="#">
+                            <div class="d-flex justify-content-center">
+                                <li class="nav-item"><a href="settings.html" class="nav-link"><i
+                                            class="fas fa-user-cog"></i><span>Definições</span></a></li>
+                        </a>
+                </div>
+                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                </div>
+                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError"
+                            aria-expanded="false" aria-controls="pagesCollapseError">Error
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
+                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
+                            data-parent="#sidenavAccordionPages">
+                        </div>
+                    </nav>
+                </div>
+        </div>
+    </div>
+    </nav> <a class="btn btn-primary" href="#" role="button">Link</a>
+    </div>
+    <div id="layoutSidenav_content">
+        <div class="container-fluid">
+            <div class="col-xl-12">
+                <div id="user1" class="row">
+                    <div class="col-md-12">
+                        <h3 class="mt-4 mb-5 pt-5"><a href="messages.html">
+                                <p class="pl-2"> <i class="fas fa-arrow-left"></i>
+                            </a> PerdComp <strong>/ Configurações</strong></p>
+                        </h3>
+                        <div class="card mt-4">
+                            <div id="accountAndSignature" class="card-header">
+                                <strong>Configurar opções de leitura dos PERD/COMP</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="col-xl-12">
+                                    <div class="form-group">
+                                        <!-- <label for="text"><strong>Usuários a serem notificados</strong></label> -->
+
+                                        <select class="js-example-basic-multiple" multiple="multiple">
+                                            <option value="NM">nathan@bkps.com.br</option>
+                                            <option value="RB">ralph.baesso@bkps.com.br</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <label for="text"><strong>Frequência de consulta</strong></label>
+                                    <div class="row">
+                                        <p>
+                                            <h3><span class="badge badge-secondary ml-2">SEG</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">TER</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">QUA</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-secondary">QUI</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">SEX</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">SAB</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">DOM</span></h3>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <label for="text"><strong>Horário de consulta</strong></label>
+                                    <div class="row">
+                                        <p>
+                                            <h3><span class="badge badge-light ml-2">08:00</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-secondary">16:00</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">00:00</span></h3>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col-xl-9"></div>
+                            <div class="col-xl-3 text-right">
+                                <button id="btnFilter" class="btn btn-outline-dark">Voltar</button>
+                                <button id="btnFilter" class="btn btn-dark">Salvar</button>
+                            </div>
+                        </div>
+                        <footer class="py-4 bg-light mt-auto ">
+                            <div class="container-fluid ">
+                                <div class="d-flex align-items-center justify-content-between small ">
+                                    <div class="text-muted ">Copyright &copy; Your Website 2019</div>
+                                    <div>
+                                        <a href="# ">Privacy Policy</a> &middot;
+                                        <a href="# ">Terms &amp; Conditions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js "
+                    crossorigin="anonymous "></script>
+                <script src="js/scripts.js "></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js "
+                    crossorigin="anonymous "></script>
+                <script src="assets/demo/chart-area-demo.js "></script>
+                <script src="assets/demo/chart-bar-demo.js "></script>
+                <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous ">
+                </script>
+                <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js "
+                    crossorigin="anonymous "></script>
+                <script src="assets/demo/datatables-demo.js "></script>
+</body>
+
+</html>
