@@ -10554,3 +10554,10 @@ a {
 a :hover {
     color: gray
 }
+.active {
+    display: block;
+}
+
+#div {
+    display: none;
+}
