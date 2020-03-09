@@ -10564,3 +10564,17 @@ a :hover {
 #informActionMsg{
     height: 160px;
 }
+#dragNdrop3 {
+    width: 745px;
+    height: 120px;
+    margin-bottom: 20px;
+    border: dashed 1px #aaaaaa;
+}
+#modalImg3 {
+    padding-left: 335px;
+    padding-top: 30px;
+}
+#modalText2 {
+    width: 740px;
+    height: 300px;
+}
