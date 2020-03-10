@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -18,9 +19,7 @@
             <div class="input-group">
                 <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
                 <span class="input-group-append">
-                    <button class="btn btn-outline-dark" type="button">
-                        <i class="fa fa-search"></i>
-                    </button>
+                    <button class="btn btn-outline-dark " type="button"> <i class="fa fa-search"></i></button>
                 </span>
             </div>
         </form>
@@ -28,11 +27,13 @@
             <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted"></i></a>
             <a href="#"><i class="far fa-bell fa-lg mr-3 text-muted"></i></a>
         </div>
+
         <ul class="navbar-nav ml-auto ml-md-0">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Activity Log</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="login.html">Logout</a>
                 </div>
@@ -75,7 +76,7 @@
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
-                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"  data-parent="#sidenavAccordionPages"></div>
+                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages"></div>
                     </nav>
                 </div>
         </div>
@@ -83,49 +84,20 @@
     </nav> <a class="btn btn-primary" href="#" role="button">Link</a>
     </div>
     <div id="layoutSidenav_content">
-        <div class="container-fluid">
-            <h3 class="mt-4 mb-3 pt-5"><strong>Apps e Marketplace</strong></h3>
-            <div class="col-xl-3 pt-3">
-                <a href="marketplace.html">tabs</a>
+        <main>
+            <div class="container-fluid">
+                <h3 class="mt-4 mb-3 pt-5"><strong>Dashboard</strong></h3>
+                <div class="row">
+                    <div class="col-xl-12 pt-3 pb-5">
+                        <div class="btn-group btn-block" role="group" aria-label="Basic example">
+                            <a href="generalInfo.html" class="btn btn-lg btn-outline-dark active"><strong>Informações gerais</strong></a>
+                            <a href="index.html" class="btn btn-lg btn-outline-dark">BKPS DF-e</a>
+                            <a href="bkpsMessages.html" class="btn btn-lg btn-outline-dark">BKPS Messages</a>
+                            <a href="bkpsPerdComp.html" class="btn btn-lg btn-outline-dark">BKPS PerdComp</a>
+                        </div>
+                    </div>
             </div>
-            <h4 class="pt-3 pb-3">Apps instalados</h4>
-            <div class="card flex-row flex-wrap mb-3">
-                <div class="card-header border-0">
-                    <img src="https://img.icons8.com/dotty/80/000000/business-e-mail.png">
-                </div>
-                <div class="card-block px-3 my-auto">
-                    <h4 class="card-title"><strong>BKPS DF-e</strong></h4>
-                    <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.</p>
-                </div>
-                <div class="card-body text-right my-auto">
-                    <a href="dfe.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Acessar DF-e</strong></button></a>
-                </div>
-            </div>
-            <div class="card flex-row flex-wrap mb-3">
-                <div class="card-header border-0">
-                    <img src="https://img.icons8.com/wired/80/000000/chat.png">
-                </div>
-                <div class="card-block px-3 my-auto">
-                    <h4 class="card-title"><strong>BKPS Messages</strong></h4>
-                    <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.</p>
-                </div>
-                <div class="card-body text-right my-auto">
-                    <a href="bkpsMessages.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Acessar Messages</strong></button></a>
-                </div>
-            </div>
-            <div class="card flex-row flex-wrap mb-3">
-                <div class="card-header border-0">
-                    <img src="https://img.icons8.com/dotty/80/000000/refund.png">
-                </div>
-                <div class="card-block px-3 my-auto">
-                    <h4 class="card-title"><strong>BKPS PerdComp</strong></h4>
-                    <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.</p>
-                </div>
-                <div class="card-body text-right my-auto">
-                   <a href="bkpsPerdComp.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Acessar PerdComp</strong></button></a>
-                </div>
-            </div>
-        </div>
+        </main>
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid">
                 <div class="d-flex align-items-center justify-content-between small">
@@ -135,8 +107,7 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </footer>
+        </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>

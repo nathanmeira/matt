@@ -79,4 +79,37 @@ function drop(ev) {
     ev.target.appendChild(document.getElementById(data));
 }
 
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+});
 
+function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+
+  function time() {
+    var date = new Date();
+    var hh = date.getHours();
+    var mm = date.getMinutes();
+    var ss = date.getSeconds();
+
+    mm = checkTime(mm);
+    ss = checkTime(ss);
+    document.getElementById('datebtn').innerHTML = hh + "h" + mm;
+  }
+
+
+  function myFunction() {
+    document.getElementById('addBranch').innerHTML = '';
+}
+
+$(document).ready(function () {
+    $("#deleteBtn2").click(function () {
+        $("#empresa1").remove();
+    });
+});
