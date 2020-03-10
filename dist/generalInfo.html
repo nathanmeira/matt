@@ -2,16 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>BKPS</title>
-    <link href="css/styles.css" rel="stylesheet"/>
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
+    </script>
 </head>
+
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
         <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
@@ -19,7 +21,7 @@
             <div class="input-group">
                 <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
                 <span class="input-group-append">
-                    <button class="btn btn-outline-dark " type="button"> <i class="fa fa-search"></i></button>
+                    <button class="btn btn-outline-dark" type="button"> <i class="fa fa-search"></i></button>
                 </span>
             </div>
         </form>
@@ -30,7 +32,8 @@
 
         <ul class="navbar-nav ml-auto ml-md-0">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
+                <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                     <a class="dropdown-item" href="#">Settings</a>
                     <a class="dropdown-item" href="#">Activity Log</a>
@@ -71,7 +74,8 @@
                                 <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fas fa-user-cog"></i><span>Definições</span></a></li>
                         </a>
                 </div>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion"></div>
+                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                </div>
                 <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
@@ -90,13 +94,61 @@
                 <div class="row">
                     <div class="col-xl-12 pt-3 pb-5">
                         <div class="btn-group btn-block" role="group" aria-label="Basic example">
-                            <a href="generalInfo.html" class="btn btn-lg btn-outline-dark active"><strong>Informações gerais</strong></a>
-                            <a href="index.html" class="btn btn-lg btn-outline-dark">BKPS DF-e</a>
-                            <a href="bkpsMessages.html" class="btn btn-lg btn-outline-dark">BKPS Messages</a>
-                            <a href="bkpsPerdComp.html" class="btn btn-lg btn-outline-dark">BKPS PerdComp</a>
+                            <a id="btnGnrlInf" href="generalInfo.html" class="btn btn-lg btn-outline-dark active"><strong>Informações gerais</strong></a>
+                            <a id="btnBksDfe" href="index.html" class="btn btn-lg btn-outline-dark">BKPS DF-e</a>
+                            <a id="btnMessages" href="bkpsMessages.html" class="btn btn-lg btn-outline-dark ">BKPS Messages</a>
+                            <a id="btnPerdComp" href="bkpsPerdComp.html" class="btn btn-lg btn-outline-dark">BKPS PerdComp</a>
                         </div>
                     </div>
-            </div>
+                    </div>
+                <div class="col-md-4">
+                    <div class="btn-group btn-block" role="group" aria-label="Basic example">
+                        <a href="generalInfo.html" class="btn btn-sm btn-outline-dark" style="line-height: 4">Empresas</a>
+                        <a href="#" class="btn btn-sm btn-dark" style="line-height: 4">Usuários</a>
+                        <a href="#" class="btn btn-sm btn-dark" style="line-height: 4">Últimas ações</a>
+                    </div>
+                </div>
+                <div class="col-xl-8"></div>
+                <div class="row">
+                    <div class="col-xl-9">
+                        <h4 class="mt-4 mb-4 ml-3"><strong>2 empresas cadastradas no total</strong></h4>
+                    </div>
+                    <div class="col-xl-3 text-right">
+                        <button id="deleteBtn" class="btn btn-dark"><strong>Ver todas</strong></button>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Razão Social</th>
+                                <th scope="col">CNPJ</th>
+                                <th scope="col">UF</th>
+                                <th scope="col">Filiais</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Certificado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>BOOKEEPERS LTDA.</strong></td>
+                                <td><strong>68.417.539/0001-84</strong></td>
+                                <td><strong>SP</strong></td>
+                                <td><strong>0</strong></td>
+                                <td><strong>contato@bkps.com.br</strong></td>
+                                <td><strong>Válido - Vence em <br> 20/12/2020 - 13:04:00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>BOOKEEPERS LTDA.</strong></td>
+                                <td><strong>68.417.539/0001-84</strong></td>
+                                <td><strong>SP</strong></td>
+                                <td><strong>0</strong></td>
+                                <td><strong>contato@bkps.com.br</strong></td>
+                                <td><strong>Válido - Vence em <br> 20/12/2020 - 13:04:00</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
         </main>
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid">
@@ -108,14 +160,18 @@
                 </div>
             </div>
         </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/chart-area-demo.js"></script>
-    <script src="assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/datatables-demo.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous">
+        </script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous">
+        </script>
+        <script src="assets/demo/datatables-demo.js"></script>
 </body>
+
 </html>

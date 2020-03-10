@@ -93,10 +93,10 @@
                 <div class="row">
                     <div class="col-xl-12 pt-3 pb-5">
                         <div class="btn-group btn-block" role="group" aria-label="Basic example">
-                            <a href="generalInfo.html" class="btn btn-lg btn-outline-dark">Informações gerais</a>
-                            <a href="index.html" class="btn btn-lg btn-outline-dark active"><strong>BKPS DF-e</strong></a>
-                            <a href="bkpsMessages.html" class="btn btn-lg btn-outline-dark">BKPS Messages</a>
-                            <a href="bkpsPerdComp.html" class="btn btn-lg btn-outline-dark">BKPS PerdComp</a>
+                            <a id="btnGnrlInf" href="generalInfo.html" class="btn btn-lg btn-outline-dark">Informações gerais</a>
+                            <a id="btnBksDfe" href="index.html" class="btn btn-lg btn-outline-dark active"><strong>BKPS DF-e</strong></a>
+                            <a id="btnMessages" href="bkpsMessages.html" class="btn btn-lg btn-outline-dark ">BKPS Messages</a>
+                            <a id="btnPerdComp" href="bkpsPerdComp.html" class="btn btn-lg btn-outline-dark">BKPS PerdComp</a>
                         </div>
                     </div>
                     <div class="col-xl-3 pb-5">
@@ -121,23 +121,35 @@
                     </div>
                     <div class="col-xl-4">
                         <div class="card bg-light mb-3">
-                            <div class=" card-body">
-                            <p class="card-title text-muted"><strong>AUTENTICADAS</strong></p>
-                            <h4 class="card-text"><strong>1.234</strong></h4>
+                            <div class="card-body">
+                            <div class="row">
+                            <p id="cardDfe" class="card-title text-muted"><strong>AUTENTICADAS</strong><h4 id="h4Dfe" class="text-left"><strong><br>1.234</strong></h4>
+                            </p>
+                            <div id="cardIcon" class="text-right">
+                                <img src="https://img.icons8.com/windows/80/000000/send-letter.png">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4">
                     <div class="card bg-light mb-3">
                         <div class="card-body">
-                            <p class="card-title text-muted"><strong>CANCELADAS</strong></p>
-                            <h4 class="card-text"><strong>1.234</strong></h4>
+                        <div class="row">
+                        <p id="cardDfe" class="card-title text-muted"><strong>CANCELADAS</strong><h4 id="h4Dfe" class="text-left"><strong><br>1.234</strong></h4>
+                        </p>
+                        <div id="cardIcon" class="text-right">
+                            <img src="https://img.icons8.com/windows/80/000000/low-importance.png">
+                            </div>
                         </div>
+
                     </div>
                 </div>
+            </div>
                 <div class="col-xl-4">
                     <div class="card bg-light mb-3">
-                        <div class="card-body">
+                        <div class="card-body pb-3 mb-3">
                             <p class="card-title text-muted"><strong>TOTAL DE NOTAS</strong></p>
                             <h4 class="card-text"><strong>80.945</strong></h4>
                         </div>
