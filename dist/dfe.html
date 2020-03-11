@@ -20,6 +20,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </head>
+
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
             <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
@@ -27,15 +28,74 @@
                 <div class="input-group">
                     <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
                     <span class="input-group-append">
-                    <button class="btn btn-outline-dark " type="button">
+                    <button class="btn btn-outline-dark" type="button">
                         <i class="fa fa-search"></i>
                     </button>
                 </span>
                 </div>
             </form>
             <div id="iconsNav">
-                <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted"></i></a>
-                <a href="#"><i class="far fa-bell fa-lg mr-3 text-muted"></i></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="far fa-bell fa-lg mr-3 text-muted"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="head text-light bg-dark">
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12 col-12">
+                                    <span>Notifications (3)</span>
+                                    <a href="" class="float-right text-light">Mark all as read</a>
+                                </div>
+                        </li>
+                        <li class="notification-box">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3 col-3 text-center">
+                                    <img src="/demo/man-profile.jpg" class="w-50 rounded-circle">
+                                </div>
+                                <div class="col-lg-8 col-sm-8 col-8">
+                                    <strong class="text-info">David John</strong>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                    </div>
+                                    <small class="text-warning">27.11.2015, 15:00</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="notification-box bg-gray">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3 col-3 text-center">
+                                    <img src="/demo/man-profile.jpg" class="w-50 rounded-circle">
+                                </div>
+                                <div class="col-lg-8 col-sm-8 col-8">
+                                    <strong class="text-info">David John</strong>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                    </div>
+                                    <small class="text-warning">27.11.2015, 15:00</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="notification-box">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-3 col-3 text-center">
+                                    <img src="/demo/man-profile.jpg" class="w-50 rounded-circle">
+                                </div>
+                                <div class="col-lg-8 col-sm-8 col-8">
+                                    <strong class="text-info">David John</strong>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                    </div>
+                                    <small class="text-warning">27.11.2015, 15:00</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="footer bg-dark text-center">
+                            <a href="" class="text-light">View All</a>
+                        </li>
+                    </ul>
+
+                    <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted"></i></a>
+                    </div>
             </div>
             <ul class="navbar-nav ml-auto ml-md-0">
                 <li class="nav-item dropdown">
@@ -55,32 +115,28 @@
                         <ul class="nav navbar-nav navbar-right ml-auto">
                             <a class="nav-link" href="#">
                                 <div class="d-flex justify-content-center">
-                                    <li class="nav-item active"><a href="index.html" class="nav-link"><i
-                                            class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
+                                    <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
                             </a>
                             </div>
                             <div class="sb-sidenav-menu">
                                 <ul class="nav navbar-nav navbar-right ml-auto text-center">
                                     <a class="nav-link" href="#">
                                         <div class="d-flex justify-content-center">
-                                            <li class="nav-item"><a href="installed.html" class="nav-link"><i
-                                            class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
+                                            <li class="nav-item"><a href="installed.html" class="nav-link"><i class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
                                     </a>
                                     </div>
                                     <div class="sb-sidenav-menu">
                                         <ul class="nav navbar-nav navbar-right ml-auto">
                                             <a class="nav-link" href="#">
                                                 <div class="d-flex justify-content-center">
-                                                    <li class="nav-item"><a href="#" class="nav-link"><i
-                                            class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
+                                                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
                                             </a>
                                             </div>
                                             <div class="sb-sidenav-menu">
                                                 <ul class="nav navbar-nav navbar-right ml-auto">
                                                     <a class="nav-link" href="settings.html">
                                                         <div class="d-flex justify-content-center">
-                                                            <li class="nav-item"><a href="settings.html" class="nav-link"><i
-                                            class="fas fa-user-cog"></i><span>Definições</span></a></li>
+                                                            <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fas fa-user-cog"></i><span>Definições</span></a></li>
                                                     </a>
                                                     </div>
                                                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
@@ -491,4 +547,5 @@
                     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
                     <script src="assets/demo/datatables-demo.js"></script>
     </body>
+
 </html>
