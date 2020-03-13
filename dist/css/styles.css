@@ -10417,7 +10417,10 @@ body {
 #searchMktInput {
     height: 50px;
 }
-
+#btnFilterLupa{
+    height: 20px;
+    margin-bottom: 4px;
+}
 #body {
     overflow: hidden;
 }
@@ -10428,7 +10431,7 @@ body {
 
 #btnFilter {
     width: 100px;
-    max-height: 60px;
+    max-height: 50px;
 }
 
 #btnFilter2 {
@@ -10686,67 +10689,32 @@ a :hover {
     line-height: 2.5;
 }
 
-body {
-    margin-top: 50px;
-    background-color: #f1f1f1;
-}
+  .dropdown-menu{
+      padding:0 0 0 0;
+  }
+  a.dropdown-menu-header {
+      background: #f7f9fe;
+      font-weight: bold;
+      border-bottom: 1px solid #e3e3e3;
+  }
+  .dropdown-menu > li a {
+      padding: 10px 20px;
+  }
+  #dropdrop{
+      min-width: 430px;
+      margin-top: 69px;
+      left: -389px;
 
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
-    background-color: #17A2B8;
-}
 
-.dropdown-menu {
-    top: 60px;
-    right: 0px;
-    left: unset;
-    width: 460px;
-    box-shadow: 0px 5px 7px -1px #c1c1c1;
-    padding-bottom: 0px;
-    padding: 0px;
-}
+  }
+  #dropCard{
+      margin-top: 20px;
+      margin-right: 35px;
+      margin-bottom: 10px;
+      height: 138px;
 
-.dropdown-menu:before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    right: 12px;
-    border: 10px solid #343A40;
-    border-color: transparent transparent #343A40 transparent;
-}
-
-.head {
-    padding: 5px 15px;
-    border-radius: 3px 3px 0px 0px;
-}
-
-.footer {
-    padding: 5px 15px;
-    border-radius: 0px 0px 3px 3px;
-}
-
-.notification-box {
-    padding: 10px 0px;
-}
-
-.bg-gray {
-    background-color: #eee;
-}
-
-@media (max-width: 640px) {
-    .dropdown-menu {
-        top: 50px;
-        left: -16px;
-        width: 290px;
-    }
-    .nav {
-        display: block;
-    }
-    .nav .nav-item,
-    .nav .nav-item a {
-        padding-left: 0px;
-    }
-    .message {
-        font-size: 13px;
-    }
-}
+  }
+  #btnNot{
+      max-width: 400px;
+      max-height: 80px;
+  }

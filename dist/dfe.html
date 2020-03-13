@@ -1,551 +1,577 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>BKPS</title>
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
-        </script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </head>
-
-    <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
-            <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
-            <form class="mx-auto col-xl-4">
-                <div class="input-group">
-                    <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
-                    <span class="input-group-append">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>BKPS</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
+        <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
+        <form class="mx-auto col-xl-4">
+            <div class="input-group">
+                <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
+                <span class="input-group-append">
                     <button class="btn btn-outline-dark" type="button">
                         <i class="fa fa-search"></i>
                     </button>
                 </span>
-                </div>
-            </form>
-            <div id="iconsNav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-bell fa-lg mr-3 text-muted"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="head text-light bg-dark">
-                            <div class="row">
-                                <div class="col-lg-12 col-sm-12 col-12">
-                                    <span>Notifications (3)</span>
-                                    <a href="" class="float-right text-light">Mark all as read</a>
-                                </div>
-                        </li>
-                        <li class="notification-box">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-3 col-3 text-center">
-                                    <img src="/demo/man-profile.jpg" class="w-50 rounded-circle">
-                                </div>
-                                <div class="col-lg-8 col-sm-8 col-8">
-                                    <strong class="text-info">David John</strong>
-                                    <div>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                    </div>
-                                    <small class="text-warning">27.11.2015, 15:00</small>
+            </div>
+        </form>
+        <div id="iconsNav">
+            <div class="dropdown dropleft" style="float: right; padding: 13px">
+                <a href="#" onclick="return false;" role="button" data-toggle="dropdown" id="dropdownMenu1" data-target="#" style="float: left" aria-expanded="true">
+                    <i class="far fa-bell fa-lg mr-3 text-muted"></i>
+                </a>
+                <ul id="dropdrop" class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                        <a href="#" class="dropdown-menu-header">
+                            <div id="btnNot" class="btn-group btn-block mx-auto" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-dark">Notificações</button>
+                            <button type="button" class="btn btn-outline-dark">Processamento</button>
+                            </div>
+                        </a>
+                    </li>
+                    <ul style="list-style-type: none; margin-left: -1px;margin-bottom: -11px;margin-top: -31px; padding-bottom: 10px;">
+                        <li>
+                            <div id="dropCard" class="card">
+                                <div class="card-body">
+                                    <small class="text-muted">04/03/2020</small>
+                                    <p><strong>BKPS Message - Workflow atualizado</strong>
+                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
                                 </div>
                             </div>
-                        </li>
-                        <li class="notification-box bg-gray">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-3 col-3 text-center">
-                                    <img src="/demo/man-profile.jpg" class="w-50 rounded-circle">
-                                </div>
-                                <div class="col-lg-8 col-sm-8 col-8">
-                                    <strong class="text-info">David John</strong>
-                                    <div>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                    </div>
-                                    <small class="text-warning">27.11.2015, 15:00</small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="notification-box">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-3 col-3 text-center">
-                                    <img src="/demo/man-profile.jpg" class="w-50 rounded-circle">
-                                </div>
-                                <div class="col-lg-8 col-sm-8 col-8">
-                                    <strong class="text-info">David John</strong>
-                                    <div>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                    </div>
-                                    <small class="text-warning">27.11.2015, 15:00</small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="footer bg-dark text-center">
-                            <a href="" class="text-light">View All</a>
                         </li>
                     </ul>
-
-                    <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted"></i></a>
-                    </div>
-            </div>
-            <ul class="navbar-nav ml-auto ml-md-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="login.html">Logout</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <ul class="nav navbar-nav navbar-right ml-auto">
-                            <a class="nav-link" href="#">
-                                <div class="d-flex justify-content-center">
-                                    <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
-                            </a>
+                    <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                        <li>
+                            <div id="dropCard" class="card">
+                                <div class="card-body">
+                                    <small class="text-muted">04/03/2020</small>
+                                    <p><strong>BKPS Message - Workflow atualizado</strong>
+                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                </div>
                             </div>
-                            <div class="sb-sidenav-menu">
-                                <ul class="nav navbar-nav navbar-right ml-auto text-center">
-                                    <a class="nav-link" href="#">
-                                        <div class="d-flex justify-content-center">
-                                            <li class="nav-item"><a href="installed.html" class="nav-link"><i class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
+                        </li>
+                    </ul>
+                    <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                        <li>
+                            <div id="dropCard" class="card">
+                                <div class="card-body">
+                                    <small class="text-muted">04/03/2020</small>
+                                    <p><strong>BKPS Message - Workflow atualizado</strong>
+                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                        <li>
+                            <div id="dropCard" class="card">
+                                <div class="card-body">
+                                    <small class="text-muted">04/03/2020</small>
+                                    <p><strong>BKPS Message - Workflow atualizado</strong>
+                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
+                </ul>
+            </div>
+            <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted" style="margin-top: 14px;"></i></a>
+        </div>
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+                        <a class="nav-link" href="#">
+                            <div class="d-flex justify-content-center">
+                                <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
+                            </a>
+                        </div>
+                        <div class="sb-sidenav-menu">
+                            <ul class="nav navbar-nav navbar-right ml-auto text-center">
+                                <a class="nav-link" href="#">
+                                    <div class="d-flex justify-content-center">
+                                        <li class="nav-item"><a href="installed.html" class="nav-link"><i class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
                                     </a>
-                                    </div>
-                                    <div class="sb-sidenav-menu">
-                                        <ul class="nav navbar-nav navbar-right ml-auto">
-                                            <a class="nav-link" href="#">
-                                                <div class="d-flex justify-content-center">
-                                                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
+                                </div>
+                                <div class="sb-sidenav-menu">
+                                    <ul class="nav navbar-nav navbar-right ml-auto">
+                                        <a class="nav-link" href="#">
+                                            <div class="d-flex justify-content-center">
+                                                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
                                             </a>
-                                            </div>
-                                            <div class="sb-sidenav-menu">
-                                                <ul class="nav navbar-nav navbar-right ml-auto">
-                                                    <a class="nav-link" href="settings.html">
-                                                        <div class="d-flex justify-content-center">
-                                                            <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fas fa-user-cog"></i><span>Definições</span></a></li>
+                                        </div>
+                                        <div class="sb-sidenav-menu">
+                                            <ul class="nav navbar-nav navbar-right ml-auto">
+                                                <a class="nav-link" href="settings.html">
+                                                    <div class="d-flex justify-content-center">
+                                                        <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fas fa-user-cog"></i><span>Definições</span></a></li>
                                                     </a>
-                                                    </div>
-                                                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                                    </div>
-                                                    <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
+                                                </div>
+                                                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion"></div>
+                                                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
                                                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
-                                                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                                                            </div>
+                                                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages"></div>
                                                         </nav>
                                                     </div>
+                                                </div>
                                             </div>
+                                        </nav>
                                     </div>
-                </nav>
-                </div>
-                <div id="layoutSidenav_content">
-                    <div class="container-fluid">
-                        <h3 class="mt-4 mb-5 pt-5"><a href="installed.html"><i class="fas fa-arrow-left"></i></a> <strong class="pl-2"> DF-e</strong></h3>
-                        <div class="container-fluid">
-                            <div class="col-xl-8 row">
-                                <div id="searchMkt" class="input-group pb-4">
-                                    <input id="searchMktInput" class="form-control" type="search" placeholder="Pesquisar por CNPJ, Chave de Acesso ou Número do Documento" aria-label="Search">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text" id="basic-text1">
-                                <button class="btn btn-sm"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
-                                    </div>
-                                    <button id="btnFilter" class="btn btn-dark ml-2">Filtros</button>
-                                </div>
-                            </div>
-                            <div id="filter">
-                                <div class="row">
-                                    <div class="col-xl-2 form-group">
-                                        <label for="inputEstabelecimento">Estabelecimento</label>
-                                        <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
-                                    </div>
-                                    <div class="col-xl-2 form-group">
-                                        <label for="inputParticipantes">Participantes</label>
-                                        <select id="inputParticipantes" class="form-control">
-                                <option selected>Todos</option>
-                                <option>Não.</option>
-                            </select>
-                                    </div>
-                                    <div class="col-xl-2 form-group">
-                                        <label for="inputDocumento">Tipo de documento</label>
-                                        <select id="inputDocumento" class="form-control">
-                                <option selected>NF-e</option>
-                                <option>Não.</option>
-                            </select>
-                                    </div>
-                                    <div class="col-xl-2 form-group">
-                                        <label for="inputValidade">Validade Jurídica</label>
-                                        <select id="inputValidade" class="form-control">
-                                <option selected>Todos</option>
-                                <option>Não.</option>
-                            </select>
-                                    </div>
-                                    <div class="col-xl-2 form-group">
-                                        <label for="inputEventos">Eventos</label>
-                                        <select id="inputEventos" class="form-control">
-                                <option selected>Cancelado</option>
-                                <option>Não.</option>
-                            </select>
-                                    </div>
-                                    <div class="col-xl-2 form-group">
-                                        <label for="inputOrigem">Origem</label>
-                                        <select id="inputOrigem" class="form-control">
-                                <option selected>UPLOAD</option>
-                                <option>Não.</option>
-                            </select>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xl-2 form-group">
-                                        <label for="inputEscriturado">Escriturado</label>
-                                        <select id="inputEscriturado" class="form-control">
-                                <option selected>Todos</option>
-                                <option>Não.</option>
-                            </select>
-                                    </div>
-                                    <div class="col-xl-2 form-group">
-                                        <label for="inputPeriodo">Tipo de Período</label>
-                                        <select id="inputPeriodo" class="form-control">
-                                <option selected>Emissão</option>
-                                <option>Não.</option>
-                            </select>
-                                    </div>
-                                    <div class="col-xl-2 form-group">
-                                        <label for="inputDataInicio">Data inicial</label>
-                                        <input type="date" id="inputDataInicio" class="form-control">
-                                    </div>
-                                    <div class="col-xl-2 form-group">
-                                        <label for="inputDataFinal">Data final</label>
-                                        <input type="date" id="inputDataFinal" class="form-control">
-                                    </div>
-                                    <div class="col-xl-4 my-auto text-right">
-                                        <button id="btnFilter2" class="btn btn-outline-dark">Limpar filtros</button>
-                                        <button id="btnFilter2" class="btn btn-dark ">Aplicar</button>
-                                    </div>
-                                </div>
-                                <strong>Este mês</strong>
-                                </button>
-                            </div>
-                            <div class="row mt-3">
-                                <button class="btn btn-dark ml-2" data-toggle="modal" data-target="#myModal"><strong>Upload de notas</strong></button>
-                                <button class="btn btn-dark ml-2 dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownDfe" aria-haspopup="true" aria-expanded="false"><strong>Manifestação</strong></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownDfe">
-                                    <p class="ml-3 mt-3"><strong>NFe</strong></p>
-                                    <div class="vl">
-                                        <p class="ml-2">Confirmação da Operação</p>
-                                        <p class="ml-2">Desconhecimento da Operação</p>
-                                        <p class="ml-2">Operação não realizada</p>
-                                    </div>
-                                    <p class="ml-3 mt-3"><strong>CTe</strong></p>
-                                    <div class="vl2">
-                                        <p class="ml-2">Prestação de serviço
-                                            <br> em desacordo</p>
-                                    </div>
-                                    <a class="dropdown-item mt-2" href="#"><button class="btn btn-dark"><strong>Manifestação em lote</strong></button></a>
-                                </div>
-                                <button class="btn btn-dark ml-2" data-toggle="modal" data-target="#myModal2"><strong>Processos em andamento</strong></button>
-                                <button class="btn btn-dark ml-2"><strong>Cruzamento</strong></button>
-                                <button class="btn btn-dark ml-2" data-toggle="modal" data-target="#myModal3"><strong>Pesquisa por chave</strong></button>
-                                <button class="btn btn-dark ml-2 disabled"><strong>Consultar status</strong></button>
-                                <button class="btn btn-dark ml-2 dropdown-toggle" type="button" data-toggle="dropdown" id="dropDownloadNotas" aria-haspopup="true" aria-expanded="false"><strong>Download de notas</strong></button>
-                                <div class="dropdown-menu" aria-labelledby="dropDownloadNotas">
-                                    <a class="dropdown-item mt-2" href="#">Danfe/DACTE (.pdf)</a>
-                                </div>
-                            </div>
-                            <div class="row pt-4">
-                                <p class="pt-2 pb-3 ml-4"><strong>Mostrando de 1 até 10 de 1312 registros.</strong></p>
-                                <button id="selectAll" class="btn btn-outline-dark ml-2 pl-2">Selecionar todas (1312)</button>
-                            </div>
-                            <div class="col-xl-12">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Eventos</th>
-                                            <th scope="col">Tipo</th>
-                                            <th scope="col">Número</th>
-                                            <th scope="col">Valor</th>
-                                            <th scope="col">Emitente</th>
-                                            <th scope="col">Destinatário</th>
-                                            <th scope="col">Chave</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                    <label class="custom-control-label" for="customCheck1"><a id="radioTable"
-                                                href="#">Ciência<br>da emissão</a></label>
-                                                </div>
-                                            </td>
+                                    <div id="layoutSidenav_content">
+                                        <div class="container-fluid">
+                                            <h3 class="mt-4 mb-5 pt-5"><a href="installed.html"><i class="fas fa-arrow-left"></i></a> <strong class="pl-2"> DF-e</strong></h3>
+                                            <div class="container-fluid">
+                                                <div class="col-xl-8 row">
+                                                    <div id="searchMkt" class="input-group pb-4">
+                                                        <input id="myInput" onkeyup="myFunction()" title="Type in a name" id="searchMktInput" class="form-control" type="search" placeholder="Pesquisar por CNPJ, Chave de Acesso ou Número do Documento" aria-label="Search">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text" id="basic-text1">
+                                                                <button id="btnFilterLupa" class="btn btn-sm"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                                                                </div>
+                                                                <button id="btnFilter" class="btn btn-dark ml-2">Filtros</button>
+                                                            </div>
+                                                        </div>
+                                                        <div id="filter">
+                                                            <div class="row">
+                                                                <div class="col-xl-2 form-group">
+                                                                    <label for="inputEstabelecimento">Estabelecimento</label>
+                                                                    <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
+                                                                </div>
+                                                                <div class="col-xl-2 form-group">
+                                                                    <label for="inputParticipantes">Participantes</label>
+                                                                    <select id="inputParticipantes" class="form-control">
+                                                                        <option selected>Todos</option>
+                                                                        <option>Não.</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-xl-2 form-group">
+                                                                    <label for="inputDocumento">Tipo de documento</label>
+                                                                    <select id="inputDocumento" class="form-control">
+                                                                        <option selected>NF-e</option>
+                                                                        <option>Não.</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-xl-2 form-group">
+                                                                    <label for="inputValidade">Validade Jurídica</label>
+                                                                    <select id="inputValidade" class="form-control">
+                                                                        <option selected>Todos</option>
+                                                                        <option>Não.</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-xl-2 form-group">
+                                                                    <label for="inputEventos">Eventos</label>
+                                                                    <select id="inputEventos" class="form-control">
+                                                                        <option selected>Cancelado</option>
+                                                                        <option>Não.</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-xl-2 form-group">
+                                                                    <label for="inputOrigem">Origem</label>
+                                                                    <select id="inputOrigem" class="form-control">
+                                                                        <option selected>UPLOAD</option>
+                                                                        <option>Não.</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-xl-2 form-group">
+                                                                    <label for="inputEscriturado">Escriturado</label>
+                                                                    <select id="inputEscriturado" class="form-control">
+                                                                        <option selected>Todos</option>
+                                                                        <option>Não.</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-xl-2 form-group">
+                                                                    <label for="inputPeriodo">Tipo de Período</label>
+                                                                    <select id="inputPeriodo" class="form-control">
+                                                                        <option selected>Emissão</option>
+                                                                        <option>Não.</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-xl-2 form-group">
+                                                                    <label for="inputDataInicio">Data inicial</label>
+                                                                    <input type="date" id="inputDataInicio" class="form-control">
+                                                                </div>
+                                                                <div class="col-xl-2 form-group">
+                                                                    <label for="inputDataFinal">Data final</label>
+                                                                    <input type="date" id="inputDataFinal" class="form-control">
+                                                                </div>
+                                                                <div class="col-xl-4 my-auto text-right">
+                                                                    <button id="btnFilter2" class="btn btn-outline-dark">Limpar filtros</button>
+                                                                    <button id="btnFilter2" class="btn btn-dark ">Aplicar</button>
+                                                                </div>
+                                                            </div>
+                                                            <strong>Este mês</strong>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <button class="btn btn-dark ml-2" data-toggle="modal" data-target="#myModal"><strong>Upload de notas</strong></button>
+                                                            <button class="btn btn-dark ml-2 dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownDfe" aria-haspopup="true" aria-expanded="false"><strong>Manifestação</strong></button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropdownDfe">
+                                                                <p class="ml-3 mt-3"><strong>NFe</strong></p>
+                                                                <div class="vl">
+                                                                    <p class="ml-2">Confirmação da Operação</p>
+                                                                    <p class="ml-2">Desconhecimento da Operação</p>
+                                                                    <p class="ml-2">Operação não realizada</p>
+                                                                </div>
+                                                                <p class="ml-3 mt-3"><strong>CTe</strong></p>
+                                                                <div class="vl2">
+                                                                    <p class="ml-2">Prestação de serviço<br> em desacordo</p>
+                                                                </div>
+                                                                <a class="dropdown-item mt-2" href="#"><button class="btn btn-dark"><strong>Manifestação em lote</strong></button></a>
+                                                            </div>
+                                                            <button class="btn btn-dark ml-2" data-toggle="modal" data-target="#myModal2"><strong>Processos em andamento</strong></button>
+                                                            <button class="btn btn-dark ml-2"><strong>Cruzamento</strong></button>
+                                                            <button class="btn btn-dark ml-2" data-toggle="modal" data-target="#myModal3"><strong>Pesquisa por chave</strong></button>
+                                                            <button class="btn btn-dark ml-2 disabled"><strong>Consultar status</strong></button>
+                                                            <button class="btn btn-dark ml-2 dropdown-toggle" type="button" data-toggle="dropdown" id="dropDownloadNotas" aria-haspopup="true" aria-expanded="false"><strong>Download de notas</strong></button>
+                                                            <div class="dropdown-menu" aria-labelledby="dropDownloadNotas">
+                                                                <a class="dropdown-item mt-2" href="#">Danfe/DACTE (.pdf)</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row pt-4">
+                                                            <p class="pt-2 pb-3 ml-4"><strong>Mostrando de 1 até 10 de 1312 registros.</strong></p>
+                                                            <button id="selectAll" type="checkbox" name="selectAll" class="btn btn-outline-dark ml-2 pl-2">Selecionar todas (1312)</button>
+                                                        </div>
+                                                        <div class="col-xl-12">
+                                                            <table id="myTable" class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Eventos</th>
+                                                                        <th scope="col">Tipo</th>
+                                                                        <th scope="col">Número</th>
+                                                                        <th scope="col">Valor</th>
+                                                                        <th scope="col">Emitente</th>
+                                                                        <th scope="col">Destinatário</th>
+                                                                        <th scope="col">Chave</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                                                <label class="custom-control-label" for="customCheck1"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                                                <label class="custom-control-label" for="customCheck2"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                                <label class="custom-control-label" for="customCheck3"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                                                <label class="custom-control-label" for="customCheck4"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                                                                <label class="custom-control-label" for="customCheck5"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                                                                <label class="custom-control-label" for="customCheck6"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                                                                <label class="custom-control-label" for="customCheck7"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                                                                <label class="custom-control-label" for="customCheck8"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                                                                <label class="custom-control-label" for="customCheck9"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                        </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                                                                <label class="custom-control-label" for="customCheck10"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck11">
+                                                                                <label class="custom-control-label" for="customCheck11"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck12">
+                                                                                <label class="custom-control-label" for="customCheck12"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>João da Silva
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" class="custom-control-input" id="customCheck13">
+                                                                                <label class="custom-control-label" for="customCheck12"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>NFSe</td>
+                                                                        <td>400.289.22</td>
+                                                                        <td>R$40,00</td>
+                                                                        <td>Toninho do diabo
+                                                                            <br> CNPJ: 40.028.922/6669-69</td>
+                                                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
+                                                                                <br> CNPJ: 13.131.313/1313-13
+                                                                            </td>
+                                                                            <td>12345678901234567890</td>
+                                                                    </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <footer class="py-4 bg-light mt-auto">
+                                                            <div class="container-fluid">
+                                                                <div class="d-flex align-items-center justify-content-between small">
+                                                                    <div class="text-muted">Copyright &copy; Your Website 2019</div>
+                                                                    <div>
+                                                                        <a href="#">Privacy Policy</a> &middot;<a href="#">Terms &amp; Conditions</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal fade" id="myModal">
+                                                                <div class="modal-dialog modal-lg">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h4 class="modal-title">Upload de notas</h4>
+                                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                        </div>
+                                                                        <div id="modalBg">
+                                                                            <div class="modal-body">
+                                                                                <p id="modalText">Você pode importar, individualmente ou em lote, arquivos de obrigações acessórias, respeitando os layouts oficiais, em extensão .txt e .xml ou compactados em extensão .zip.</p>
+                                                                                <div id="dragNdrop" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="modalImg" src="https://img.icons8.com/ios/30/999999/cloud.png">
+                                                                                    <p class="text-muted" id="dragTxt">Selecione ou arraste seu<br>arquivo aqui</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal fade" id="myModal2">
+                                                                <div class="modal-dialog modal-lg">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h4 class="modal-title">Processos em andamento</h4>
+                                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                        </div>
+                                                                        <div id="modalBg">
+                                                                            <div class="modal-body">
+                                                                                <p id="modalText"><strong>Não existe nenhum processo em andamento</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal fade" id="myModal3">
+                                                                <div class="modal-dialog modal-lg">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h4 class="modal-title"><strong>Pesquisa por chave</strong></h4>
+                                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                        </div>
+                                                                        <div id="modalBg">
+                                                                            <div class="modal-body">
+                                                                                <input class="ml-2 mr-3 mt-3" id="keyWordSearch" type="text" placeholder="Para consultar multiplas chaves de acesso, basta inserí-las separadas por ponto e vírgula ou uma por linha, <br> conforme o exemplo abaixo:<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;<br>ou<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;"></input>
+                                                                                <button id="keyWordSearchButton" class="btn btn-dark float-right" data-dismiss="modal"><strong>Pesquisar</strong></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </footer>
+                                                        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+                                                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+                                                        <script src="js/scripts.js"></script>
+                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+                                                        <script src="assets/demo/chart-area-demo.js"></script>
+                                                        <script src="assets/demo/chart-bar-demo.js"></script>
+                                                        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+                                                        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+                                                        <script src="assets/demo/datatables-demo.js"></script>
+                                                    </body>
 
-                                            <td>NFSe</td>
-                                            <td>400.289.22</td>
-                                            <td>R$40,00</td>
-                                            <td>José Adilson Rodrigues dos Santos
-                                                <br> CNPJ: 40.028.922/6669-69</td>
-                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
-                                                <br> CNPJ: 13.131.313/1313-13
-                                            </td>
-                                            <td>12345678901234567890</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                    <label class="custom-control-label" for="customCheck2"><a id="radioTable" href="#">Ciência<br>da emissão</a></label>
-                                                </div>
-                                            </td>
-
-                                            <td>NFSe</td>
-                                            <td>400.289.22</td>
-                                            <td>R$4,00</td>
-                                            <td>José Adilson Rodrigues dos Santos
-                                                <br> CNPJ: 40.028.922/6669-69</td>
-                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
-                                                <br> CNPJ: 13.131.313/1313-13
-                                            </td>
-                                            <td>12345678901234567890</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                                    <label class="custom-control-label" for="customCheck3"><a id="radioTable"
-                                                href="#">Ciência<br>da emissão</a></label>
-                                                </div>
-                                            </td>
-
-                                            <td>NFSe</td>
-                                            <td>400.289.22</td>
-                                            <td>R$2,00</td>
-                                            <td>José Adilson Rodrigues dos Santos
-                                                <br> CNPJ: 40.028.922/6669-69</td>
-                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
-                                                <br> CNPJ: 13.131.313/1313-13
-                                            </td>
-                                            <td>12345678901234567890</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                    <label class="custom-control-label" for="customCheck4"><a id="radioTable"
-                                                href="#">Ciência<br>da emissão</a></label>
-                                                </div>
-                                            </td>
-
-                                            <td>NFSe</td>
-                                            <td>400.289.22</td>
-                                            <td>R$0,00</td>
-                                            <td>José Adilson Rodrigues dos Santos
-                                                <br> CNPJ: 40.028.922/6669-69</td>
-                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
-                                                <br> CNPJ: 13.131.313/1313-13
-                                            </td>
-                                            <td>12345678901234567890</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                                    <label class="custom-control-label" for="customCheck5"><a id="radioTable"
-                                                href="#">Ciência<br>da emissão</a></label>
-                                                </div>
-                                            </td>
-
-                                            <td>NFSe</td>
-                                            <td>400.289.22</td>
-                                            <td>R$42,00</td>
-                                            <td>José Adilson Rodrigues dos Santos
-                                                <br> CNPJ: 40.028.922/6669-69</td>
-                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
-                                                <br> CNPJ: 13.131.313/1313-13
-                                            </td>
-                                            <td>12345678901234567890</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                                    <label class="custom-control-label" for="customCheck6"><a id="radioTable"
-                                                href="#">Ciência<br>da emissão</a></label>
-                                                </div>
-                                            </td>
-
-                                            <td>NFSe</td>
-                                            <td>400.289.22</td>
-                                            <td>R$40,00</td>
-                                            <td>José Adilson Rodrigues dos Santos
-                                                <br> CNPJ: 40.028.922/6669-69</td>
-                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
-                                                <br> CNPJ: 13.131.313/1313-13
-                                            </td>
-                                            <td>12345678901234567890</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                                    <label class="custom-control-label" for="customCheck7"><a id="radioTable"
-                                                href="#">Ciência<br>da emissão</a></label>
-                                                </div>
-                                            </td>
-
-                                            <td>NFSe</td>
-                                            <td>400.289.22</td>
-                                            <td>R$20,00</td>
-                                            <td>José Adilson Rodrigues dos Santos
-                                                <br> CNPJ: 40.028.922/6669-69</td>
-                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
-                                                <br> CNPJ: 13.131.313/1313-13
-                                            </td>
-                                            <td>12345678901234567890</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck8">
-                                                    <label class="custom-control-label" for="customCheck8"><a id="radioTable"
-                                                href="#">Ciência<br>da emissão</a></label>
-                                                </div>
-                                            </td>
-
-                                            <td>NFSe</td>
-                                            <td>400.289.22</td>
-                                            <td>R$40,00</td>
-                                            <td>José Adilson Rodrigues dos Santos
-                                                <br> CNPJ: 40.028.922/6669-69</td>
-                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
-                                                <br> CNPJ: 13.131.313/1313-13
-                                            </td>
-                                            <td>12345678901234567890</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck9">
-                                                    <label class="custom-control-label" for="customCheck9"><a id="radioTable"
-                                                href="#">Ciência<br>da emissão</a></label>
-                                                </div>
-                                            </td>
-
-                                            <td>NFSe</td>
-                                            <td>400.289.22</td>
-                                            <td>R$40,00</td>
-                                            <td>José Adilson Rodrigues dos Santos
-                                                <br> CNPJ: 40.028.922/6669-69</td>
-                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
-                                                <br> CNPJ: 13.131.313/1313-13
-                                            </td>
-                                            <td>12345678901234567890</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck10">
-                                                    <label class="custom-control-label" for="customCheck10"><a id="radioTable"
-                                                href="#">Ciência<br>da emissão</a></label>
-                                                </div>
-                                            </td>
-
-                                            <td>NFSe</td>
-                                            <td>400.289.22</td>
-                                            <td>R$40,00</td>
-                                            <td>José Adilson Rodrigues dos Santos
-                                                <br> CNPJ: 40.028.922/6669-69</td>
-                                            <td>PUGILISMO E AULAS DE DEVELOPMENT LTDA
-                                                <br> CNPJ: 13.131.313/1313-13
-                                            </td>
-                                            <td>12345678901234567890</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <footer class="py-4 bg-light mt-auto">
-                        <div class="container-fluid">
-                            <div class="d-flex align-items-center justify-content-between small">
-                                <div class="text-muted">Copyright &copy; Your Website 2019</div>
-                                <div>
-                                    <a href="#">Privacy Policy</a> &middot;<a href="#">Terms &amp; Conditions</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Upload de notas</h4>
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    </div>
-                                    <div id="modalBg">
-                                        <div class="modal-body">
-                                            <p id="modalText">Você pode importar, individualmente ou em lote, arquivos de obrigações acessórias, respeitando os layouts oficiais, em extensão .txt e .xml ou compactados em extensão .zip.</p>
-                                            <div id="dragNdrop" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="modalImg" src="https://img.icons8.com/ios/30/999999/cloud.png">
-                                                <p class="text-muted" id="dragTxt">Selecione ou arraste seu<br>arquivo aqui</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="myModal2">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Processos em andamento</h4>
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    </div>
-                                    <div id="modalBg">
-                                        <div class="modal-body">
-                                            <p id="modalText"><strong>Não existe nenhum processo em andamento</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="myModal3">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title"><strong>Pesquisa por chave</strong></h4>
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    </div>
-                                    <div id="modalBg">
-                                        <div class="modal-body">
-                                            <input class="ml-2 mr-3 mt-3" id="keyWordSearch" type="text" placeholder="Para consultar multiplas chaves de acesso, basta inserí-las separadas por ponto e vírgula ou uma por linha, <br> conforme o exemplo abaixo:<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;<br>ou<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;<br>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX;"></input>
-                                            <button id="keyWordSearchButton" class="btn btn-dark float-right" data-dismiss="modal"><strong>Pesquisar</strong></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-                    <script src="js/scripts.js"></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-                    <script src="assets/demo/chart-area-demo.js"></script>
-                    <script src="assets/demo/chart-bar-demo.js"></script>
-                    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-                    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-                    <script src="assets/demo/datatables-demo.js"></script>
-    </body>
-
-</html>
+                                                    </html>
