@@ -10417,10 +10417,12 @@ body {
 #searchMktInput {
     height: 50px;
 }
-#btnFilterLupa{
+
+#btnFilterLupa {
     height: 20px;
     margin-bottom: 4px;
 }
+
 #body {
     overflow: hidden;
 }
@@ -10689,32 +10691,46 @@ a :hover {
     line-height: 2.5;
 }
 
-  .dropdown-menu{
-      padding:0 0 0 0;
-  }
-  a.dropdown-menu-header {
-      background: #f7f9fe;
-      font-weight: bold;
-      border-bottom: 1px solid #e3e3e3;
-  }
-  .dropdown-menu > li a {
-      padding: 10px 20px;
-  }
-  #dropdrop{
-      min-width: 430px;
-      margin-top: 69px;
-      left: -389px;
+.dropdown-menu {
+    padding: 0 0 0 0;
+}
 
+a.dropdown-menu-header {
+    background: #f7f9fe;
+    font-weight: bold;
+    border-bottom: 1px solid #e3e3e3;
+}
 
-  }
-  #dropCard{
-      margin-top: 20px;
-      margin-right: 35px;
-      margin-bottom: 10px;
-      height: 138px;
+.dropdown-menu>li a {
+    padding: 10px 20px;
+}
 
-  }
-  #btnNot{
-      max-width: 400px;
-      max-height: 80px;
-  }
+#dropdrop {
+    min-width: 430px;
+    margin-top: 69px;
+    left: -389px;
+}
+
+#dropCard {
+    margin-top: 20px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    height: 138px;
+}
+
+#btnNot {
+    max-width: 400px;
+    max-height: 80px;
+}
+
+@media (max-width: 1024px) {
+    font-size: 0.8rem;
+}
+
+.calendar {
+    margin-top: 80px
+}
+
+body {
+    over flow: hidden;
+}

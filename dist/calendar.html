@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>BKPS</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    </head>
+
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
+            <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
+            <form class="mx-auto col-xl-6">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
+                    <span class="input-group-append">
+                    <button class="btn btn-outline-dark" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+                </div>
+            </form>
+            <div id="iconsNav">
+                <div class="dropdown dropleft" style="float: right; padding: 13px">
+                    <a href="#" onclick="return false;" role="button" data-toggle="dropdown" id="dropdownMenu1" data-target="#" style="float: left" aria-expanded="true">
+                        <i class="far fa-bell fa-lg mr-3 text-muted"></i>
+                    </a>
+                    <ul id="dropdrop" class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a href="#" class="dropdown-menu-header">
+                                <div id="btnNot" class="btn-group btn-block mx-auto" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-dark">Notificações</button>
+                                    <button type="button" class="btn btn-outline-dark">Processamento</button>
+                                </div>
+                            </a>
+                        </li>
+                        <ul style="list-style-type: none; margin-left: -1px;margin-bottom: -11px;margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
+                    </ul>
+                </div>
+                <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted" style="margin-top: 14px;"></i></a>
+            </div>
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <ul class="nav navbar-nav navbar-right ml-auto">
+                            <a class="nav-link" href="#">
+                                <div class="d-flex justify-content-center">
+                                    <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
+                            </a>
+                            </div>
+                            <div class="sb-sidenav-menu">
+                                <ul class="nav navbar-nav navbar-right ml-auto text-center">
+                                    <a class="nav-link" href="#">
+                                        <div class="d-flex justify-content-center">
+                                            <li class="nav-item"><a href="installed.html" class="nav-link"><i class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
+                                    </a>
+                                    </div>
+                                    <div class="sb-sidenav-menu">
+                                        <ul class="nav navbar-nav navbar-right ml-auto">
+                                            <a class="nav-link" href="#">
+                                                <div class="d-flex justify-content-center">
+                                                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
+                                            </a>
+                                            </div>
+                                            <div class="sb-sidenav-menu">
+                                                <ul class="nav navbar-nav navbar-right ml-auto">
+                                                    <a class="nav-link" href="settings.html">
+                                                        <div class="d-flex justify-content-center">
+                                                            <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fas fa-user-cog"></i><span>Definições</span></a></li>
+                                                    </a>
+                                                    </div>
+                                                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion"></div>
+                                                    <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
+                                                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages"></div>
+                                                        </nav>
+                                                    </div>
+                                            </div>
+                                    </div>
+                </nav>
+                </div>
+                <div id="layoutSidenav_content">
+                    <div class="container calendar">
+                        <div class="row">
+                            <div id="overview" class="col-sm-4 col-md-3">
+                                .SWDAEFRGTHYJUKILOÇPÕLIU
+                            </div>
+                            <div id="calendar" class="col-sm-8 col-md-9">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="calendar fc fc-ltr">
+                                            <table class="fc-header" style="width:100%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center pr-5 pb-3"> <span class="fc-header-title"> <h2>January 2014</h2>          </span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="fc-content" ; min-height: 1px; ">
+                                                <div class="fc-view fc-view-month fc-grid "  ; min-height: 1px;" unselectable="on">
+                                                <div style="position:absolute;z-index:8;top:0;left:0">
+                                                    <div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end ui-draggable" style="position: absolute; z-index: 8; left: 495px; top: 60px;" unselectable="on">
+                                                        <div class="fc-event-inner">
+
+                                                        </div>
+                                                        <div class="ui-resizable-handle ui-resizable-e">   </div>
+                                                    </div>
+                                                    <div class="fc-event fc-event-hori fc-event-draggable fc-event-start" style="position: absolute; z-index: 8; left: 804px; width: 304px; top: 352px;">
+                                                        <div class="fc-event-inner">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; z-index: 8; left: 306px; top: 265px;">
+                                                        <div class="fc-event-inner">
+                                                        </div>
+                                                        <div class="ui-resizable-handle ui-resizable-e">   </div>
+                                                    </div>
+                                                </div>
+                                                <table class="fc-border-separate" style="width:100%" cellspacing="0">
+                                                    <thead>
+                                                        <tr class="fc-first fc-last">
+                                                            <th class="fc-day-header fc-sun fc-widget-header fc-first" style="width: 158px;">Segunda</th>
+                                                            <th class="fc-day-header fc-mon fc-widget-header" style="width: 158px;">Terça</th>
+                                                            <th class="fc-day-header fc-tue fc-widget-header" style="width: 158px;">Quarta</th>
+                                                            <th class="fc-day-header fc-wed fc-widget-header" style="width: 158px;">Quinta</th>
+                                                            <th class="fc-day-header fc-thu fc-widget-header" style="width: 158px;">Sexta</th>
+                                                            <th class="fc-day-header fc-fri fc-widget-header" style="width: 158px;">Sábado</th>
+                                                            <th class="fc-day-header fc-sat fc-widget-header fc-last" style="width: 158px;">Domingo</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="fc-week fc-first">
+                                                            <td class="fc-day fc-sun fc-widget-content fc-other-month fc-first" data-date="2013-12-29">
+                                                                <div style="min-height: 80px;">
+                                                                    <div class="fc-day-number">29</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-mon fc-widget-content fc-other-month " data-date="2013-12-30 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">30</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 25px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-tue fc-widget-content fc-other-month" data-date="2013-12-31">
+                                                                <div>
+                                                                    <div class="fc-day-number">31</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-wed fc-widget-content " data-date="2014-01-01 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">1</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 25px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-thu fc-widget-content" data-date="2014-01-02">
+                                                                <div>
+                                                                    <div class="fc-day-number">2</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-fri fc-widget-content " data-date="2014-01-03 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">3</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 25px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-sat fc-widget-content fc-last" data-date="2014-01-04">
+                                                                <div>
+                                                                    <div class="fc-day-number">4</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fc-week ">
+                                                                <td class="fc-day fc-sun fc-widget-content fc-first " data-date="2014-01-05 ">
+                                                                    <div style="min-height: 80px; ">
+                                                                        <div class="fc-day-number ">5</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 0px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-mon fc-widget-content" data-date="2014-01-06">
+                                                                <div>
+                                                                    <div class="fc-day-number">6</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 0px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-tue fc-widget-content " data-date="2014-01-07 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">7</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 0px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-wed fc-widget-content" data-date="2014-01-08">
+                                                                <div>
+                                                                    <div class="fc-day-number">8</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 0px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-thu fc-widget-content " data-date="2014-01-09 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">9</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 0px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-fri fc-widget-content" data-date="2014-01-10">
+                                                                <div>
+                                                                    <div class="fc-day-number">10</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 0px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-sat fc-widget-content fc-last " data-date="2014-01-11 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">11</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 0px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="fc-week">
+                                                            <td class="fc-day fc-sun fc-widget-content fc-first" data-date="2014-01-12">
+                                                                <div style="min-height: 80px;">
+                                                                    <div class="fc-day-number">12</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-mon fc-widget-content " data-date="2014-01-13 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">13</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 25px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-tue fc-widget-content" data-date="2014-01-14">
+                                                                <div>
+                                                                    <div class="fc-day-number">14</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-wed fc-widget-content " data-date="2014-01-15 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">15</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 25px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-thu fc-widget-content" data-date="2014-01-16">
+                                                                <div>
+                                                                    <div class="fc-day-number">16</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-fri fc-widget-content " data-date="2014-01-17 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">17</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 25px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-sat fc-widget-content fc-last" data-date="2014-01-18">
+                                                                <div>
+                                                                    <div class="fc-day-number">18</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fc-week ">
+                                                                <td class="fc-day fc-sun fc-widget-content fc-first " data-date="2014-01-19 ">
+                                                                    <div style="min-height: 80px; ">
+                                                                        <div class="fc-day-number ">19</div>
+                                                                        <div class="fc-day-content ">
+                                                                             
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-mon fc-widget-content " data-date="2014-01-20 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">20</div>
+                                                                        <div class="fc-day-content ">
+                                                                             
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-tue fc-widget-content " data-date="2014-01-21 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">21</div>
+                                                                        <div class="fc-day-content ">
+                                                                             
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-wed fc-widget-content fc-today fc-state-highlight " data-date="2014-01-22 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">22</div>
+                                                                        <div class="fc-day-content ">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-thu fc-widget-content " data-date="2014-01-23 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">23</div>
+                                                                        <div class="fc-day-content ">
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-fri fc-widget-content " data-date="2014-01-24 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">24</div>
+                                                                        <div class="fc-day-content ">
+                                                                             
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-sat fc-widget-content fc-last " data-date="2014-01-25 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">25</div>
+                                                                        <div class="fc-day-content ">
+                                                                             
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="fc-week ">
+                                                                <td class="fc-day fc-sun fc-widget-content fc-first " data-date="2014-01-26 ">
+                                                                    <div style="min-height: 80px; ">
+                                                                        <div class="fc-day-number ">26</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 25px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-mon fc-widget-content" data-date="2014-01-27">
+                                                                <div>
+                                                                    <div class="fc-day-number">27</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-tue fc-widget-content " data-date="2014-01-28 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">28</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 25px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-wed fc-widget-content" data-date="2014-01-29">
+                                                                <div>
+                                                                    <div class="fc-day-number">29</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-thu fc-widget-content " data-date="2014-01-30 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">30</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 25px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-fri fc-widget-content" data-date="2014-01-31">
+                                                                <div>
+                                                                    <div class="fc-day-number">31</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 25px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-sat fc-widget-content fc-other-month fc-last " data-date="2014-02-01 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">1</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 25px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="fc-week fc-last">
+                                                            <td class="fc-day fc-sun fc-widget-content fc-other-month fc-first" data-date="2014-02-02">
+                                                                <div style="min-height: 80px;">
+                                                                    <div class="fc-day-number">2</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 0px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-mon fc-widget-content fc-other-month " data-date="2014-02-03 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">3</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 0px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-tue fc-widget-content fc-other-month" data-date="2014-02-04">
+                                                                <div>
+                                                                    <div class="fc-day-number">4</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 0px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-wed fc-widget-content fc-other-month " data-date="2014-02-05 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">5</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 0px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-thu fc-widget-content fc-other-month" data-date="2014-02-06">
+                                                                <div>
+                                                                    <div class="fc-day-number">6</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 0px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="fc-day fc-fri fc-widget-content fc-other-month " data-date="2014-02-07 ">
+                                                                    <div>
+                                                                        <div class="fc-day-number ">7</div>
+                                                                        <div class="fc-day-content ">
+                                                                            <div  ; height: 0px;"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="fc-day fc-sat fc-widget-content fc-other-month fc-last" data-date="2014-02-08">
+                                                                <div>
+                                                                    <div class="fc-day-number">8</div>
+                                                                    <div class="fc-day-content">
+                                                                        <div ; height: 0px; "> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade " id="unlockModal " tabindex="-1 " role="dialog " aria-labelledby="myModalLabel " aria-hidden="true ">
+                        <div class="modal-dialog ">
+                            <div class="modal-content ">
+                                <div class="modal-header ">
+                                    <button type="button " class="close " data-dismiss="modal " aria-hidden="true ">×</button>
+                                    <h4 class="modal-title " id="myModalLabel "><i class="fa fa-fw fa-unlock "></i> Unlock Calendar</h4>
+
+                                </div>
+                                <div class="modal-body ">
+                                    <p class="h3 text-center text-primary "><i class="fa fa-thumbs-up "></i> Woop!</p>
+                                    <p class="lead text-center ">Here's what happens when you unlock your calendar:</p>
+                                    <hr>
+                                    <div class="row ">
+                                        <div class="col-xs-1 "> <i class="fa fa-fw fa-thumbs-up text-primary "></i>
+
+                                        </div>
+                                        <div class="col-xs-11 ">You'll instantly get access to all <strong class="text-primary ">67 shared assignments</strong> on your calendar.</div>
+                                        <div class="col-xs-1 "> <i class="fa fa-fw fa-thumbs-up text-primary "></i>
+
+                                        </div>
+                                        <div class="col-xs-11 ">You'll be <strong>notified</strong> whenever a shared assignment is <strong>updated or edited</strong> throughout the semester.</div>
+                                        <div class="col-xs-1 "> <i class="fa fa-fw fa-thumbs-up text-primary "></i>
+
+                                        </div>
+                                        <div class="col-xs-11 ">You'll be able to <strong>share your own calendar assignments</strong> with your class, which means you can start making money instantly.</div>
+                                        <div class="col-xs-1 "> <i class="fa fa-fw fa-thumbs-up text-primary "></i>
+
+                                        </div>
+                                        <div class="col-xs-11 ">You'll gain access to special features of mchp, such as <strong>calendar integration</strong> in your College Pulse and in each of your class's activity sections.</div>
+                                    </div>
+                                    <hr>
+                                    <div class="panel panel-default ">
+                                        <!-- Default panel contents -->
+                                        <!-- Table -->
+                                        <table class="table table-hover ">
+                                            <thead>
+                                                <tr>
+                                                    <th>Class Name</th>
+                                                    <th># of Assignments</th>
+                                                    <th>Unlock</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><i class="fa fa-book "></i> ECON 200</td>
+                                                    <td><strong class="text-primary "><i class="fa fa-calendar "></i> 15 now</strong> + all future</td>
+                                                    <td><i class="fa fa-check-circle text-success "> yes</i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-book "></i> ACCT 210</td>
+                                                    <td><strong class="text-primary "><i class="fa fa-calendar "></i> 22 now</strong> + all future</td>
+                                                    <td><i class="fa fa-check-circle text-success "> yes</i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-book "></i> MGMT 310</td>
+                                                    <td><strong class="text-primary "><i class="fa fa-calendar "></i> 30 now</strong> + all future</td>
+                                                    <td> <i class="fa fa-check-circle text-success "> yes</i>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="panel-footer text-center ">You're unlocking: <strong>3 classes</strong> for <strong>300 points</strong>
+                                        </div>
+                                    </div>
+                                    <!-- Begin Carousel -- <div id="carousel-example-generic " class="carousel slide ">
+                                      
+                      <!-- Indicators 
+                      <ol class="carousel-indicators ">
+                        <li data-target="#carousel-example-generic " data-slide-to="0 " class="active "></li>
+                        <li data-target="#carousel-example-generic " data-slide-to="1 "></li>
+                        <li data-target="#carousel-example-generic " data-slide-to="2 "></li>
+                      </ol>-->
+                                    <!-- Wrapper for slides -- <div class="carousel-inner ">
+                        <div class="item ">
+                            <div class="custom-content ">
+                          <div class="media ">
+                      <a class="pull-left " href="# ">
+                        <img class="media-object " src="https://s3-us-west-2.amazonaws.com/mchpstatic/calendar.svg " alt="... ">
+                      </a>
+                      <div class="media-body ">
+                        <h4 class="media-heading ">Poop Assignments</h4>
+                        <p>Any assignment shared by any of your classmates will be visible to you, and you'll get the option to add it to your own calendar. This includes any assignment that is updated or edited throughout the semester.</p>
+                      </div>
+                    </div>
+                                </div>
+                          
+                        </div>
+                        
+                      </div>
+                                      
+                                      
+                                      <div class="carousel-inner ">
+                        <div class="item ">
+                            <div class="custom-content ">
+                          <div class="media ">
+                      <a class="pull-left " href="# ">
+                        <img class="media-object " src="https://s3-us-west-2.amazonaws.com/mchpstatic/calendar.svg " alt="... ">
+                      </a>
+                      <div class="media-body ">
+                        <h4 class="media-heading ">Poop Assignments</h4>
+                        <p>Any assignment shared by any of your classmates will be visible to you, and you'll get the option to add it to your own calendar. This includes any assignment that is updated or edited throughout the semester.</p>
+                      </div>
+                    </div>
+                                </div>
+                          
+                        </div>
+                        
+                      </div>
+                                      
+                                      
+                      <div class="carousel-inner ">
+                        <div class="item active ">
+                            <div class="custom-content ">
+                          <div class="media ">
+                      <a class="pull-left " href="# ">
+                        <img class="media-object " src="https://s3-us-west-2.amazonaws.com/mchpstatic/calendar.svg " alt="... ">
+                      </a>
+                      <div class="media-body ">
+                        <h4 class="media-heading ">Shared Assignments</h4>
+                        <p>Any assignment shared by any of your classmates will be visible to you, and you'll get the option to add it to your own calendar. This includes any assignment that is updated or edited throughout the semester.</p>
+                      </div>
+                    </div>
+                                </div>
+                          
+                        </div>
+                        
+                      </div>
+                          
+                          
+                    
+                    
+                      <!-- Controls ----!>
+                        <p class="pull-right ">
+                            <a class=" " href="#carousel-example-generic " data-slide="prev "><i class="fa fa-hand-o-left fa-lg "></i></a> 
+                            <a class=" " href="#carousel-example-generic " data-slide="next "><i class="fa fa-hand-o-right fa-lg "></i></a> 
+                            
+                        </p>    
+                    </div>
+                                          
+                                  <!-- End Carousel --></div>
+                                <div class="modal-footer ">
+                                    <button type="button " class="btn btn-default " data-dismiss="modal ">Close</button>
+                                    <button type="button " class="btn btn-success ">Unlock!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Modal -->
+    </body>
+    </div>
+    </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous "></script>
+    <script src="js/scripts.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js " crossorigin="anonymous "></script>
+    <script src="assets/demo/chart-area-demo.js "></script>
+    <script src="assets/demo/chart-bar-demo.js "></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js " crossorigin="anonymous "></script>
+    <script src="assets/demo/datatables-demo.js "></script>
+    </body>
+
+</html>
