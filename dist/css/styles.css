@@ -10734,3 +10734,20 @@ a.dropdown-menu-header {
 body {
     over flow: hidden;
 }
+
+.vel {
+    border-right: 1px solid rgba(211, 211, 211, 0.842);
+    height: 1110px;
+}
+
+#calendarr {
+    box-shadow: 10px 10px 5px grey;
+}
+
+#layoutSidenav_nav {
+    max-width: 170px;
+}
+
+.sb-topnav {
+    min-height: 70px;
+}
