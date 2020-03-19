@@ -53,7 +53,6 @@
 
 html {
     font-family: sans-serif;
-    line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -76,7 +75,6 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5;
     color: #212529;
     text-align: left;
     background-color: #fff;
@@ -10213,11 +10211,6 @@ body {
     max-width: 20rem;
 }
 
-.nav .nav-link .sb-nav-link-icon,
-.sb-sidenav-menu .nav-link .sb-nav-link-icon {
-    margin-right: 0.5rem;
-}
-
 .sb-topnav {
     padding-left: 0;
     height: 56px;
@@ -10270,8 +10263,8 @@ body {
     position: relative;
 }
 
-.sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
-    font-size: 0.9rem;
+.sb-sidenav-menu {
+    overflow: !important hidden;
 }
 
 .sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-sidenav-collapse-arrow {
@@ -10307,10 +10300,6 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
-    color: rgba(255, 255, 255, 0.25);
-}
-
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
     color: rgba(255, 255, 255, 0.25);
 }
@@ -10320,10 +10309,6 @@ body {
 }
 
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
-    color: #fff;
-}
-
-.sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
     color: #fff;
 }
 
@@ -10340,28 +10325,8 @@ body {
     color: #adb5bd;
 }
 
-.sb-sidenav-light .sb-sidenav-menu .nav-link {
-    color: #212529;
-}
-
-.sb-sidenav-light .sb-sidenav-menu .nav-link .sb-nav-link-icon {
-    color: #adb5bd;
-}
-
 .sb-sidenav-light .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
     color: #adb5bd;
-}
-
-.sb-sidenav-light .sb-sidenav-menu .nav-link:hover {
-    color: #007bff;
-}
-
-.sb-sidenav-light .sb-sidenav-menu .nav-link.active {
-    color: #007bff;
-}
-
-.sb-sidenav-light .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
-    color: #007bff;
 }
 
 .sb-sidenav-light .sb-sidenav-footer {
