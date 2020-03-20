@@ -10646,6 +10646,9 @@ a.dropdown-menu-header {
     margin-right: 39px;
     left: -389px;
     max-height: 400px;
+    margin-left: 39px;
+    left: -327px;
+    right: -10.333px;
 }
 
 #dropCard {
