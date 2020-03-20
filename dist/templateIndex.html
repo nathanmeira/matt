@@ -11,6 +11,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     </head>
 
     <body class="sb-nav">
@@ -25,6 +26,28 @@
                 </span>
                 </div>
             </form>
+            <script>
+                $(window).on("load", function() {
+                    $(window).scroll(function() {
+                        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+                        $(".fade").each(function() {
+                            /* Check the location of each desired element */
+                            var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+                            /* If the element is completely within bounds of the window, fade it in */
+                            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                                if ($(this).css("opacity") == 0) {
+                                    $(this).fadeTo(500, 1);
+                                }
+                            } else { //object goes out of view (scrolling up)
+                                if ($(this).css("opacity") == 1) {
+                                    $(this).fadeTo(500, 0);
+                                }
+                            }
+                        });
+                    }).scroll(); //invoke scroll-handler on page-load
+                });
+            </script>
             <div id="iconsNav">
                 <div class="dropdown dropleft" style="float: right; padding: 13px">
                     <a href="#" onclick="return false;" role="button" data-toggle="dropdown" data-target="#" style="float: left" aria-expanded="true">
@@ -41,7 +64,7 @@
                         </li>
                         <div class="notificationScroll">
                             <ul class="notificationList">
-                                <li>
+                                <li class="fade">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -52,7 +75,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li>
+                                <li class="fade">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -63,7 +86,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li>
+                                <li class="fade">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -74,8 +97,8 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li>
-                                    <div id="dropCard" class="card mx-auto">
+                                <li class="fade">
+                                    <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
                                             <p><strong>BKPS Message - Workflow atualizado</strong>
@@ -83,9 +106,10 @@
                                         </div>
                                     </div>
                                 </li>
+
+                                <button id="btnNotification" class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
                             </ul>
                         </div>
-                        <button id="btnNotification" class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
                     </ul>
                 </div>
                 <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted" style="margin-top: 14px;"></i></a>

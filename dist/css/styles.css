@@ -10742,11 +10742,10 @@ a.dropdown-menu-header {
     padding-left: 3px;
 }
 
-#btnNotification {
+#btnNotif ication {
     max-width: 250px;
     max-height: 30px;
     margin-left: 33px;
-    margin-bottom: 5px;
     text-align: center;
 }
 
@@ -10754,4 +10753,16 @@ a.dropdown-menu-header {
     overflow-y: scroll;
     overflow-x: hidden;
     max-height: 280px;
+}
+
+.fadeNotification {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    opacity: 1;
+}
+
+.fade {
+    background-color: lightgreen;
+    opacity: 1;
 }
