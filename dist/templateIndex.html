@@ -21,7 +21,7 @@
                 <div class="input-group w-100">
                     <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
                     <span class="input-group-append">
-                    <button class="btn btn-light" type="button"> <i class="fa fa-search"></i></button>
+                    <button class="btn btn-outline-secondary" type="button"> <i class="fa fa-search"></i></button>
                 </span>
                 </div>
             </form>
@@ -32,14 +32,14 @@
                     </a>
                     <ul id="dropdrop" class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
                         <li role="presentation">
-                            <a href="#" class="dropdown-menu-header">
-                                <div id="btnNot" class="btn-group btn-block mx-auto" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-dark">Notificações</button>
-                                    <button type="button" class="btn btn-outline-dark">Processamento</button>
+                            <a href="#">
+                                <div id="btnNot" class="btn-group btn-block" role="group" aria-label="Basic example">
+                                    <button type="button" style="margin-left:-20px" class="btn btn-dark">Notificações</button>
+                                    <button type="button" style="margin-right: 20px" class="btn btn-outline-dark">Processamento</button>
                                 </div>
                             </a>
                         </li>
-                        <ul style="list-style-type: none; margin-left: -1px;margin-bottom: -11px;margin-top: -31px; padding-bottom: 10px;">
+                        <ul class="notificationList">
                             <li>
                                 <div id="dropCard" class="card">
                                     <div class="card-body">
@@ -50,7 +50,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                        <ul class="notificationList">
                             <li>
                                 <div id="dropCard" class="card">
                                     <div class="card-body">
@@ -61,7 +61,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                        <ul class="notificationList">
                             <li>
                                 <div id="dropCard" class="card">
                                     <div class="card-body">
@@ -72,7 +72,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                        <ul class="notificationList">
                             <li>
                                 <div id="dropCard" class="card">
                                     <div class="card-body">
@@ -83,7 +83,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <button class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
+                        <button id="btnNotification" class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
                     </ul>
                 </div>
                 <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted" style="margin-top: 14px;"></i></a>
@@ -140,7 +140,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h3 class="mt-4 mb-3 pt-5"><strong>Dashboard</strong></h3>
+                        <h3 class="mt-4 mb-3"><strong>Dashboard</strong></h3>
                         <div class="row">
                             <div class="col-xl-12 pt-3 pb-5">
                                 <div class="btn-group d-flex" role="group">

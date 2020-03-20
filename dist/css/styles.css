@@ -3311,17 +3311,6 @@ input[type=button].btn-block {
     margin-bottom: 0.125rem;
 }
 
-.dropup .dropdown-toggle::after {
-    display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0.3em solid;
-    border-left: 0.3em solid transparent;
-}
-
 .dropup .dropdown-toggle:empty::after {
     margin-left: 0;
 }
@@ -9603,6 +9592,12 @@ button.bg-dark:focus {
     .py-xl-3 {
         padding-bottom: 1rem !important;
     }
+    p {
+        margin-bottom: 0;
+    }
+    .card-body {
+        margin-top: -10px;
+    }
     .pl-xl-3,
     .px-xl-3 {
         padding-left: 1rem !important;
@@ -10651,15 +10646,17 @@ a.dropdown-menu-header {
 }
 
 #dropCard {
-    margin-top: 20px;
+    font-size: 13px;
+    margin-top: 10px;
     margin-right: 35px;
     margin-bottom: 10px;
-    height: 138px;
+    height: 90px;
 }
 
 #btnNot {
-    max-width: 400px;
-    max-height: 80px;
+    max-width: 430px;
+    max-height: 50px;
+    margin-right: 100px;
 }
 
 @media (max-width: 1024px) {
@@ -10735,4 +10732,14 @@ a.dropdown-menu-header {
 .navButtonContent {
     display: block;
     text-align: center;
+}
+
+.notificationList {
+    list-style-type: none;
+}
+
+#btnNotification {
+    max-width: 300px;
+    margin-left: 69px;
+    margin-bottom: 10px;
 }
