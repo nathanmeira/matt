@@ -10639,18 +10639,21 @@ a.dropdown-menu-header {
     padding: 10px 20px;
 }
 
-#dropdrop {
-    min-width: 430px;
+#dropNotifications {
+    max-width: 360px;
     margin-top: 69px;
+    margin-left: 39px;
+    margin-right: 39px;
     left: -389px;
+    max-height: 400px;
 }
 
 #dropCard {
     font-size: 13px;
     margin-top: 10px;
-    margin-right: 35px;
     margin-bottom: 10px;
     height: 90px;
+    width: 350px;
 }
 
 #btnNot {
@@ -10736,10 +10739,19 @@ a.dropdown-menu-header {
 
 .notificationList {
     list-style-type: none;
+    padding-left: 3px;
 }
 
 #btnNotification {
-    max-width: 300px;
-    margin-left: 69px;
-    margin-bottom: 10px;
+    max-width: 250px;
+    max-height: 30px;
+    margin-left: 33px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.notificationScroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 280px;
 }
