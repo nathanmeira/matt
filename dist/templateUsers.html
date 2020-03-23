@@ -11,79 +11,85 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     </head>
 
-    <body class="sb-nav-fixed">
+    <body class="sb-nav">
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
-            <a class="navbar-brand" href="index.html"><img src="dist\img\bkps.png"></a>
+            <a class="navbar-brand" href="index.html">BKPS Platform</a>
             <!-- Navbar Search-->
             <form class="mx-auto col-xl-4">
                 <div class="input-group w-100">
                     <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
                     <span class="input-group-append">
-                    <button class="btn btn-light" type="button"> <i class="fa fa-search"></i></button>
+                    <button class="btn btn-outline-secondary" type="button"> <i class="fa fa-search"></i></button>
                 </span>
                 </div>
             </form>
+
+
             <div id="iconsNav">
                 <div class="dropdown dropleft" style="float: right; padding: 13px">
-                    <a href="#" onclick="return false;" role="button" data-toggle="dropdown" id="dropdownMenu1" data-target="#" style="float: left" aria-expanded="true">
+                    <a href="#" onclick="return false;" role="button" data-toggle="dropdown" data-target="#" style="float: left" aria-expanded="true">
                         <i class="far fa-bell fa-lg mr-3 text-muted"></i>
                     </a>
-                    <ul id="dropdrop" class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation">
-                            <a href="#" class="dropdown-menu-header">
-                                <div id="btnNot" class="btn-group btn-block mx-auto" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-dark">Notificações</button>
-                                    <button type="button" class="btn btn-outline-dark">Processamento</button>
+                    <ul id="dropNotifications" class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li role="presentation" style="margin-bottom: -20px;">
+                            <a href="#">
+                                <div id="btnNot" class="btn-group btn-block" role="group" aria-label="Basic example">
+                                    <button type="button" style="margin-left:-20px" class="btn btn-dark">Notificações</button>
+                                    <button type="button" style="margin-right: 20px" class="btn btn-outline-dark">Processamento</button>
                                 </div>
                             </a>
                         </li>
-                        <ul style="list-style-type: none; margin-left: -1px;margin-bottom: -11px;margin-top: -31px; padding-bottom: 10px;">
-                            <li>
-                                <div id="dropCard" class="card">
-                                    <div class="card-body">
-                                        <small class="text-muted">04/03/2020</small>
-                                        <p><strong>BKPS Message - Workflow atualizado</strong>
-                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                        <div class="notificationScroll">
+                            <ul class="notificationList">
+                                <li class=".">
+                                    <div id="dropCard" class="card">
+                                        <div class="card-body">
+                                            <small class="text-muted">04/03/2020</small>
+                                            <p><strong>BKPS Message - Workflow atualizado</strong>
+                                                <br><small>Este workflow foi atualizado por<br> <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
-                            <li>
-                                <div id="dropCard" class="card">
-                                    <div class="card-body">
-                                        <small class="text-muted">04/03/2020</small>
-                                        <p><strong>BKPS Message - Workflow atualizado</strong>
-                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                </li>
+                            </ul>
+                            <ul class="notificationList">
+                                <li class=".">
+                                    <div id="dropCard" class="card">
+                                        <div class="card-body">
+                                            <small class="text-muted">04/03/2020</small>
+                                            <p><strong>BKPS Message - Workflow atualizado</strong>
+                                                <br><small>Este workflow foi atualizado por<br> <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
-                            <li>
-                                <div id="dropCard" class="card">
-                                    <div class="card-body">
-                                        <small class="text-muted">04/03/2020</small>
-                                        <p><strong>BKPS Message - Workflow atualizado</strong>
-                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                </li>
+                            </ul>
+                            <ul class="notificationList">
+                                <li class=".">
+                                    <div id="dropCard" class="card">
+                                        <div class="card-body">
+                                            <small class="text-muted">04/03/2020</small>
+                                            <p><strong>BKPS Message - Workflow atualizado</strong>
+                                                <br><small>Este workflow foi atualizado por<br> <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
-                            <li>
-                                <div id="dropCard" class="card">
-                                    <div class="card-body">
-                                        <small class="text-muted">04/03/2020</small>
-                                        <p><strong>BKPS Message - Workflow atualizado</strong>
-                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                </li>
+                            </ul>
+                            <ul class="notificationList">
+                                <li class=".">
+                                    <div id="dropCard" class="card">
+                                        <div class="card-body">
+                                            <small class="text-muted">04/03/2020</small>
+                                            <p><strong>BKPS Message - Workflow atualizado</strong>
+                                                <br><small>Este workflow foi atualizado por<br> <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <button class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="btnNotification" class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
+
                     </ul>
                 </div>
                 <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted" style="margin-top: 14px;"></i></a>
@@ -105,22 +111,34 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link" href="templateIndex.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                <p class="text-center">Home</p>
-                            </a>
-                            <a class="nav-link" href="templateIndex.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-store"></i></div>
-                                <p class="text-center">Apps e<br>Marketplace
-                            </a>
-                            <a class="nav-link" href="templateIndex.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
-                                <p class="text-center">Calendário</p>
-                            </a>
-                            <a class="nav-link" href="templateIndex.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-cog"></i></div>
-                                <p class="text-center">Definições</p>
-                            </a>
+                            <div id="sidebarPrimary">
+                                <ul id="sidebarPrimaryNav">
+                                    <li class="navButton">
+                                        <a href="templateIndex.html">
+                                            <div class="navButtonContent"><i class="fas fa-tachometer-alt"></i><br>Home
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="navButton">
+                                        <a href="templateIndex.html">
+                                            <div class="navButtonContent"><i class="fas fa-store"></i><br>Apps e<br> Marketplace
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="navButton">
+                                        <a href="templateIndex.html">
+                                            <div class="navButtonContent"><i class="fas fa-calendar-alt"></i><br>Calendário
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="navButton">
+                                        <a href="templateIndex.html">
+                                            <div class="navButtonContent"><i class="fas fa-user-cog"></i><br>Definições
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -128,20 +146,20 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h3 class="mt-4 mb-3 pt-5"><strong>Dashboard</strong></h3>
+                        <h3 class="mt-4 mb-3"><strong>Dashboard</strong></h3>
                         <div class="row">
                             <div class="col-xl-12 pt-3 pb-5">
                                 <div class="btn-group d-flex" role="group">
                                     <a href="templateIndex.html" class="pt-4 btn btn-outline-dark active w-100"><strong>Informações gerais</strong></a>
-                                    <a href="#" class="pt-4 btn btn-outline-dark w-100">BKPS DF-e</a>
-                                    <a href="#" class="pt-4 btn btn-outline-dark w-100">BKPS Messages</a>
-                                    <a href="#" class="pt-4 btn btn-outline-dark w-100">BKPS PerdComp</a>
+                                    <a href="templateDfe.html" class="pt-4 btn btn-outline-dark w-100">BKPS DF-e</a>
+                                    <a href="templateMessages" class="pt-4 btn btn-outline-dark w-100">BKPS Messages</a>
+                                    <a href="templatePerdComp" class="pt-4 btn btn-outline-dark w-100">BKPS PerdComp</a>
                                 </div>
                             </div>
                         </div>
                         <div class="row col-xl-6 btn-group d-flex" role="group">
-                            <a href="templateCompanies.html" class="pt-4 btn btn-dark active"><strong>Empresas</strong></a>
-                            <a href="templateUsers.html" class="pt-4 btn btn-outline-dark"><strong>Usuários</strong></a>
+                            <a href="templateIndex.html" class="pt-4 btn btn-outline-dark "><strong>Empresas</strong></a>
+                            <a href="templateUsers.html" class="pt-4 btn btn-dark active"><strong>Usuários</strong></a>
                             <a href="templateActions.html" class="pt-4 btn btn-outline-dark"><strong>Últimas ações</strong></a>
                         </div>
                         <div class="row">
@@ -164,9 +182,19 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><strong>BOOKEEPERS LTDA.</strong></td>
-                                        <td><strong>68.417.539/0001-84</strong></td>
-                                        <td><strong>SP</strong></td>
+                                        <td><strong>Matheus Meira</strong></td>
+                                        <td><strong>matheus@bkps.com.br</strong></td>
+                                        <td><strong>Administrador</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Matheus Meira</strong></td>
+                                        <td><strong>matheus@bkps.com.br</strong></td>
+                                        <td><strong>Administrador</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Matheus Meira</strong></td>
+                                        <td><strong>matheus@bkps.com.br</strong></td>
+                                        <td><strong>Administrador</strong></td>
                                     </tr>
                                 </tbody>
                             </table>

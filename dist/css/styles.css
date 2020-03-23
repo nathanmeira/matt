@@ -10400,18 +10400,6 @@ body {
     background-color: rgba(174, 170, 184, 0.459)
 }
 
-#myModal {
-    margin-top: 250px;
-}
-
-#myModal2 {
-    margin-top: 250px;
-}
-
-#myModal3 {
-    margin-top: 250px;
-}
-
 #dragNdrop {
     width: 350px;
     height: 140px;
@@ -10588,20 +10576,6 @@ a {
     border-left-style: solid;
 }
 
-#h4Dfe {
-    margin-top: 9px;
-    margin-right: 180px;
-    padding-right: 13px;
-    padding-left: -22px;
-    border-left-width: 0px;
-    border-left-style: solid;
-    margin-left: -102px;
-    border-bottom-width: 0px;
-    border-bottom-style: solid;
-    border-right-width: 0px;
-    border-right-style: solid;
-}
-
 #btnGnrlInf {
     line-height: 2.5;
     letter-spacing: 0em;
@@ -10656,7 +10630,7 @@ a.dropdown-menu-header {
     margin-top: 10px;
     margin-bottom: 10px;
     height: 90px;
-    width: 350px;
+    width: 310px;
 }
 
 #btnNot {
@@ -10745,7 +10719,7 @@ a.dropdown-menu-header {
     padding-left: 3px;
 }
 
-#btnNotif ication {
+#btnNoti fication {
     max-width: 250px;
     max-height: 30px;
     margin-left: 33px;
@@ -10758,7 +10732,9 @@ a.dropdown-menu-header {
     max-height: 280px;
 }
 
-.fadeNotification {
+
+/* .fadeNotification {
+
     margin: 0;
     position: relative;
     width: 100%;
@@ -10768,4 +10744,4 @@ a.dropdown-menu-header {
 .fade {
     background-color: lightgreen;
     opacity: 1;
-}
+} */
