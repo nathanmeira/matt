@@ -43,7 +43,7 @@
                         </li>
                         <div class="notificationScroll">
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -54,7 +54,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -65,7 +65,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -76,7 +76,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -141,105 +141,186 @@
                         </div>
                     </div>
             </div>
-
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h3 class="mt-4 mb-3"><strong>Dashboard</strong></h3>
-                        <div class="row">
-                            <div class="col-xl-12 pt-3 pb-5">
-                                <div class="btn-group d-flex" role="group">
-                                    <a href="templateIndex.html" class="pt-4 btn btn-outline-dark active w-100"><strong>Informações gerais</strong></a>
-                                    <a href="templateDfe.html" class="pt-4 btn btn-outline-dark w-100">BKPS DF-e</a>
-                                    <a href="templateMessages.html" class="pt-4 btn btn-outline-dark w-100">BKPS Messages</a>
-                                    <a href="templatePerdComp.html" class="pt-4 btn btn-outline-dark w-100">BKPS PerdComp</a>
+                        <a href="templateMessagesFull.html">
+                            <h3 class="mt-4 mb-3"><i class="fas fa-arrow-left mr-3"></i></a>Messages<strong> / Consultas</strong></h3>
+                        <div class="col-xl-8 row">
+                            <div id="searchMkt" class="input-group pb-4 mt-4">
+                                <input id="myInput" onkeyup="myFunction()" title="Type in a name" id="searchMktInput" class="form-control" type="search" placeholder="Todos" aria-label="Search">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-text1">
+                                            <button id="btnFilterLupa" class="btn btn-sm"><i class="fas fa-search text-grey mb-1" aria-hidden="true"></i></span>
+                                </div>
+                                <button id="btnFilter" class="btn btn-outline-dark ml-2">Filtros</button>
+                            </div>
+                        </div>
+                        <div id="filter">
+                            <div class="row">
+                                <div class="col-xl-3 form-group">
+                                    <label for="inputEstabelecimento"><strong>Remetente</strong></label>
+                                    <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
+                                </div>
+                                <div class="col-xl-3 form-group">
+                                    <label for="inputDataInicial"><strong>Data Inicial</strong></label>
+                                    <input type="date" id="inputDataInicial" class="form-control">
+                                </div>
+                                <div class="col-xl-3 form-group">
+                                    <label for="inputDataFinal"><strong>Data Final</strong></label>
+                                    <input type="date" id="inputDataFinal" class="form-control">
+                                </div>
+
+                                <div class="col-xl-3 my-auto text-right">
+                                    <button id="btnFilter2" class="btn btn-outline-dark mb-2">Limpar filtros</button>
+                                    <button id="btnFilter2" class="btn btn-dark mb-2">Aplicar</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="row col-xl-6 btn-group d-flex" role="group">
-                            <a href="templateIndex.html" class="pt-4 btn btn-outline-dark "><strong>Empresas</strong></a>
-                            <a href="templateUsers.html" class="pt-4 btn btn-outline-dark"><strong>Usuários</strong></a>
-                            <a href="templateActions.html" class="pt-4 btn btn-dark active"><strong>Últimas ações</strong></a>
+                        <div class="row">
+                            <p class=" pl-2 pb-3 ml-4"><strong>Mostrando de 1 até 10 de 1312 registros. | Última consulta realizada em: 17/02/2020 08:10</strong></p>
                         </div>
-                        <div class=" col-xl-12 ">
-                            <table class="table table-hover mt-5 ">
+                        <div class="col-xl-12">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Empresa</th>
+                                        <th scope="col">Origem</th>
+                                        <th scope="col">Serviço</th>
+                                        <th scope="col">Mensagens</th>
+                                        <th scope="col">Criado em</th>
+                                    </tr>
+                                </thead>
                                 <tbody>
                                     <tr>
-                                        <td>O usuário <strong>Nathan Meira</strong> realizou alterações na empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Bruno Dinamarco</strong> excluiu a empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Matheus Meira</strong> adicionou a empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Matheus Meira</strong> fez upload de <strong>50 notas fiscais </strong>na empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Bruno Dinamarco</strong> gerou <strong>relatório de Excel resumido</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Nathan Meira</strong> realizou alterações na empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Nathan Meira</strong> realizou alterações na empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Bruno Dinamarco</strong> excluiu a empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Matheus Meira</strong> adicionou a empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Matheus Meira</strong> fez upload de <strong>50 notas fiscais </strong>na empresa <strong> BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Bruno Dinamarco</strong> gerou <strong>relatório de Excel resumido</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                     <tr>
-                                        <td>O usuário <strong>Nathan Meira</strong> realizou alterações na empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26.549.883/0001-87</td>
+                                        <td>MUN-SP</strong>
+                                        </td>
+                                        <td>prefeitura/sp/dec/caixa-postal</td>
+                                        <td>0</td>
+                                        <td>18/02/2020 16:18</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                </main>
-                </div>
-            </div>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous "></script>
-        <script src="js/scripts.js "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js " crossorigin="anonymous "></script>
-        <script src="assets/demo/chart-area-demo.js "></script>
-        <script src="assets/demo/chart-bar-demo.js "></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous "></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js " crossorigin="anonymous "></script>
-        <script src="assets/demo/datatables-demo.js "></script>
+                    </div>
+
+
     </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous "></script>
+    <script src="js/scripts.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js " crossorigin="anonymous "></script>
+    <script src="assets/demo/chart-area-demo.js "></script>
+    <script src="assets/demo/chart-bar-demo.js "></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js " crossorigin="anonymous "></script>
+    <script src="assets/demo/datatables-demo.js "></script>
+
+
 
 </html>

@@ -10515,10 +10515,6 @@ a {
     height: 300px;
 }
 
-#modalAtribuir {
-    margin-top: 130px;
-}
-
 #AddPerd {
     margin-top: 220px;
 }
@@ -10732,6 +10728,10 @@ a.dropdown-menu-header {
     max-height: 280px;
 }
 
+body {
+    overflow-y: scroll;
+}
+
 
 /* .fadeNotification {
  
@@ -10745,3 +10745,7 @@ a.dropdown-menu-header {
     background-color: lightgreen;
     opacity: 1;
 } */
+
+#dropdownMenuButton:hover {
+    color: white;
+}

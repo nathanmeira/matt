@@ -43,7 +43,7 @@
                         </li>
                         <div class="notificationScroll">
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -54,7 +54,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -65,7 +65,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -76,7 +76,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -141,105 +141,132 @@
                         </div>
                     </div>
             </div>
-
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h3 class="mt-4 mb-3"><strong>Dashboard</strong></h3>
-                        <div class="row">
-                            <div class="col-xl-12 pt-3 pb-5">
-                                <div class="btn-group d-flex" role="group">
-                                    <a href="templateIndex.html" class="pt-4 btn btn-outline-dark active w-100"><strong>Informações gerais</strong></a>
-                                    <a href="templateDfe.html" class="pt-4 btn btn-outline-dark w-100">BKPS DF-e</a>
-                                    <a href="templateMessages.html" class="pt-4 btn btn-outline-dark w-100">BKPS Messages</a>
-                                    <a href="templatePerdComp.html" class="pt-4 btn btn-outline-dark w-100">BKPS PerdComp</a>
+                        <a href="templateMessagesFull.html">
+                            <h3 class="mt-4 mb-3"><i class="fas fa-arrow-left mr-3"></i></a>Messages<strong> / Configurações</strong></h3>
+                        <div class="card mt-4">
+                            <div id="accountAndSignature" class="card-header">
+                                <strong>Configurar opções de caixa postal</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="col-xl-12">
+                                    <div class="form-group mt-3">
+                                        <label for="text"><strong>Usuários a serem notificados</strong></label>
+                                        <input type="text" class="form-control" id="notificationMsg" value="x nathan@bkps.com.br">
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <label for="text"><strong>Frequência de consulta</strong></label>
+                                    <div class="row">
+                                        <p>
+                                            <h3><span class="badge badge-secondary ml-2">SEG</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">TER</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">QUA</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-secondary">QUI</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">SEX</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">SAB</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">DOM</span></h3>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <label for="text"><strong>Horário de consulta</strong></label>
+                                    <div class="row">
+                                        <p>
+                                            <h3><span class="badge badge-light ml-2">08:00</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-secondary">16:00</span></h3>
+                                        </p>
+                                        <p>
+                                            <h3><span class="badge badge-light">00:00</span></h3>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row col-xl-6 btn-group d-flex" role="group">
-                            <a href="templateIndex.html" class="pt-4 btn btn-outline-dark "><strong>Empresas</strong></a>
-                            <a href="templateUsers.html" class="pt-4 btn btn-outline-dark"><strong>Usuários</strong></a>
-                            <a href="templateActions.html" class="pt-4 btn btn-dark active"><strong>Últimas ações</strong></a>
+                        <div class="card mt-4">
+                            <div id="accountAndSignature" class="card-header">
+                                <strong>Ambientes de consulta</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="col-xl-12 mt-3">
+                                    <p><strong>Escolha a empresa matriz e selecione no calendário abaixo a data de vencimento da certidão negativa desta empresa. Este evento será incluso no calendário da BKPS Platform, que notificará todos os administradores da conta no dia escolhido. Também é possivel optar pela notificação por e-mail.</strong></p>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control mt-3" id="notificationMsg" placeholder="26/549.883/0001-87 - Nacional">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3">
+                                    <button class="btn btn-outline-dark mr-1"><strong>Federal</strong></button>
+                                    <button class="btn btn-outline-dark mr-1"><strong>Estadual</strong></button>
+                                    <button class="btn btn-outline-dark mr-1"><strong>Municipal</strong></button>
+                                </div>
+                            </div>
                         </div>
-                        <div class=" col-xl-12 ">
-                            <table class="table table-hover mt-5 ">
-                                <tbody>
-                                    <tr>
-                                        <td>O usuário <strong>Nathan Meira</strong> realizou alterações na empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Bruno Dinamarco</strong> excluiu a empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Matheus Meira</strong> adicionou a empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Matheus Meira</strong> fez upload de <strong>50 notas fiscais </strong>na empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Bruno Dinamarco</strong> gerou <strong>relatório de Excel resumido</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Nathan Meira</strong> realizou alterações na empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Nathan Meira</strong> realizou alterações na empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Bruno Dinamarco</strong> excluiu a empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Matheus Meira</strong> adicionou a empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Matheus Meira</strong> fez upload de <strong>50 notas fiscais </strong>na empresa <strong> BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Bruno Dinamarco</strong> gerou <strong>relatório de Excel resumido</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>O usuário <strong>Nathan Meira</strong> realizou alterações na empresa <strong>BKPS SOLUTIONS</strong></td>
-                                        <td></td>
-                                        <td>09/03/2020<br>12h50</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="card mt-4">
+                            <div id="accountAndSignature" class="card-header">
+                                <strong>Certidão negativa</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="col-xl-12 mt-3">
+                                    <p><strong>Escolha a empresa matriz e selecione no calendário abaixo a data de vencimento da certidão negativa desta empresa. Este evento será incluso no calendário da BKPS Platform, que notificará todos os administradores da conta no dia escolhido. Também é possivel optar pela notificação por e-mail.</strong></p>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control mt-3" id="notificationMsg" placeholder="26/549.883/0001-87 - Nacional">
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 form-group">
+                                    <label for="inputDataInicial">Data de vencimento</label>
+                                    <input type="date" id="inputDataInicial" class="form-control">
+                                </div>
+                                <div class="form-check pl-4 ml-2 pt-2">
+                                    <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value=""> Receber notificação por email
+                                        </label>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="form-group pt-3">
+                                        <label for="text"><strong>Ser lembrado previamente em dias</strong></label>
+                                        <input type="text" class="form-control" id="notificationMsg" value="x 30 dias">
+                                    </div>
+                                </div>
+                                <div class="row pt-4 text-right">
+                                    <div class="col-xl-9"></div>
+                                    <div class="col-xl-3">
+                                        <a href="templateMessagesFull.html"><button id="btnFilter" class="btn btn-outline-dark">Voltar</button></a>
+                                        <button id="btnFilter" class="btn btn-dark">Salvar</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                </main>
-                </div>
+                    </div>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous "></script>
-        <script src="js/scripts.js "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js " crossorigin="anonymous "></script>
-        <script src="assets/demo/chart-area-demo.js "></script>
-        <script src="assets/demo/chart-bar-demo.js "></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous "></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js " crossorigin="anonymous "></script>
-        <script src="assets/demo/datatables-demo.js "></script>
+
     </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous "></script>
+    <script src="js/scripts.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js " crossorigin="anonymous "></script>
+    <script src="assets/demo/chart-area-demo.js "></script>
+    <script src="assets/demo/chart-bar-demo.js "></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js " crossorigin="anonymous "></script>
+    <script src="assets/demo/datatables-demo.js "></script>
+
+
 
 </html>
