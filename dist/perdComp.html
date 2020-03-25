@@ -1,444 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
-    <title>BKPS</title>
-    <link href="css/styles.css" rel="stylesheet"/>
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</head>
-<body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
-        <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
-        <form class="mx-auto col-xl-4">
-            <div class="input-group">
-                <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
-                <span class="input-group-append">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>BKPS</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
+            <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
+            <form class="mx-auto col-xl-4">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
+                    <span class="input-group-append">
                     <button class="btn btn-outline-dark" type="button">
                         <i class="fa fa-search"></i>
                     </button>
                 </span>
+                </div>
+            </form>
+            <div id="iconsNav">
+                <div class="dropdown dropleft" style="float: right; padding: 13px">
+                    <a href="#" onclick="return false;" role="button" data-toggle="dropdown" id="dropdownMenu1" data-target="#" style="float: left" aria-expanded="true">
+                        <i class="far fa-bell fa-lg mr-3 text-muted"></i>
+                    </a>
+                    <ul id="dropdrop" class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a href="#" class="dropdown-menu-header">
+                                <div id="btnNot" class="btn-group btn-block mx-auto" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-dark">Notificações</button>
+                                    <button type="button" class="btn btn-outline-dark">Processamento</button>
+                                </div>
+                            </a>
+                        </li>
+                        <ul style="list-style-type: none; margin-left: -1px;margin-bottom: -11px;margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
+                    </ul>
+                </div>
+                <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted" style="margin-top: 14px;"></i></a>
             </div>
-        </form>
-        <div id="iconsNav">
-            <div class="dropdown dropleft" style="float: right; padding: 13px">
-                <a href="#" onclick="return false;" role="button" data-toggle="dropdown" id="dropdownMenu1" data-target="#" style="float: left" aria-expanded="true">
-                    <i class="far fa-bell fa-lg mr-3 text-muted"></i>
-                </a>
-                <ul id="dropdrop" class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
-                    <li role="presentation">
-                        <a href="#" class="dropdown-menu-header">
-                            <div id="btnNot" class="btn-group btn-block mx-auto" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-dark">Notificações</button>
-                            <button type="button" class="btn btn-outline-dark">Processamento</button>
-                            </div>
-                        </a>
-                    </li>
-                    <ul style="list-style-type: none; margin-left: -1px;margin-bottom: -11px;margin-top: -31px; padding-bottom: 10px;">
-                        <li>
-                            <div id="dropCard" class="card">
-                                <div class="card-body">
-                                    <small class="text-muted">04/03/2020</small>
-                                    <p><strong>BKPS Message - Workflow atualizado</strong>
-                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
-                        <li>
-                            <div id="dropCard" class="card">
-                                <div class="card-body">
-                                    <small class="text-muted">04/03/2020</small>
-                                    <p><strong>BKPS Message - Workflow atualizado</strong>
-                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
-                        <li>
-                            <div id="dropCard" class="card">
-                                <div class="card-body">
-                                    <small class="text-muted">04/03/2020</small>
-                                    <p><strong>BKPS Message - Workflow atualizado</strong>
-                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
-                        <li>
-                            <div id="dropCard" class="card">
-                                <div class="card-body">
-                                    <small class="text-muted">04/03/2020</small>
-                                    <p><strong>BKPS Message - Workflow atualizado</strong>
-                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <button class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
-                </ul>
-            </div>
-            <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted" style="margin-top: 14px;"></i></a>
-        </div>
-        <ul class="navbar-nav ml-auto ml-md-0">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="login.html">Logout</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
-                    <ul class="nav navbar-nav navbar-right ml-auto">
-                        <a class="nav-link" href="#">
-                            <div class="d-flex justify-content-center">
-                                <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
-                        </a>
-                </div>
-                <div class="sb-sidenav-menu">
-                    <ul class="nav navbar-nav navbar-right ml-auto text-center">
-                        <a class="nav-link" href="#">
-                            <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="installed.html" class="nav-link"><i class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
-                        </a>
-                </div>
-                <div class="sb-sidenav-menu">
-                    <ul class="nav navbar-nav navbar-right ml-auto">
-                        <a class="nav-link" href="#">
-                            <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
-                        </a>
-                </div>
-                <div class="sb-sidenav-menu">
-                    <ul class="nav navbar-nav navbar-right ml-auto">
-                        <a class="nav-link" href="settings.html">
-                            <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fas fa-user-cog"></i><span>Definições</span></a></li>
-                        </a>
-                </div>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion"></div>
-                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
-                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                        </div>
-                    </nav>
-                </div>
-        </div>
-    </div>
-    </nav>
-    </div>
-    <div id="layoutSidenav_content">
-        <div class="container-fluid">
-            <h3 class="mt-4 mb-5 pt-5"><a href="installed.html"><i class="fas fa-arrow-left"></i></a> <strong class="pl-2"> Apps</strong></h3>
-            <div class="container-fluid">
-                <div class="col-xl-8 row">
-                    <div id="searchMkt" class="input-group pb-4">
-                        <input id="searchMktInput" class="form-control" type="search" placeholder="Pesquisar por CNPJ, Número do PErdComp ou Informação Complementar" aria-label="Search">
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="basic-text1">
-                                <button class="btn btn-sm"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
-                        </div>
-                        <button id="btnFilter" class="btn btn-outline-dark ml-2">Filtros</button>
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Logout</a>
                     </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <ul class="nav navbar-nav navbar-right ml-auto">
+                            <a class="nav-link" href="#">
+                                <div class="d-flex justify-content-center">
+                                    <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
+                            </a>
+                            </div>
+                            <div class="sb-sidenav-menu">
+                                <ul class="nav navbar-nav navbar-right ml-auto text-center">
+                                    <a class="nav-link" href="#">
+                                        <div class="d-flex justify-content-center">
+                                            <li class="nav-item"><a href="installed.html" class="nav-link"><i class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
+                                    </a>
+                                    </div>
+                                    <div class="sb-sidenav-menu">
+                                        <ul class="nav navbar-nav navbar-right ml-auto">
+                                            <a class="nav-link" href="#">
+                                                <div class="d-flex justify-content-center">
+                                                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
+                                            </a>
+                                            </div>
+                                            <div class="sb-sidenav-menu">
+                                                <ul class="nav navbar-nav navbar-right ml-auto">
+                                                    <a class="nav-link" href="settings.html">
+                                                        <div class="d-flex justify-content-center">
+                                                            <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fas fa-user-cog"></i><span>Definições</span></a></li>
+                                                    </a>
+                                                    </div>
+                                                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion"></div>
+                                                    <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
+                                                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                                            </div>
+                                                        </nav>
+                                                    </div>
+                                            </div>
+                                    </div>
+                </nav>
                 </div>
-                <div id="filter">
-                    <div class="row">
-                        <div class="col-xl-4 form-group">
-                            <label for="inputEstabelecimento">Estabelecimento</label>
-                            <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
-                        </div>
-                        <div class="col-xl-4 form-group">
-                            <label for="inputRemetente">Remetente</label>
-                            <input type="Remetente" class="form-control" id="inputRemetente">
-                        </div>
-                        <div class="col-xl-4 form-group">
-                            <label for="inputDocumento">Status</label>
-                            <select id="inputDocumento" class="form-control">
+                <div id="layoutSidenav_content">
+                    <div class="container-fluid">
+                        <h3 class="mt-4 mb-5 pt-5"><a href="installed.html"><i class="fas fa-arrow-left"></i></a> <strong class="pl-2"> Apps</strong></h3>
+                        <div class="container-fluid">
+                            <div class="col-xl-8 row">
+                                <div id="searchMkt" class="input-group pb-4">
+                                    <input id="searchMktInput" class="form-control" type="search" placeholder="Pesquisar por CNPJ, Número do PErdComp ou Informação Complementar" aria-label="Search">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-text1">
+                                <button class="btn btn-sm"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                                    </div>
+                                    <button id="btnFilter" class="btn btn-outline-dark ml-2">Filtros</button>
+                                </div>
+                            </div>
+                            <div id="filter">
+                                <div class="row">
+                                    <div class="col-xl-4 form-group">
+                                        <label for="inputEstabelecimento">Estabelecimento</label>
+                                        <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
+                                    </div>
+                                    <div class="col-xl-4 form-group">
+                                        <label for="inputRemetente">Remetente</label>
+                                        <input type="Remetente" class="form-control" id="inputRemetente">
+                                    </div>
+                                    <div class="col-xl-4 form-group">
+                                        <label for="inputDocumento">Status</label>
+                                        <select id="inputDocumento" class="form-control">
                                 <option selected>NF-e</option>
                                 <option>Não.</option>
                             </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-4 form-group">
-                            <label for="inputDataInicial">Data Inicial</label>
-                            <input type="date" id="inputDataInicial" class="form-control">
-                        </div>
-                        <div class="col-xl-4 form-group">
-                            <label for="inputDataFinal">Data final</label>
-                            <input type="date" id="inputDataFinal" class="form-control">
-                        </div>
-                        <div class="col-xl-4 form-group">
-                            <label for="inputOrigem">Enviado em</label>
-                            <select id="inputOrigem" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4 form-group">
+                                        <label for="inputDataInicial">Data Inicial</label>
+                                        <input type="date" id="inputDataInicial" class="form-control">
+                                    </div>
+                                    <div class="col-xl-4 form-group">
+                                        <label for="inputDataFinal">Data final</label>
+                                        <input type="date" id="inputDataFinal" class="form-control">
+                                    </div>
+                                    <div class="col-xl-4 form-group">
+                                        <label for="inputOrigem">Enviado em</label>
+                                        <select id="inputOrigem" class="form-control">
                                 <option selected>abc</option>
                                 <option>123</option>
                             </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-4"></div>
-                        <div class="col-xl-4"></div>
-                        <div class="col-xl-4 my-auto text-right">
-                            <button id="btnFilter2" class="btn btn-outline-dark">Limpar filtros</button>
-                            <button id="btnFilter2" class="btn btn-dark ">Aplicar</button>
-                        </div>
-                    </div>
-                    <strong>Este mês</strong>
-                    </button>
-                </div>
-                <div class="row mt-3">
-                    <a href="#"><button class="btn btn-dark ml-2"><strong>Consultar PerdComp</strong></button></a>
-                    <a href="perdCompSettings.html"><button class="btn btn-dark ml-2"><strong>Configurar</strong></button></a>
-                    <button class="btn btn-dark ml-2" data-toggle="modal" data-target="#AddPerd"><strong>Adicionar</strong></button>
-                    <a href="perdCompConsultas.html"><button class="btn btn-dark ml-2"><strong>Histórico de Consultas</strong></button></a>
-                    <button class="btn btn-dark ml-2"><strong>Exportar para Excel</strong></button>
-                </div>
-                <div class="row pt-4">
-                    <p class="pt-2 pb-3 ml-4"><strong>Mostrando de 1 até 10 de 1312 registros. | Última consulta realizada em: 17/02/2020 08:10</strong></p>
-                </div>
-                <div class="col-xl-12">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Ação</th>
-                                <th scope="col">Empresa</th>
-                                <th scope="col">Remetente</th>
-                                <th scope="col">Assunto</th>
-                                <th scope="col">Enviado em</th>
-                                <th scope="col">Lido em</th>
-                                <th scope="col">Data de inclusão</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr><tr>
-                                <td><i class="fas fa-search"></i></td>
-                                <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
-                                <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                <td><strong>IMPORTANTE: Expiração.....</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019</strong></td>
-                                <td><strong>17/12/2019 08:10</strong></td>
-                            </tr>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-4"></div>
+                                    <div class="col-xl-4"></div>
+                                    <div class="col-xl-4 my-auto text-right">
+                                        <button id="btnFilter2" class="btn btn-outline-dark">Limpar filtros</button>
+                                        <button id="btnFilter2" class="btn btn-dark ">Aplicar</button>
+                                    </div>
+                                </div>
+                                <strong>Este mês</strong>
+                                </button>
+                            </div>
+                            <div class="row mt-3">
+                                <a href="#"><button class="btn btn-dark ml-2"><strong>Consultar PerdComp</strong></button></a>
+                                <a href="perdCompSettings.html"><button class="btn btn-dark ml-2"><strong>Configurar</strong></button></a>
+                                <button class="btn btn-dark ml-2" data-toggle="modal" data-target="#AddPerd"><strong>Adicionar</strong></button>
+                                <a href="perdCompConsultas.html"><button class="btn btn-dark ml-2"><strong>Histórico de Consultas</strong></button></a>
+                                <button class="btn btn-dark ml-2"><strong>Exportar para Excel</strong></button>
+                            </div>
+                            <div class="row pt-4">
+                                <p class="pt-2 pb-3 ml-4"><strong>Mostrando de 1 até 10 de 1312 registros. | Última consulta realizada em: 17/02/2020 08:10</strong></p>
+                            </div>
+                            <div class="col-xl-12">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Ação</th>
+                                            <th scope="col">Empresa</th>
+                                            <th scope="col">Remetente</th>
+                                            <th scope="col">Assunto</th>
+                                            <th scope="col">Enviado em</th>
+                                            <th scope="col">Lido em</th>
+                                            <th scope="col">Data de inclusão</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-search"></i></td>
+                                            <td><strong><a href="perDetails.html">26.549.883/0001-87...</a></strong></td>
+                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td><strong>IMPORTANTE: Expiração.....</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019</strong></td>
+                                            <td><strong>17/12/2019 08:10</strong></td>
+                                        </tr>
 
 
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <footer class="py-4 bg-light mt-auto">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Your Website 2019</div>
-                    <div>
-                        <a href="#">Privacy Policy</a> &middot;
-                        <a href="#">Terms &amp; Conditions</a>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </footer>
-        <div class="modal fade" id="modalAtribuir">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title"><strong>Atribuir ação de mensagem</strong></h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div id="modalBg">
-                        <div class="modal-body">
-                            <p class="ml-2"> <strong>Assunto: </strong> IMPORTANTE: Expiração de Procuração Eletrônica</p>
-                            <p class="ml-2"> <strong>Enviado: </strong>17/02/2020 </p>
-                            <p class="ml-2"><strong>Criado por: </strong> Bruno Dinamarco </p>
-                            <div class="row">
-                                <div class="col-xl-9 form-group">
-                                    <label for="inputDocumento"><strong class="ml-2">Responsável</strong></label>
-                                    <select id="inputDocumento" class="form-control">
+                    <footer class="py-4 bg-light mt-auto">
+                        <div class="container-fluid">
+                            <div class="d-flex align-items-center justify-content-between small">
+                                <div class="text-muted">Copyright &copy; Your Website 2019</div>
+                                <div>
+                                    <a href="#">Privacy Policy</a> &middot;
+                                    <a href="#">Terms &amp; Conditions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <div class="modal fade" id="modalAtribuir">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title"><strong>Atribuir ação de mensagem</strong></h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div id="modalBg">
+                                    <div class="modal-body">
+                                        <p class="ml-2"> <strong>Assunto: </strong> IMPORTANTE: Expiração de Procuração Eletrônica</p>
+                                        <p class="ml-2"> <strong>Enviado: </strong>17/02/2020 </p>
+                                        <p class="ml-2"><strong>Criado por: </strong> Bruno Dinamarco </p>
+                                        <div class="row">
+                                            <div class="col-xl-9 form-group">
+                                                <label for="inputDocumento"><strong class="ml-2">Responsável</strong></label>
+                                                <select id="inputDocumento" class="form-control">
                                         <option selected>Nathan Meira</option>
                                         <option>Anthony of the devil</option>
                                     </select>
-                                </div>
-                                <div class="col-xl-3 form-group">
-                                    <label for="inputDataInicial"><strong>Prazo</strong></label>
-                                    <input type="date" id="inputDataInicial" class="form-control">
-                                </div>
-                                <div class="col-xl-12">
-                                    <div class="form-group">
-                                        <label for="text"><strong>Informe a ação a ser tomada</strong></label>
-                                        <input type="text" class="form-control" id="informActionMsg">
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
+                                            </div>
+                                            <div class="col-xl-3 form-group">
+                                                <label for="inputDataInicial"><strong>Prazo</strong></label>
+                                                <input type="date" id="inputDataInicial" class="form-control">
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="form-group">
+                                                    <label for="text"><strong>Informe a ação a ser tomada</strong></label>
+                                                    <input type="text" class="form-control" id="informActionMsg">
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
                                             <input type="checkbox" class="form-check-input" value=""> Adicionar no calendário
                                         </label>
-                                    </div>
-                                    <div class="form-check pt-2">
-                                        <label class="form-check-label">
+                                                </div>
+                                                <div class="form-check pt-2">
+                                                    <label class="form-check-label">
                                             <input type="checkbox" class="form-check-input" value=""> Notificar por email
                                         </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-8 mt-3"></div>
+                                            <div class="col-xl-4 mt-3 text-right">
+                                                <button id="btnFilter" class="btn btn-outline-dark">Cancelar</button>
+                                                <button id="btnFilter" class="btn btn-dark">Atribuir</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-8 mt-3"></div>
-                                <div class="col-xl-4 mt-3 text-right">
-                                    <button id="btnFilter" class="btn btn-outline-dark">Cancelar</button>
-                                    <button id="btnFilter" class="btn btn-dark">Atribuir</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="modal fade" id="AddPerd">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title"><strong>Adicionar PerdComp</strong></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div id="modalBg">
-                    <div class="modal-body">
-                        <div class="col-xl-12 form-group">
-                            <input id="modalText2" type="text" class="form-control" placeholder="Você pode adicionar um ou vários PerdComps de uma única vez. Basta copiar e colar todos os PerdComps neste espaço, colocando o CNPJ, Número de PerdComp e o valor separados por ponto e vírgula. Veja o exemplo">
-                        </div>
-                        <div class="col-xl-12 text-right">
-                            <a href="perdComp.html"><button id="btnFilter" class="btn btn-dark">Concluir</button></a>
+                <div class="modal fade" id="AddPerd">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title"><strong>Adicionar PerdComp</strong></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div id="modalBg">
+                                <div class="modal-body">
+                                    <div class="col-xl-12 form-group">
+                                        <input id="modalText2" type="text" class="form-control" placeholder="Você pode adicionar um ou vários PerdComps de uma única vez. Basta copiar e colar todos os PerdComps neste espaço, colocando o CNPJ, Número de PerdComp e o valor separados por ponto e vírgula. Veja o exemplo">
+                                    </div>
+                                    <div class="col-xl-12 text-right">
+                                        <a href="perdComp.html"><button id="btnFilter" class="btn btn-dark">Concluir</button></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/chart-area-demo.js"></script>
-    <script src="assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/datatables-demo.js"></script>
-</body>
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+                <script src="js/scripts.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+                <script src="assets/demo/chart-area-demo.js"></script>
+                <script src="assets/demo/chart-bar-demo.js"></script>
+                <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+                <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+                <script src="assets/demo/datatables-demo.js"></script>
+    </body>
+
 </html>

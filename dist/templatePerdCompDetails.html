@@ -26,6 +26,7 @@
                 </span>
                 </div>
             </form>
+
             <div id="iconsNav">
                 <div class="dropdown dropleft" style="float: right; padding: 13px">
                     <a href="#" onclick="return false;" role="button" data-toggle="dropdown" data-target="#" style="float: left" aria-expanded="true">
@@ -42,7 +43,7 @@
                         </li>
                         <div class="notificationScroll">
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -53,7 +54,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -64,7 +65,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -75,7 +76,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -140,105 +141,111 @@
                         </div>
                     </div>
             </div>
-
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h3 class="mt-4 mb-3"><strong>Dashboard</strong></h3>
-                        <div class="row">
-                            <div class="col-xl-12 pt-3 pb-5">
-                                <div class="btn-group d-flex" role="group">
-                                    <a href="templateIndex.html" class="pt-4 btn btn-outline-dark w-100">Informações gerais</a>
-                                    <a href="templateDfe.html" class="pt-4 btn btn-outline-dark w-100">BKPS DF-e</a>
-                                    <a href="templateMessages.html" class="pt-4 btn btn-outline-dark w-100">BKPS Messages</a>
-                                    <a href="templatePerdComp.html" class="pt-4 btn btn-outline-dark active w-100"><strong>BKPS PerdComp</strong></a>
+                        <div class="col-xl-12">
+                            <div id="user1" class="row">
+                                <div class="col-md-12">
+                                    <h3 class="mt-4 mb-5 pt-5">
+                                        <a href="templatePerdCompFull.html">
+                                            <p class="pl-2"> <i class="fas fa-arrow-left"></i></a> PerdComp <strong>/ Detalhes do PerdComp</strong></p>
+                                    </h3>
+                                    <div class="card mt-4">
+                                        <div id="accountAndSignature" class="card-header"><strong>PerdComp: 24777.65120.310719.1.3.04-3502</strong></div>
+                                        <div class="card-body">
+                                            <div class="row pt-3">
+                                                <div class="col-xl-12 ml-3 mb-3">
+                                                    <p class="mb-2"><strong>Empresa: </strong>04.297.516/0001-09 - ISENTO NACIONAL</p>
+                                                    <p class="mb-2"><strong>Número: </strong>244777.65120.310719.1.3.04-3502</p>
+                                                    <p class="mb-2"><strong>Data de transmissão: </strong>31/07/2019</p>
+                                                    <p class="mb-2"><strong>Tipo de documento: </strong>Declaração de compensação</p>
+                                                    <p class="mb-2"><strong>Tipoe de crédito: </strong>Pagamento indevido ou maior</p>
+                                                    <p class="mb-2"><strong>Status: </strong>Consulta com erro</p>
+                                                    <p class="mb-2"><strong>Info: </strong>Ocorreu um erro na consulta.</p>
+                                                    <p class="mb-2"><strong>Valor: </strong>R$ 168,18</p>
+                                                    <p class="mb-2"><strong>Arquivo .DEC: </strong>Não possui</p>
+                                                    <p class="mb-2"><strong>Arquivo .REC: </strong>Não possui</p>
+                                                </div>
+                                                <div class="col-xl-12 mb-4 ml-3 text-left"><a href="templatePerdCompFull.html"><button id="btnFilter" class="btn btn-outline-dark mr-1">Voltar</button></a><button id="btnFilter" class="btn btn-dark" data-toggle="modal" data-target="#EditPerd">Editar</button>
+                                                    <button class="btn btn-dark" data-toggle="modal" data-target="#DisablePerd">Desabilitar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-4 pb-4">
-                                <h5><strong>PerdComp</strong></h5>
-                            </div>
-                            <div class="col-xl-8 pb-4 text-right">
-                                Última atualização hoje, às <span id="datebtn"> 17h30</span><button type="button" onclick="time()" class="btn btn-dark mr-2 ml-3"><i class="fas fa-sync"></i><a href="templatePerdCompFull.html"><button class="btn btn-dark">Acessar PerdComp</button></a>
-                            </div>
-                            <div class="col-xl-4">
-                                <div class="card bg-light mb-3 pt-3 pb-1">
-                                    <div class="card-body pb-3 mb-3">
-                                        <p class="card-title text-muted"><strong>PENDENTES</strong></p>
-                                        <h4 class="card-text"><strong>15</strong></h4>
+                        <div class="card mt-4">
+                            <div id="accountAndSignature" class="card-header"><strong>Anexos</strong></div>
+                            <div class="card-body">
+                                <div class="row pt-3">
+                                    <div class="col-xl-12 ml-3 mb-3 text-center my-auto">
+                                        <p><strong>Não existe nenhum anexo</strong></p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4">
-                                <div class="card bg-light mb-3 pt-3 pb-1">
-                                    <div class="card-body pb-3 mb-3">
-                                        <p class="card-title text-muted"><strong>ANDAMENTO</strong></p>
-                                        <h4 class="card-text"><strong>3</strong></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4">
-                                <div class="card bg-light mb-3 pt-3 pb-1">
-                                    <div class="card-body pb-3 mb-3">
-                                        <p class="card-title text-muted"><strong>RESOLVIDAS</strong></p>
-                                        <h4 class="card-text"><strong>50</strong></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="table" class="card col-xl-12">
-                                <h5 class="mt-3 mb-4"><strong>Últimas consultas</strong><i class="fas fa-info-circle ml-2"></i></h5>
-                                <br>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class="mx-3">
-                                            <tr>
-                                                <th>Empresa</th>
-                                                <th>Número PerdComp</th>
-                                                <th>Data Transmissão</th>
-                                                <th>Atualizado em</th>
-                                                <th>Tipo</th>
-                                                <th>Tipo crédito</th>
-                                                <th>Situação</th>
-                                                <th>Informação complementar</th>
-                                                <th>Valor</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="text-muted">
-                                                <th>12.345.678/9123-45 - ISENTO<br>BKPS</th>
-                                                <th>3242324.32523./342325<br>do Brasil</th>
-                                                <th>25/03/1999</th>
-                                                <th>Declaração de compensação</th>
-                                                <th>Pagamento indevido</th>
-                                                <th>Análise</th>
-                                                <th>Recepcionado em<br>preocedimento de análise</th>
-                                                <th>282.513,00</th>
-                                            </tr>
-
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
                                 </div>
                             </div>
                         </div>
-                    </div>
-            </div>
-        </div>
-        </div>
-        </main>
-        </div>
+                        <div class="card mt-5 mb-4">
+                            <div id="accountAndSignature" class="card-header"><strong>Histórico de consultas</strong></div>
+                            <div class="card-body">
+                                <div class="row pt-3">
+                                    <div class="col-xl-12 ml-3 mb-3 text-center my-auto">
+                                        <p><strong>Vazio</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="EditPerd">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title"><strong>Editar PerdComp</strong></h4><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+                                    <div id="modalBg">
+                                        <div class="modal-body">
+                                            <div class="col-xl-12 form-group"><label for="inputRazao"><strong>Razão Social</strong></label><input type="razao" class="form-control" value="NACIONAL" id="inputRazao"></div>
+                                            <div class="col-xl-12 form-group"><label for="inputNumber"><strong>Número do PerdComp</strong></label><input type="InputNumber" class="form-control" value="24777.65120.310719.1.3.04-3502" id="inputNumber"></div>
+                                            <div class="col-xl-12 form-group"><label for="inputValue"><strong>Valor Total</strong></label><input type="value" class="form-control" value="168,18" id="inputValue"></div>
+                                            <div class="col-xl-12">
+                                                <div id="dragNdrop3" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="modalImg3" src="https://img.icons8.com/ios/30/999999/cloud.png">
+                                                    <p class="text-muted" id="dragTxt">Upload de arquivo .DEC</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div id="dragNdrop3" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="modalImg3" src="https://img.icons8.com/ios/30/999999/cloud.png">
+                                                    <p class="text-muted" id="dragTxt">Upload de arquivo .REC</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-12 text-right"><button id="btnFilter" class="btn btn-outline-dark mr-2" data-dismiss="modal">Cancelar</button><button id="btnFilter" class="btn btn-dark" data-dismiss="modal">Concluir</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="DisablePerd">
+                            <div class="modal-dialog modal-md">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title"><strong>Desabilitar PerdComp</strong></h4><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+                                    <div id="modalBg">
+                                        <div class="modal-body">
+                                            <p id="dragTxt">Deseja realmente desativar o PerdComp<br><strong>24777.65120.310719.1.3.04-3502</strong></p>
+                                            <div class="col-xl-12 text-center"><button id="btnFilter" class="btn btn-outline-dark mr-2 mt-4" data-dismiss="modal">Agora não</button><a href="templatePerdCompFull.html"><button id="btnFilter" class="btn btn-dark mt-4">Desativar</button></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous "></script>
+                        <script src="js/scripts.js "></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js " crossorigin="anonymous "></script>
+                        <script src="assets/demo/chart-area-demo.js "></script>
+                        <script src="assets/demo/chart-bar-demo.js "></script>
+                        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous "></script>
+                        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js " crossorigin="anonymous "></script>
+                        <script src="assets/demo/datatables-demo.js "></script>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/datatables-demo.js"></script>
-    </body>
+
 
 </html>

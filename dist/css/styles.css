@@ -10515,18 +10515,6 @@ a {
     height: 300px;
 }
 
-#AddPerd {
-    margin-top: 220px;
-}
-
-#DisablePerd {
-    margin-top: 250px;
-}
-
-#EditPerd {
-    margin-top: 50px;
-}
-
 #myModal4 {
     margin-top: 160px;
 }
@@ -10748,4 +10736,21 @@ body {
 
 #dropdownMenuButton:hover {
     color: white;
+}
+
+#truncate {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 20px;
+    margin: 0;
+    resize: horizontal;
+}
+
+#td {
+    padding-top: 20px;
+}
+
+
 }

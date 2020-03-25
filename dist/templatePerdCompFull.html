@@ -144,12 +144,12 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <a href="templateMessages.html">
-                            <h3 class="mt-4 mb-3"><i class="fas fa-arrow-left mr-3"></i></a>Messages</h3>
+                        <a href="templatePerdComp.html">
+                            <h3 class="mt-4 mb-3"><i class="fas fa-arrow-left mr-3"></i></a>PerdComp</h3>
 
                         <div class="col-xl-8 row">
                             <div id="searchMkt" class="input-group pb-4 mt-4">
-                                <input id="myInput" onkeyup="myFunction()" title="Type in a name" id="searchMktInput" class="form-control" type="search" placeholder="Pesquisar por CNPJ, Chave de Acesso ou assunto" aria-label="Search">
+                                <input id="myInput" onkeyup="myFunction()" title="Type in a name" id="searchMktInput" class="form-control" type="search" placeholder="Pesquisar por CNPJ, Número do PerdComp ou Informação complementar" aria-label="Search">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-text1">
                                         <button id="btnFilterLupa" class="btn btn-sm"><i class="fas fa-search text-grey mb-1" aria-hidden="true"></i></span>
@@ -201,22 +201,15 @@
                             </div>
                         </div>
                         <div class="row">
-                            <button class="btn btn-dark ml-3 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <strong>Consultar agora</strong>
-                                </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Todos</a>
-                                <a class="dropdown-item" href="#">Federal</a>
-                                <a class="dropdown-item" href="#">Estadual</a>
-                                <a class="dropdown-item" href="#">Municipal</a>
-                            </div>
-                            <a href="TemplateMessagesSettings.html"><button class="btn btn-dark ml-2"><strong>Configurações</strong></button></a>
-                            <a href="TemplateMessagesConsultas.html"><button class="btn btn-dark ml-2"><strong>Histórico de consultas</strong></button></a>
-                            <button class="btn btn-dark ml-2"><strong>Exportar</strong></button>
+                            <button class="btn btn-dark ml-3"><strong>Consultar PerdComp</strong></button>
+                            <a href="templatePerdCompSettings.html"><button class="btn btn-dark ml-2"><strong>Configurar</strong></button></a>
+                            <button class="btn btn-dark ml-2" data-toggle="modal" data-target="#AddPerd"><strong>Adicionar</strong></button></a>
+                            <a href="templatePerdCompConsultas.html"> <button class="btn btn-dark ml-2"><strong>Histórico de consultas</strong></button></a>
+                            <button class="btn btn-dark ml-2"><strong>Exportar para Excel</strong></button>
                         </div>
                         <div class="row pt-2">
-                            <p class="pt-2 pb-3 ml-3"><strong>Mostrando de 1 até 10 de 1312 registros. | Última consulta realizada em: 17/02/2020 08:10</strong></p>
-                            <div class="col-xl-12">
+                            <p class="pt-3 pb-3 ml-3"><strong>Mostrando de 1 até 10 de 1312 registros. | Última consulta realizada em: 17/02/2020 08:10</strong></p>
+                            <div class="col-xl-12 pt-3">
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
@@ -231,8 +224,8 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="row"><button class="btn btn-outline-dark mr-1">Ignorar</button><button class="btn btn-dark" data-toggle="modal" data-target="#modalAtribuir">Atribuir</button></td>
-                                            <td id="truncate"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></td>
+                                            <td id="td"><i class="fas fa-search"></i></td>
+                                            <td id="truncate"><a href="templatePerdCompDetails.html"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></a></td>
                                             <td id="td"><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                             <td id="truncate"><strong>IMPORTANTE: Expiração da expiração será expirada quando expirar o expiramento</strong></td>
                                             <td id="td"><strong>17/12/2019</strong></td>
@@ -240,8 +233,8 @@
                                             <td id="td"><strong>17/12/2019 08:10</strong></td>
                                         </tr>
                                         <tr>
-                                            <td class="row"><button class="btn btn-outline-dark mr-1">Ignorar</button><button class="btn btn-dark" data-toggle="modal" data-target="#modalAtribuir">Atribuir</button></td>
-                                            <td id="truncate"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></td>
+                                            <td id="td"><i class="fas fa-search"></i></td>
+                                            <td id="truncate"><a href="templatePerdCompDetails.html"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></a></td>
                                             <td id="td"><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                             <td id="truncate"><strong>IMPORTANTE: Expiração da expiração será expirada quando expirar o expiramento</strong></td>
                                             <td id="td"><strong>17/12/2019</strong></td>
@@ -249,26 +242,8 @@
                                             <td id="td"><strong>17/12/2019 08:10</strong></td>
                                         </tr>
                                         <tr>
-                                            <td class="row"><button class="btn btn-dark" data-toggle="modal" data-target="#modalAtribuir">Finalizado</button></td>
-                                            <td id="truncate"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></td>
-                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                            <td id="truncate"><strong>IMPORTANTE: Expiração da expiração será expirada quando expirar o expiramento</strong></td>
-                                            <td id="td"><strong>17/12/2019</strong></td>
-                                            <td id="td"><strong>17/12/2019</strong></td>
-                                            <td id="td"><strong>17/12/2019 08:10</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="row"><button class="btn btn-outline-dark mr-1">Em andamento</button></td>
-                                            <td id="truncate"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></td>
-                                            <td><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                            <td id="truncate"><strong>IMPORTANTE: Expiração da expiração será expirada quando expirar o expiramento</strong></td>
-                                            <td id="td"><strong>17/12/2019</strong></td>
-                                            <td id="td"><strong>17/12/2019</strong></td>
-                                            <td id="td"><strong>17/12/2019 08:10</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="row"><button class="btn btn-outline-dark mr-1">Em andamento</button></td>
-                                            <td id="truncate"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></td>
+                                            <td id="td"><i class="fas fa-search"></i></td>
+                                            <td id="truncate"><a href="templatePerdCompDetails.html"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></a></td>
                                             <td id="td"><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                             <td id="truncate"><strong>IMPORTANTE: Expiração da expiração será expirada quando expirar o expiramento</strong></td>
                                             <td id="td"><strong>17/12/2019</strong></td>
@@ -276,8 +251,8 @@
                                             <td id="td"><strong>17/12/2019 08:10</strong></td>
                                         </tr>
                                         <tr>
-                                            <td class="row"><button class="btn btn-outline-dark mr-1">Ignorar</button><button class="btn btn-dark" data-toggle="modal" data-target="#modalAtribuir">Atribuir</button></td>
-                                            <td id="truncate"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></td>
+                                            <td id="td"><i class="fas fa-search"></i></td>
+                                            <td id="truncate"><a href="templatePerdCompDetails.html"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></a></td>
                                             <td id="td"><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                             <td id="truncate"><strong>IMPORTANTE: Expiração da expiração será expirada quando expirar o expiramento</strong></td>
                                             <td id="td"><strong>17/12/2019</strong></td>
@@ -285,8 +260,8 @@
                                             <td id="td"><strong>17/12/2019 08:10</strong></td>
                                         </tr>
                                         <tr>
-                                            <td class="row"><button class="btn btn-outline-dark mr-1">Ignorar</button><button class="btn btn-dark" data-toggle="modal" data-target="#modalAtribuir">Atribuir</button></td>
-                                            <td id="truncate"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></td>
+                                            <td id="td"><i class="fas fa-search"></i></td>
+                                            <td id="truncate"><a href="templatePerdCompDetails.html"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></a></td>
                                             <td id="td"><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                             <td id="truncate"><strong>IMPORTANTE: Expiração da expiração será expirada quando expirar o expiramento</strong></td>
                                             <td id="td"><strong>17/12/2019</strong></td>
@@ -294,33 +269,26 @@
                                             <td id="td"><strong>17/12/2019 08:10</strong></td>
                                         </tr>
                                         <tr>
-                                            <td class="row"><button class="btn btn-dark" data-toggle="modal" data-target="#modalAtribuir">Finalizado</button></td>
-                                            <td id="truncate"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></td>
-                                            <td id="td"><strong>RECEITA FEDERAL DO BRASIL</strong></td>
+                                            <td id="td"><i class="fas fa-search"></i></td>
+                                            <td id="truncate"><a href="templatePerdCompDetails.html"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></a></td>
+                                            <td id="td"><strong>RECEITA FEDERAL DO BRSIL</strong></td>
                                             <td id="truncate"><strong>IMPORTANTE: Expiração da expiração será expirada quando expirar o expiramento</strong></td>
                                             <td id="td"><strong>17/12/2019</strong></td>
                                             <td id="td"><strong>17/12/2019</strong></td>
                                             <td id="td"><strong>17/12/2019 08:10</strong></td>
                                         </tr>
                                         <tr>
-                                            <td class="row"><button class="btn btn-outline-dark mr-1">Em andamento</button></td>
-                                            <td id="truncate"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></td>
+                                            <td id="td"><i class="fas fa-search"></i></td>
+                                            <td id="truncate"><a href="templatePerdCompDetails.html"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></a></td>
                                             <td id="td"><strong>RECEITA FEDERAL DO BRASIL</strong></td>
                                             <td id="truncate"><strong>IMPORTANTE: Expiração da expiração será expirada quando expirar o expiramento</strong></td>
                                             <td id="td"><strong>17/12/2019</strong></td>
                                             <td id="td"><strong>17/12/2019</strong></td>
                                             <td id="td"><strong>17/12/2019 08:10</strong></td>
                                         </tr>
-                                        <tr>
-                                            <td class="row"><button class="btn btn-outline-dark mr-1">Ignorar</button><button class="btn btn-dark" data-toggle="modal" data-target="#modalAtribuir">Atribuir</button></td>
-                                            <td id="truncate"><strong>26.549.883/0001-874345325-34634-3423456/0013</strong></td>
-                                            <td id="td"><strong>RECEITA FEDERAL DO BRASIL</strong></td>
-                                            <td id="truncate"><strong>IMPORTANTE: Expiração da expiração será expirada quando expirar o expiramento</strong></td>
-                                            <td id="td"><strong>17/12/2019</strong></td>
-                                            <td id="td"><strong>17/12/2019</strong></td>
-                                            <td id="td"><strong>17/12/2019 08:10</strong></td>
-                                        </tr>
-                            </div>
+
+                                    </tbody>
+                                </table>
                 </main>
                 </div>
                 </div>
@@ -377,6 +345,77 @@
                     </div>
                 </div>
     </body>
+    <div class="modal fade" id="modalAtribuir">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><strong>Atribuir ação de mensagem</strong></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div id="modalBg">
+                    <div class="modal-body">
+                        <p class="ml-2"> <strong>Assunto: </strong> IMPORTANTE: Expiração de Procuração Eletrônica</p>
+                        <p class="ml-2"> <strong>Enviado: </strong>17/02/2020 </p>
+                        <p class="ml-2"><strong>Criado por: </strong> Bruno Dinamarco </p>
+                        <div class="row">
+                            <div class="col-xl-9 form-group">
+                                <label for="inputDocumento"><strong class="ml-2">Responsável</strong></label>
+                                <select id="inputDocumento" class="form-control">
+                                        <option selected>Nathan Meira</option>
+                                        <option>Anthony of the devil</option>
+                                    </select>
+                            </div>
+                            <div class="col-xl-3 form-group">
+                                <label for="inputDataInicial"><strong>Prazo</strong></label>
+                                <input type="date" id="inputDataInicial" class="form-control">
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="text"><strong>Informe a ação a ser tomada</strong></label>
+                                    <input type="text" class="form-control" id="informActionMsg">
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value=""> Adicionar no calendário
+                                        </label>
+                                </div>
+                                <div class="form-check pt-2">
+                                    <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value=""> Notificar por email
+                                        </label>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 mt-3"></div>
+                            <div class="col-xl-4 mt-3 text-right">
+                                <button id="btnFilter" class="btn btn-outline-dark">Cancelar</button>
+                                <button id="btnFilter" class="btn btn-dark">Atribuir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="AddPerd">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><strong>Adicionar PerdComp</strong></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div id="modalBg">
+                    <div class="modal-body">
+                        <div class="col-xl-12 form-group">
+                            <input id="modalText2" type="text" class="form-control" pla ceholder="Você pode adicionar um ou vários PerdComps de uma única vez. Basta copiar e colar todos os PerdComps neste espaço, colocando o CNPJ, Número de PerdComp e o valor separados por ponto e vírgula. Veja o exemplo">
+                        </div>
+                        <div class="col-xl-12 text-right">
+                            <button id="btnFilter" class="btn btn-dark" data-dismiss="modal">Concluir</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous "></script>
     <script src="js/scripts.js "></script>

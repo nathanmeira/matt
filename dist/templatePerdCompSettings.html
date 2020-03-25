@@ -26,6 +26,7 @@
                 </span>
                 </div>
             </form>
+
             <div id="iconsNav">
                 <div class="dropdown dropleft" style="float: right; padding: 13px">
                     <a href="#" onclick="return false;" role="button" data-toggle="dropdown" data-target="#" style="float: left" aria-expanded="true">
@@ -42,7 +43,7 @@
                         </li>
                         <div class="notificationScroll">
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -53,7 +54,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -64,7 +65,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -75,7 +76,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class=".">
+                                <li class="">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -140,105 +141,136 @@
                         </div>
                     </div>
             </div>
-
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h3 class="mt-4 mb-3"><strong>Dashboard</strong></h3>
-                        <div class="row">
-                            <div class="col-xl-12 pt-3 pb-5">
-                                <div class="btn-group d-flex" role="group">
-                                    <a href="templateIndex.html" class="pt-4 btn btn-outline-dark w-100">Informações gerais</a>
-                                    <a href="templateDfe.html" class="pt-4 btn btn-outline-dark w-100">BKPS DF-e</a>
-                                    <a href="templateMessages.html" class="pt-4 btn btn-outline-dark w-100">BKPS Messages</a>
-                                    <a href="templatePerdComp.html" class="pt-4 btn btn-outline-dark active w-100"><strong>BKPS PerdComp</strong></a>
-                                </div>
+                        <a href="templatePerdCompFull.html">
+                            <h3 class="mt-4 mb-3"><i class="fas fa-arrow-left mr-3"></i></a>PerdComp <strong>/ Configurações</h3>
+                        <div class="card mt-4">
+                            <div id="accountAndSignature" class="card-header">
+                                <strong>Configurar opções de leitura dos PERD/COMP</strong>
+                    </div>
+                    <div class="card-body">
+                        <div class="col-xl-12">
+                            <div class="form-group mt-3">
+                                <label for="text"><strong>Usuários a serem notificados</strong></label>
+                                <input type="text" class="form-control" id="notificationMsg" value="x nathan@bkps.com.br">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xl-4 pb-4">
-                                <h5><strong>PerdComp</strong></h5>
+                        <div class="col-xl-12">
+                            <label for="text"><strong>Frequência de consulta</strong></label>
+                            <div class="row">
+                                <p>
+                                    <h3><span class="badge badge-secondary ml-2">SEG</span></h3>
+                                </p>
+                                <p>
+                                    <h3><span class="badge badge-light">TER</span></h3>
+                                </p>
+                                <p>
+                                    <h3><span class="badge badge-light">QUA</span></h3>
+                                </p>
+                                <p>
+                                    <h3><span class="badge badge-secondary">QUI</span></h3>
+                                </p>
+                                <p>
+                                    <h3><span class="badge badge-light">SEX</span></h3>
+                                </p>
+                                <p>
+                                    <h3><span class="badge badge-light">SAB</span></h3>
+                                </p>
+                                <p>
+                                    <h3><span class="badge badge-light">DOM</span></h3>
+                                </p>
                             </div>
-                            <div class="col-xl-8 pb-4 text-right">
-                                Última atualização hoje, às <span id="datebtn"> 17h30</span><button type="button" onclick="time()" class="btn btn-dark mr-2 ml-3"><i class="fas fa-sync"></i><a href="templatePerdCompFull.html"><button class="btn btn-dark">Acessar PerdComp</button></a>
-                            </div>
-                            <div class="col-xl-4">
-                                <div class="card bg-light mb-3 pt-3 pb-1">
-                                    <div class="card-body pb-3 mb-3">
-                                        <p class="card-title text-muted"><strong>PENDENTES</strong></p>
-                                        <h4 class="card-text"><strong>15</strong></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4">
-                                <div class="card bg-light mb-3 pt-3 pb-1">
-                                    <div class="card-body pb-3 mb-3">
-                                        <p class="card-title text-muted"><strong>ANDAMENTO</strong></p>
-                                        <h4 class="card-text"><strong>3</strong></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4">
-                                <div class="card bg-light mb-3 pt-3 pb-1">
-                                    <div class="card-body pb-3 mb-3">
-                                        <p class="card-title text-muted"><strong>RESOLVIDAS</strong></p>
-                                        <h4 class="card-text"><strong>50</strong></h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="table" class="card col-xl-12">
-                                <h5 class="mt-3 mb-4"><strong>Últimas consultas</strong><i class="fas fa-info-circle ml-2"></i></h5>
-                                <br>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class="mx-3">
-                                            <tr>
-                                                <th>Empresa</th>
-                                                <th>Número PerdComp</th>
-                                                <th>Data Transmissão</th>
-                                                <th>Atualizado em</th>
-                                                <th>Tipo</th>
-                                                <th>Tipo crédito</th>
-                                                <th>Situação</th>
-                                                <th>Informação complementar</th>
-                                                <th>Valor</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="text-muted">
-                                                <th>12.345.678/9123-45 - ISENTO<br>BKPS</th>
-                                                <th>3242324.32523./342325<br>do Brasil</th>
-                                                <th>25/03/1999</th>
-                                                <th>Declaração de compensação</th>
-                                                <th>Pagamento indevido</th>
-                                                <th>Análise</th>
-                                                <th>Recepcionado em<br>preocedimento de análise</th>
-                                                <th>282.513,00</th>
-                                            </tr>
-
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <label for="text"><strong>Horário de consulta</strong></label>
+                            <div class="row">
+                                <p>
+                                    <h3><span class="badge badge-light ml-2">08:00</span></h3>
+                                </p>
+                                <p>
+                                    <h3><span class="badge badge-secondary">16:00</span></h3>
+                                </p>
+                                <p>
+                                    <h3><span class="badge badge-light">00:00</span></h3>
+                                </p>
                             </div>
                         </div>
                     </div>
             </div>
+            <div class="row pt-3">
+                <div class="col-xl-9"></div>
+                <div class="col-xl-3 text-right">
+                    <a href="templatePerdCompFull.html"><button id="btnFilter" class="btn btn-outline-dark">Voltar</button></a>
+                    <a href="#"><button id="btnFilter" class="btn btn-dark">Salvar</button></a>
+                </div>
+            </div>
+            </main>
         </div>
         </div>
-        </main>
+        <div class="modal fade" id="modalAtribuir">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><strong>Atribuir ação de mensagem</strong></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div id="modalBg">
+                        <div class="modal-body">
+                            <p class="ml-2"> <strong>Assunto: </strong> IMPORTANTE: Expiração de Procuração Eletrônica
+                            </p>
+                            <p class="ml-2"> <strong>Enviado: </strong>17/02/2020 </p>
+                            <p class="ml-2"><strong>Criado por: </strong> Bruno Dinamarco </p>
+                            <div class="row">
+                                <div class="col-xl-9 form-group">
+                                    <div class="form-group mt-3">
+                                        <label for="text"><strong>Usuários a serem notificados</strong></label>
+                                        <input type="text" class="form-control" id="notificationMsg" value="x nathan@bkps.com.br">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 form-group">
+                                    <label for="inputDataInicial"><strong>Prazo</strong></label>
+                                    <input type="date" id="inputDataInicial" class="form-control">
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="form-group">
+                                        <label for="text"><strong>Informe a ação a ser tomada</strong></label>
+                                        <input type="text" class="form-control" id="informActionMsg">
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input" value=""> Adicionar no calendário
+                                                </label>
+                                    </div>
+                                    <div class="form-check pt-2">
+                                        <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input" value=""> Notificar por email
+                                                </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 mt-3"></div>
+                                <div class="col-xl-4 mt-3 text-right">
+                                    <button id="btnFilter" class="btn btn-outline-dark" data-dismiss="modal">Cancelar</button>
+                                    <button id="btnFilter" class="btn btn-dark" data-dismiss="modal">Atribuir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/datatables-demo.js"></script>
     </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous "></script>
+    <script src="js/scripts.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js " crossorigin="anonymous "></script>
+    <script src="assets/demo/chart-area-demo.js "></script>
+    <script src="assets/demo/chart-bar-demo.js "></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js " crossorigin="anonymous "></script>
+    <script src="assets/demo/datatables-demo.js "></script>
+
+
 
 </html>
