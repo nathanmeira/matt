@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    </head>
+
+    <body class="sb-nav">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+
+            <a class="navbar-brand" href="index.html">BKPS Platform</a>
+            <form class="mx-auto col-xl-4">
+                <div class="input-group w-100">
+                    <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
+                    <span class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button"> <i class="fa fa-search"></i></button>
+                </span>
+                </div>
+            </form>
+            <!-- <script>
+                $(window).on("load", function() {
+                    $(window).scroll(function() {
+                        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+                        $(".fade").each(function() {
+                            /* Check the location of each desired element */
+                            var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+                            /* If the element is completely within bounds of the window, fade it in */
+                            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                                if ($(this).css("opacity") == 0) {
+                                    $(this).fadeTo(500, 1);
+                                }
+                            } else { //object goes out of view (scrolling up)
+                                if ($(this).css("opacity") == 1) {
+                                    $(this).fadeTo(500, 0);
+                                }
+                            }
+                        });
+                    }).scroll(); //invoke scroll-handler on page-load
+                });
+            </script> -->
+            <div id="iconsNav">
+                <div class="dropdown dropleft" style="float: right; padding: 13px">
+                    <a href="#" onclick="return false;" role="button" data-toggle="dropdown" data-target="#" style="float: left" aria-expanded="true">
+                        <i class="far fa-bell fa-lg mr-3 text-muted"></i>
+                    </a>
+                    <ul id="dropNotifications" class="dropdown-menu dropdown-menu-left" role="menu">
+                        <li role="presentation" style="margin-bottom: -20px;">
+                            <a href="#">
+                                <div id="btnNot" class="btn-group btn-block" role="group" aria-label="Basic example">
+                                    <button type="button" style="margin-left:-20px" class="btn btn-dark">Notificações</button>
+                                    <button type="button" style="margin-right: 20px" class="btn btn-outline-dark">Processamento</button>
+                                </div>
+                            </a>
+                        </li>
+                        <div class="notificationScroll">
+                            <ul class="notificationList">
+                                <li class=".">
+                                    <div id="dropCard" class="card">
+                                        <div class="card-body">
+                                            <small class="text-muted">04/03/2020</small>
+                                            <p><strong>BKPS Message - Workflow atualizado</strong>
+                                                <br><small>Este workflow foi atualizado por<br> <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="notificationList">
+                                <li class=".">
+                                    <div id="dropCard" class="card">
+                                        <div class="card-body">
+                                            <small class="text-muted">04/03/2020</small>
+                                            <p><strong>BKPS Message - Workflow atualizado</strong>
+                                                <br><small>Este workflow foi atualizado por<br> <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="notificationList">
+                                <li class=".">
+                                    <div id="dropCard" class="card">
+                                        <div class="card-body">
+                                            <small class="text-muted">04/03/2020</small>
+                                            <p><strong>BKPS Message - Workflow atualizado</strong>
+                                                <br><small>Este workflow foi atualizado por<br> <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="notificationList">
+                                <li class=".">
+                                    <div id="dropCard" class="card">
+                                        <div class="card-body">
+                                            <small class="text-muted">04/03/2020</small>
+                                            <p><strong>BKPS Message - Workflow atualizado</strong>
+                                                <br><small>Este workflow foi atualizado por<br> <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="btnNotification" class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
+
+                    </ul>
+                </div>
+                <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted" style="margin-top: 14px;"></i></a>
+            </div>
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a id="dropdownMenuButton" class="nav-link dropdown-toggle btn btn-outline-secondary" id="dropdownMenuButton" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activity Log</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion fixed-top">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div id="sidebarPrimary">
+                                <ul id="sidebarPrimaryNav">
+                                    <li class="navButton">
+                                        <a href="templateIndex.html">
+                                            <div class="navButtonContent"><i class="fas fa-tachometer-alt"></i><br>Home
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="navButton">
+                                        <a href="templateApps.html">
+                                            <div class="navButtonContent"><i class="fas fa-store"></i><br>Apps e<br> Marketplace
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="navButton">
+                                        <a href="templateCalendar.html">
+                                            <div class="navButtonContent"><i class="fas fa-calendar-alt"></i><br>Calendário
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="navButton">
+                                        <a href="templateSettings.html">
+                                            <div class="navButtonContent"><i class="fas fa-user-cog"></i><br>Definições
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h3 class="mt-4 mb-3"><strong>Apps e Marketplace</strong></h3>
+                        <div class="col-xl-3 pt-3">
+                            <div class="btn-group btn-block" role="group" aria-label="Basic example">
+                                <a href="templateApps.html" class="btn btn-sm btn-outline-dark" style="line-height: 4">Instalados <span class="badge badge-dark"> 3</span></a>
+                                <a href="templateMarketplace.html" class="btn btn-sm btn-outline-dark active" style="line-height: 4"><strong>Marketplace</strong></a>
+                            </div>
+                        </div>
+                        <h4 class="mt-4 mb-4 ml-3"><strong>Loja de aplicativos</strong></h4>
+                        <form class="col-xl-5">
+                            <div class="input-group w-100">
+                                <input class="form-control" type="search" placeholder="Pesquisar aplicativos" id="example-search-input">
+                                <span class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button"> <i class="fa fa-search"></i></button>
+                            </span>
+                            </div>
+                        </form>
+                        <div class="col-xl-12">
+                            <div class="card flex-row flex-wrap mb-3 mt-4">
+                                <div class="card-header border-0 mt-4 ml-3 pt-4">
+                                    <img src="https://img.icons8.com/dotty/80/000000/business.png">
+                                </div>
+                                <div class="card-block px-3 my-auto">
+                                    <div class="badge badge-secondary mt-3 mb-2">Categoria</div>
+                                    <h4 class="card-title"><strong>Nome do app</strong></h4>
+                                    <p class="card-text pb-2">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.</p>
+                                    <p class="pb-3"><strong>R$19,90</strong>/mês</p>
+                                </div>
+                                <div class="card-body text-right my-auto mr-4">
+                                    <a href="templateAppInfo.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Mais informações</strong></button></a>
+                                </div>
+                            </div>
+                            <div class="card flex-row flex-wrap mb-3">
+                                <div class="card-header border-0 mt-4 ml-3 pt-4">
+                                    <img src="https://img.icons8.com/dotty/80/000000/business.png">
+                                </div>
+                                <div class="card-block px-3 my-auto">
+                                    <div class="badge badge-secondary mt-3 mb-2">Categoria</div>
+                                    <h4 class="card-title"><strong>Nome do app</strong></h4>
+                                    <p class="card-text pb-2">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire..</p>
+                                    <p class="pb-3"><strong>R$19,90</strong>/mês</p>
+                                </div>
+                                <div class="card-body text-right my-auto mr-4">
+                                    <a href="templateAppInfo.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Mais informações</strong></button></a>
+                                </div>
+                            </div>
+                            <div class="card flex-row flex-wrap mb-3">
+                                <div class="card-header border-0 mt-4 ml-3 pt-4">
+                                    <img src="https://img.icons8.com/dotty/80/000000/business.png">
+                                </div>
+                                <div class="card-block px-3 my-auto">
+                                    <div class="badge badge-secondary mt-3 mb-2">Categoria</div>
+                                    <h4 class="card-title"><strong>Nome do app</strong></h4>
+                                    <p class="card-text pb-2">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.</p>
+                                    <p class="pb-3"><strong>R$19,90</strong>/mês</p>
+                                </div>
+                                <div class="card-body text-right my-auto mr-4">
+                                    <a href="templateAppInfo.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Mais informações</strong></button></a>
+                                </div>
+                            </div>
+                            <div class="card flex-row flex-wrap mb-3">
+                                <div class="card-header border-0 mt-4 ml-3 pt-4">
+                                    <img src="https://img.icons8.com/dotty/80/000000/business-e-mail.png">
+                                </div>
+                                <div class="card-block px-3 my-auto">
+                                    <div class="badge badge-secondary mt-3 mb-2">Categoria</div>
+                                    <h4 class="card-title"><strong>Nome do app</strong></h4>
+                                    <p class="card-text pb-2">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.</p>
+                                    <p class="pb-3"><strong>R$19,90</strong>/mês</p>
+                                </div>
+                                <div class="card-body text-right my-auto mr-4">
+                                    <a href="templateAppInfo.html"><button id="mktbtn" class="btn btn-dark float-right"><strong>Mais informações</strong></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </main>
+        </div>
+        </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/datatables-demo.js"></script>
+    </body>
+
+</html>

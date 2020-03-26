@@ -10752,5 +10752,16 @@ body {
     padding-top: 20px;
 }
 
+#appInfo {
+    margin-top: 42px;
+    margin-right: 0px;
+    padding-right: -22px;
+    margin-left: -253px;
+}
 
+#appBtn {
+    margin-right: 0px;
+    right: -241px;
+    left: 383px;
+    bottom: 5px;
 }
