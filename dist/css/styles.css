@@ -10515,38 +10515,6 @@ a {
     height: 300px;
 }
 
-#myModal4 {
-    margin-top: 160px;
-}
-
-#myModal6 {
-    margin-top: 250px;
-}
-
-#myModal7 {
-    margin-top: 200px;
-}
-
-#myModal5 {
-    margin-top: 200px;
-}
-
-#myModal8 {
-    margin-top: 200px;
-}
-
-#myModal9 {
-    margin-top: 200px;
-}
-
-#myModal10 {
-    margin-top: 200px;
-}
-
-#myModal11 {
-    margin-top: 200px;
-}
-
 #cardIcon {
     margin-left: 103px;
     border-left-width: 0px;
@@ -10760,8 +10728,17 @@ body {
 }
 
 #appBtn {
+    right: 0px;
     margin-right: 0px;
-    right: -241px;
-    left: 280px;
-    bottom: 5px;
+    left: 446px;
+    top: 14px;
+}
+
+#appInfoSmallImg {
+    margin-left: 40.25rem;
+}
+
+#btnSettings {
+    min-width: 200px;
+    max-width: 200px;
 }

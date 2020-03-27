@@ -16,8 +16,8 @@
 
     <body class="sb-nav">
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+
             <a class="navbar-brand" href="index.html">BKPS Platform</a>
-            <!-- Navbar Search-->
             <form class="mx-auto col-xl-4">
                 <div class="input-group w-100">
                     <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
@@ -26,7 +26,28 @@
                 </span>
                 </div>
             </form>
+            <!-- <script>
+                $(window).on("load", function() {
+                    $(window).scroll(function() {
+                        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+                        $(".fade").each(function() {
+                            /* Check the location of each desired element */
+                            var objectBottom = $(this).offset().top + $(this).outerHeight();
 
+                            /* If the element is completely within bounds of the window, fade it in */
+                            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                                if ($(this).css("opacity") == 0) {
+                                    $(this).fadeTo(500, 1);
+                                }
+                            } else { //object goes out of view (scrolling up)
+                                if ($(this).css("opacity") == 1) {
+                                    $(this).fadeTo(500, 0);
+                                }
+                            }
+                        });
+                    }).scroll(); //invoke scroll-handler on page-load
+                });
+            </script> -->
             <div id="iconsNav">
                 <div class="dropdown dropleft" style="float: right; padding: 13px">
                     <a href="#" onclick="return false;" role="button" data-toggle="dropdown" data-target="#" style="float: left" aria-expanded="true">
@@ -43,7 +64,7 @@
                         </li>
                         <div class="notificationScroll">
                             <ul class="notificationList">
-                                <li class="">
+                                <li class=".">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -54,7 +75,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class="">
+                                <li class=".">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -65,7 +86,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class="">
+                                <li class=".">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -76,7 +97,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class="">
+                                <li class=".">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -104,10 +125,11 @@
                     </div>
                 </li>
             </ul>
+
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion fixed-top">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div id="sidebarPrimary">
@@ -141,55 +163,97 @@
                         </div>
                     </div>
             </div>
+
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <a href="templateMarketplace.html">
-                            <h3 class="mt-4 mb-3"><i class="fas fa-arrow-left mr-3"></i></a>Nome do app</h3>
-                        <div class="col-xl-12">
-                            <div class="row pt-4">
-                                <img class="ml-5 mt-1" src="https://img.icons8.com/dotty/70/000000/business.png">
-                                <h5 class="pl-3 mt-3">Nome do app <span class="badge badge-secondary ml-5">Categoria</span></h5>
-                                <br>
-                                <p id="appInfo">Feito por:<strong> Nathan M.</strong></p>
-
-                                <div id="appBtn" class="col-xl-6 text-right">
-                                    <div class="row">
-                                        <h4><strong>R$19,90</strong>/mês</h4>
-                                        <button class="btn btn-outline-dark ml-2 mr-2">Teste gratuitamente</button>
-                                        <button class="btn btn-dark">Adquirir módulo</button>
+                        <h3 class="mt-4 mb-3"><strong>Definições</strong></h3>
+                        <div class="col-xl-10 pt-4">
+                            <div class="btn-group btn-block" role="group" aria-label="Basic example">
+                                <a id="btnSettings" href="templateSettings.html" class="btn btn-sm btn-outline-dark active" style="line-height: 4"><strong>Minha conta</strong></a>
+                                <a id="btnSettings" href="templateEmpresasFiliais.html" class="btn btn-sm btn-outline-dark " style="line-height: 4">Empresas e filiais</a>
+                                <a id="btnSettings" href="templateUsuarios.html" class="btn btn-sm btn-outline-dark " style="line-height: 4">Usuários</a>
+                                <a id="btnSettings" href="templateFaturamento.html" class="btn btn-sm btn-outline-dark " style="line-height: 4">Faturamento</a>
+                                <a id="btnSettings" href="templateAPI.html" class="btn btn-sm btn-outline-dark" style="line-height: 4">API</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 ml-2 pl-3">
+                                <div class="card mt-4">
+                                    <div id="accountAndSignature" class="card-header">
+                                        <strong>Conta e Assinatura</strong>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text pb-2"><strong>José Adilson Rodrigues dos Santos </strong><span class="badge badge-secondary ml-2"> ASSINATURA ATIVA</span></p>
+                                        <p class="card-text pb-2">welcome@maguila.com</p>
+                                        <p class="card-text pb-2"><strong>Criado por: </strong>Boomer Joking Smith.</p>
+                                        <p class="card-text pb-2"><strong>Data de criação: </strong>07/11/2077</p>
+                                        <p class="card-text pb-2"><strong>Tipo de assinatura: </strong>Premium Golden Platinum Executive</p>
+                                        <p class="card-text pb-2"><strong>Data da contratação: </strong>25/12/2020</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <p class="text-justify pt-4 pl-4 ml-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> It has been the industry's standard dummy text ever since the 1500s.<br>It is a long established fact that a reader will be distracted by<br>                                        the readable content of a page when looking at its layout. <br>The point of using Lorem Ipsum is that it has a more-or-less<br> normal distribution of letters </p>
-                                    <p class="pl-4 ml-3 pt-4">- Lorem Ipsum <br> - Lorem Ipsum<br> - Lorem Ipsum<br> - Lorem Ipsum</p>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card mt-4">
+                                            <div id="accountAndSignature" class="card-header">
+                                                <strong>Apps contratados</strong>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="card flex-row flex-wrap mb-3">
+                                                    <div class="card-header border-0">
+                                                        <img src="https://img.icons8.com/dotty/80/000000/business-e-mail.png">
+                                                    </div>
+                                                    <div class="card-block px-3 my-auto">
+                                                        <h4 class="card-title"><strong>BKPS DF-e</strong></h4>
+                                                        <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.</p>
+                                                    </div>
+                                                    <div class="card-body text-right my-auto">
+                                                        <a href="#"><button id="mktbtn" class="btn btn-outline-dark float-right"><strong>Desativar</strong></button></a>
+                                                    </div>
+                                                </div>
+                                                <div class="card flex-row flex-wrap mb-3">
+                                                    <div class="card-header border-0">
+                                                        <img src="https://img.icons8.com/wired/80/000000/chat.png">
+                                                    </div>
+                                                    <div class="card-block px-3 my-auto">
+                                                        <h4 class="card-title"><strong>BKPS Messages</strong></h4>
+                                                        <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.</p>
+                                                    </div>
+                                                    <div class="card-body text-right my-auto">
+                                                        <a href="#"><button id="mktbtn" class="btn btn-outline-dark float-right"><strong>Desativar</strong></button></a>
+                                                    </div>
+                                                </div>
+                                                <div class="card flex-row flex-wrap mb-3">
+                                                    <div class="card-header border-0">
+                                                        <img src="https://img.icons8.com/dotty/80/000000/refund.png">
+                                                    </div>
+                                                    <div class="card-block px-3 my-auto">
+                                                        <h4 class="card-title"><strong>BKPS PerdComp</strong></h4>
+                                                        <p class="card-text">Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.Dorime. Intemiro adapare dorime. Ameno Ameno. Latire. Latire.</p>
+                                                    </div>
+                                                    <div class="card-body text-right my-auto">
+                                                        <a href="#"><button id="mktbtn" class="btn btn-outline-dark float-right"><strong>Desativar</strong></button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img class="mt-3 pt-2" src="https://dummyimage.com/532x280/000/fff">
-                            </div>
-                            <div id="appInfoSmallImg" class="row mt-3">
-                                <img class="mr-2" src="https://dummyimage.com/170x100/000/fff">
-                                <img class="mr-2" src="https://dummyimage.com/170x100/000/fff">
-                                <img src="https://dummyimage.com/170x100/000/fff">
-
                             </div>
                         </div>
                     </div>
                 </main>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/datatables-demo.js"></script>
     </body>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous "></script>
-    <script src="js/scripts.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js " crossorigin="anonymous "></script>
-    <script src="assets/demo/chart-area-demo.js "></script>
-    <script src="assets/demo/chart-bar-demo.js "></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous "></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js " crossorigin="anonymous "></script>
-    <script src="assets/demo/datatables-demo.js "></script>
-
-
 
 </html>

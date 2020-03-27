@@ -1,319 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>BKPS</title>
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
-    </script>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>BKPS</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
+        </script>
+    </head>
 
-<body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
-        <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
-        <form class="mx-auto col-xl-6">
-            <div class="input-group">
-                <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
-                <span class="input-group-append">
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-light pt-5 pb-5">
+            <a class="navbar-brand col-xl-3" href="index.html">BKPS Platform</a>
+            <form class="mx-auto col-xl-6">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
+                    <span class="input-group-append">
                     <button class="btn btn-outline-dark " type="button">
                         <i class="fa fa-search"></i>
                     </button>
                 </span>
+                </div>
+            </form>
+            <div id="iconsNav">
+                <div class="dropdown dropleft" style="float: right; padding: 13px">
+                    <a href="#" onclick="return false;" role="button" data-toggle="dropdown" id="dropdownMenu1" data-target="#" style="float: left" aria-expanded="true">
+                        <i class="far fa-bell fa-lg mr-3 text-muted"></i>
+                    </a>
+                    <ul id="dropdrop" class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a href="#" class="dropdown-menu-header">
+                                <div id="btnNot" class="btn-group btn-block mx-auto" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-dark">Notificações</button>
+                                    <button type="button" class="btn btn-outline-dark">Processamento</button>
+                                </div>
+                            </a>
+                        </li>
+                        <ul style="list-style-type: none; margin-left: -1px;margin-bottom: -11px;margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
+                            <li>
+                                <div id="dropCard" class="card">
+                                    <div class="card-body">
+                                        <small class="text-muted">04/03/2020</small>
+                                        <p><strong>BKPS Message - Workflow atualizado</strong>
+                                            <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
+                    </ul>
+                </div>
+                <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted" style="margin-top: 14px;"></i></a>
             </div>
-        </form>
-        <div id="iconsNav">
-            <div class="dropdown dropleft" style="float: right; padding: 13px">
-                <a href="#" onclick="return false;" role="button" data-toggle="dropdown" id="dropdownMenu1" data-target="#" style="float: left" aria-expanded="true">
-                    <i class="far fa-bell fa-lg mr-3 text-muted"></i>
-                </a>
-                <ul id="dropdrop" class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
-                    <li role="presentation">
-                        <a href="#" class="dropdown-menu-header">
-                            <div id="btnNot" class="btn-group btn-block mx-auto" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-dark">Notificações</button>
-                            <button type="button" class="btn btn-outline-dark">Processamento</button>
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <ul class="nav navbar-nav navbar-right ml-auto">
+                            <a class="nav-link" href="#">
+                                <div class="d-flex justify-content-center">
+                                    <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
+                            </a>
                             </div>
-                        </a>
-                    </li>
-                    <ul style="list-style-type: none; margin-left: -1px;margin-bottom: -11px;margin-top: -31px; padding-bottom: 10px;">
-                        <li>
-                            <div id="dropCard" class="card">
-                                <div class="card-body">
-                                    <small class="text-muted">04/03/2020</small>
-                                    <p><strong>BKPS Message - Workflow atualizado</strong>
-                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
-                        <li>
-                            <div id="dropCard" class="card">
-                                <div class="card-body">
-                                    <small class="text-muted">04/03/2020</small>
-                                    <p><strong>BKPS Message - Workflow atualizado</strong>
-                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
-                        <li>
-                            <div id="dropCard" class="card">
-                                <div class="card-body">
-                                    <small class="text-muted">04/03/2020</small>
-                                    <p><strong>BKPS Message - Workflow atualizado</strong>
-                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul style="list-style-type: none; margin-left: -1px; margin-bottom: -11px; margin-top: -31px; padding-bottom: 10px;">
-                        <li>
-                            <div id="dropCard" class="card">
-                                <div class="card-body">
-                                    <small class="text-muted">04/03/2020</small>
-                                    <p><strong>BKPS Message - Workflow atualizado</strong>
-                                    <br><small>Este workflow foi atualizado<br> por <strong>Bruno Totoro</strong>, clique aqui para visualizar.</small></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <button class="btn btn-dark btn-block"><strong>Ver todas as Notificações</strong></button>
-                </ul>
-            </div>
-            <a href="#"><i class="far fa-question-circle fa-lg mr-3 text-muted" style="margin-top: 14px;"></i></a>
-        </div>
-        <ul class="navbar-nav ml-auto ml-md-0">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle btn btn-outline-dark" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Matheus Meira</strong></a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="login.html">Logout</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
-                    <ul class="nav navbar-nav navbar-right ml-auto">
-                        <a class="nav-link" href="#">
-                            <div class="d-flex justify-content-center">
-                                <li class="nav-item active"><a href="index.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
-                        </a>
-                </div>
-                <div class="sb-sidenav-menu">
-                    <ul class="nav navbar-nav navbar-right ml-auto text-center">
-                        <a class="nav-link" href="#">
-                            <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="installed.html" class="nav-link"><i class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
-                        </a>
-                </div>
-                <div class="sb-sidenav-menu">
-                    <ul class="nav navbar-nav navbar-right ml-auto">
-                        <a class="nav-link" href="#">
-                            <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
-                        </a>
-                </div>
-                <div class="sb-sidenav-menu">
-                    <ul class="nav navbar-nav navbar-right ml-auto">
-                        <a class="nav-link" href="#">
-                            <div class="d-flex justify-content-center">
-                                <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fas fa-user-cog"></i><span>Definições</span></a></li>
-                        </a>
-                </div>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                </div>
-                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
+                            <div class="sb-sidenav-menu">
+                                <ul class="nav navbar-nav navbar-right ml-auto text-center">
+                                    <a class="nav-link" href="#">
+                                        <div class="d-flex justify-content-center">
+                                            <li class="nav-item"><a href="installed.html" class="nav-link"><i class="fas fa-store"></i><span>Apps e<br>Marketplace</span></a></li>
+                                    </a>
+                                    </div>
+                                    <div class="sb-sidenav-menu">
+                                        <ul class="nav navbar-nav navbar-right ml-auto">
+                                            <a class="nav-link" href="#">
+                                                <div class="d-flex justify-content-center">
+                                                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-calendar-alt"></i><span>Calendário</span></a></li>
+                                            </a>
+                                            </div>
+                                            <div class="sb-sidenav-menu">
+                                                <ul class="nav navbar-nav navbar-right ml-auto">
+                                                    <a class="nav-link" href="#">
+                                                        <div class="d-flex justify-content-center">
+                                                            <li class="nav-item"><a href="settings.html" class="nav-link"><i class="fas fa-user-cog"></i><span>Definições</span></a></li>
+                                                    </a>
+                                                    </div>
+                                                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                                    </div>
+                                                    <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
-                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                        </div>
-                    </nav>
+                                                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                                            </div>
+                                                        </nav>
+                                                    </div>
+                                            </div>
+                                    </div>
+                </nav> <a class="btn btn-primary" href="#" role="button">Link</a>
                 </div>
-        </div>
-    </div>
-    </nav> <a class="btn btn-primary" href="#" role="button">Link</a>
-    </div>
-    <div id="layoutSidenav_content">
-        <div class="container-fluid">
-            <h3 class="mt-4 mb-5 pt-5"><strong class="pl-5"> Definições</strong></h3>
-            <div class="col-xl-12">
-                <div class="row">
-                    <div id="btnGroup" class="btn-group btn-block" role="group">
-                        <a href="settings.html" class="btn btn-secondary ">Minha conta</a>
-                        <a href="companiesAndBranches.html" class="btn btn-secondary">Empresas e filiais</a>
-                        <a href="users.html" class="btn btn-secondary ">Usuários</a>
-                        <a href="billing.html" class="btn btn-secondary active">Faturamento</a>
-                        <a href="api.html" class="btn btn-secondary">API</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="row pt-4">
-                    <div class="col-xl-2 form-group">
-                        <label for="inputDate">Data Inicial</label>
-                        <input type="DI" class="form-control" id="inputDF">
-                    </div>
-                    <div class="col-xl-2 form-group">
-                        <label for="inputDataFnal">CNPJ</label>
-                        <input type="DF" class="form-control" id="inputDI">
-                    </div>
-                    <div class="col-xl-2 form-group">
-                        <label for="inputStatus">Status</label>
-                        <select id="inputStatus" class="form-control">
-                            <option selected>Todos</option>
-                            <option>Nenhum</option>
-                            <option>8</option>
-                            <option>80</option>
-                        </select>
-                    </div>
-                    <div class="col-xl-2 form-group">
-                        <label for="inputCNPJ">Valor Inicial</label>
-                        <input type="VI" class="form-control" id="inputVI">
-                    </div>
-                    <div class="col-xl-2 form-group">
-                        <label for="inputVF">Valor Final</label>
-                        <input type="VF" class="form-control" id="inputVF">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-9"></div>
-                    <div class="col-xl-3">
-                        <button class="btn btn-outline-dark mr-2">Limpar filtros</button>
-                        <button class="btn btn-dark">Aplicar</button>
-                    </div>
-                </div>
-                <div class="col-xl-12">
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">Mês referente</th>
-                                <th scope="col">Data de vencimento</th>
-                                <th scope="col">Data de pagamento</th>
-                                <th scope="col">Situação</th>
-                                <th scope="col">Tipo</th>
-                                <th scope="col">Valor</th>
-                                <th scope="col">Fatura</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="clickable-row" data-href="userProfile.html">
-                                <td>Janeiro/2020</td>
-                                <td>11/03/2020</td>
-                                <td>01/02/2020</td>
-                                <td>Aberta</td>
-                                <td>Mensal</td>
-                                <td>R$150,00</td>
-                                <td><a href="#">Visualizar boleto</a></td>
-                            </tr>
-                            <tr class="clickable-row" data-href="userProfile.html">
-                                <td>Janeiro/2020</td>
-                                <td>11/03/2020</td>
-                                <td>01/02/2020</td>
-                                <td>Aberta</td>
-                                <td>Mensal</td>
-                                <td>R$150,00</td>
-                                <td><a href="#">Visualizar boleto</a></td>
-                            </tr>
-                            <tr class="clickable-row" data-href="userProfile.html">
-                                <td>Janeiro/2020</td>
-                                <td>11/03/2020</td>
-                                <td>01/02/2020</td>
-                                <td>Aberta</td>
-                                <td>Mensal</td>
-                                <td>R$150,00</td>
-                                <td><a href="#">Visualizar boleto</a></td>
-                            </tr>
-                            <tr class="clickable-row" data-href="userProfile.html">
-                                <td>Janeiro/2020</td>
-                                <td>11/03/2020</td>
-                                <td>01/02/2020</td>
-                                <td>Aberta</td>
-                                <td>Mensal</td>
-                                <td>R$150,00</td>
-                                <td><a href="#">Visualizar boleto</a></td>
-                            </tr>
-                            <tr class="clickable-row" data-href="userProfile.html">
-                                <td>Janeiro/2020</td>
-                                <td>11/03/2020</td>
-                                <td>01/02/2020</td>
-                                <td>Aberta</td>
-                                <td>Mensal</td>
-                                <td>R$150,00</td>
-                                <td><a href="#">Visualizar boleto</a><a href="#"><i class="fas fa-search-dollar"></i></a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="myModal8">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Cadastrar usuário</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div id="modalBg">
-                        <div class="modal-body">
+                <div id="layoutSidenav_content">
+                    <div class="container-fluid">
+                        <h3 class="mt-4 mb-5 pt-5"><strong class="pl-5"> Definições</strong></h3>
+                        <div class="col-xl-12">
                             <div class="row">
-                                <div class="col-xl-12 form-group">
-                                    <label for="inputEstabelecimento">Nome</label>
-                                    <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-12 form-group">
-                                    <label for="inputEmail">Email</label>
-                                    <input type="Email" class="form-control" id="inputEmail">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-12 form-group">
-                                    <label for="inputPerfil">Tipo de perfil:</label>
-                                    <select id="inputPerfil" class="form-control">
-                                        <option selected>Admin</option>
-                                        <option>Senhor feudal</option>
-                                        <option>Vassalo</option>
-                                        <option>Plebeu</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4"></div>
-                                <div class="col-md-4"></div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-outline-dark ml-4 mr-3">Cancelar</button>
-                                    <button class="btn btn-dark">Cadastrar</button>
+                                <div id="btnGroup" class="btn-group btn-block" role="group">
+                                    <a href="settings.html" class="btn btn-secondary ">Minha conta</a>
+                                    <a href="companiesAndBranches.html" class="btn btn-secondary">Empresas e filiais</a>
+                                    <a href="users.html" class="btn btn-secondary ">Usuários</a>
+                                    <a href="billing.html" class="btn btn-secondary active">Faturamento</a>
+                                    <a href="api.html" class="btn btn-secondary">API</a>
                                 </div>
                             </div>
                         </div>
+                        <div class="container-fluid">
+                            <div class="row pt-4">
+                                <div class="col-xl-2 form-group">
+                                    <label for="inputDate">Data Inicial</label>
+                                    <input type="DI" class="form-control" id="inputDF">
+                                </div>
+                                <div class="col-xl-2 form-group">
+                                    <label for="inputDataFnal">CNPJ</label>
+                                    <input type="DF" class="form-control" id="inputDI">
+                                </div>
+                                <div class="col-xl-2 form-group">
+                                    <label for="inputStatus">Status</label>
+                                    <select id="inputStatus" class="form-control">
+                                <option selected>Todos</option>
+                                <option>Nenhum</option>
+                                <option>8</option>
+                                <option>80</option>
+                            </select>
+                                </div>
+                                <div class="col-xl-2 form-group">
+                                    <label for="inputCNPJ">Valor Inicial</label>
+                                    <input type="VI" class="form-control" id="inputVI">
+                                </div>
+                                <div class="col-xl-2 form-group">
+                                    <label for="inputVF">Valor Final</label>
+                                    <input type="VF" class="form-control" id="inputVF">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-9"></div>
+                                <div class="col-xl-3">
+                                    <button class="btn btn-outline-dark mr-2">Limpar filtros</button>
+                                    <button class="btn btn-dark">Aplicar</button>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Mês referente</th>
+                                            <th scope="col">Data de vencimento</th>
+                                            <th scope="col">Data de pagamento</th>
+                                            <th scope="col">Situação</th>
+                                            <th scope="col">Tipo</th>
+                                            <th scope="col">Valor</th>
+                                            <th scope="col">Fatura</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="clickable-row" data-href="userProfile.html">
+                                            <td>Janeiro/2020</td>
+                                            <td>11/03/2020</td>
+                                            <td>01/02/2020</td>
+                                            <td>Aberta</td>
+                                            <td>Mensal</td>
+                                            <td>R$150,00</td>
+                                            <td><a href="#">Visualizar boleto</a></td>
+                                        </tr>
+                                        <tr class="clickable-row" data-href="userProfile.html">
+                                            <td>Janeiro/2020</td>
+                                            <td>11/03/2020</td>
+                                            <td>01/02/2020</td>
+                                            <td>Aberta</td>
+                                            <td>Mensal</td>
+                                            <td>R$150,00</td>
+                                            <td><a href="#">Visualizar boleto</a></td>
+                                        </tr>
+                                        <tr class="clickable-row" data-href="userProfile.html">
+                                            <td>Janeiro/2020</td>
+                                            <td>11/03/2020</td>
+                                            <td>01/02/2020</td>
+                                            <td>Aberta</td>
+                                            <td>Mensal</td>
+                                            <td>R$150,00</td>
+                                            <td><a href="#">Visualizar boleto</a></td>
+                                        </tr>
+                                        <tr class="clickable-row" data-href="userProfile.html">
+                                            <td>Janeiro/2020</td>
+                                            <td>11/03/2020</td>
+                                            <td>01/02/2020</td>
+                                            <td>Aberta</td>
+                                            <td>Mensal</td>
+                                            <td>R$150,00</td>
+                                            <td><a href="#">Visualizar boleto</a></td>
+                                        </tr>
+                                        <tr class="clickable-row" data-href="userProfile.html">
+                                            <td>Janeiro/2020</td>
+                                            <td>11/03/2020</td>
+                                            <td>01/02/2020</td>
+                                            <td>Aberta</td>
+                                            <td>Mensal</td>
+                                            <td>R$150,00</td>
+                                            <td><a href="#">Visualizar boleto</a><a href="#"><i class="fas fa-search-dollar"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal8">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Cadastrar usuário</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div id="modalBg">
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-xl-12 form-group">
+                                                <label for="inputEstabelecimento">Nome</label>
+                                                <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12 form-group">
+                                                <label for="inputEmail">Email</label>
+                                                <input type="Email" class="form-control" id="inputEmail">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12 form-group">
+                                                <label for="inputPerfil">Tipo de perfil:</label>
+                                                <select id="inputPerfil" class="form-control">
+                                            <option selected>Admin</option>
+                                            <option>Senhor feudal</option>
+                                            <option>Vassalo</option>
+                                            <option>Plebeu</option>
+                                        </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4">
+                                                <button class="btn btn-outline-dark ml-4 mr-3">Cancelar</button>
+                                                <button class="btn btn-dark">Cadastrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/chart-area-demo.js"></script>
-    <script src="assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/datatables-demo.js"></script>
-</body>
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+                <script src="js/scripts.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+                <script src="assets/demo/chart-area-demo.js"></script>
+                <script src="assets/demo/chart-bar-demo.js"></script>
+                <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+                <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+                <script src="assets/demo/datatables-demo.js"></script>
+    </body>
 
 </html>

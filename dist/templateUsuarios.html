@@ -16,8 +16,8 @@
 
     <body class="sb-nav">
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-light">
+
             <a class="navbar-brand" href="index.html">BKPS Platform</a>
-            <!-- Navbar Search-->
             <form class="mx-auto col-xl-4">
                 <div class="input-group w-100">
                     <input class="form-control" type="search" placeholder="Pesquisar" id="example-search-input">
@@ -26,7 +26,28 @@
                 </span>
                 </div>
             </form>
+            <!-- <script>
+                $(window).on("load", function() {
+                    $(window).scroll(function() {
+                        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+                        $(".fade").each(function() {
+                            /* Check the location of each desired element */
+                            var objectBottom = $(this).offset().top + $(this).outerHeight();
 
+                            /* If the element is completely within bounds of the window, fade it in */
+                            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                                if ($(this).css("opacity") == 0) {
+                                    $(this).fadeTo(500, 1);
+                                }
+                            } else { //object goes out of view (scrolling up)
+                                if ($(this).css("opacity") == 1) {
+                                    $(this).fadeTo(500, 0);
+                                }
+                            }
+                        });
+                    }).scroll(); //invoke scroll-handler on page-load
+                });
+            </script> -->
             <div id="iconsNav">
                 <div class="dropdown dropleft" style="float: right; padding: 13px">
                     <a href="#" onclick="return false;" role="button" data-toggle="dropdown" data-target="#" style="float: left" aria-expanded="true">
@@ -43,7 +64,7 @@
                         </li>
                         <div class="notificationScroll">
                             <ul class="notificationList">
-                                <li class="">
+                                <li class=".">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -54,7 +75,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class="">
+                                <li class=".">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -65,7 +86,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class="">
+                                <li class=".">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -76,7 +97,7 @@
                                 </li>
                             </ul>
                             <ul class="notificationList">
-                                <li class="">
+                                <li class=".">
                                     <div id="dropCard" class="card">
                                         <div class="card-body">
                                             <small class="text-muted">04/03/2020</small>
@@ -104,10 +125,11 @@
                     </div>
                 </li>
             </ul>
+
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion fixed-top">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div id="sidebarPrimary">
@@ -144,52 +166,125 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <a href="templateMarketplace.html">
-                            <h3 class="mt-4 mb-3"><i class="fas fa-arrow-left mr-3"></i></a>Nome do app</h3>
+                        <h3 class="mt-4 mb-3"><strong>Definições</strong></h3>
+                        <div class="col-xl-10 pt-4">
+                            <div class="btn-group btn-block" role="group" aria-label="Basic example">
+                                <a id="btnSettings" href="templateSettings.html" class="btn btn-sm btn-outline-dark" style="line-height: 4">Minha conta</a>
+                                <a id="btnSettings" href="templateEmpresasFiliais.html" class="btn btn-sm btn-outline-dark " style="line-height: 4">Empresas e filiais</a>
+                                <a id="btnSettings" href="templateUsuarios.html" class="btn btn-sm btn-outline-dark active" style="line-height: 4"><strong>Usuários</strong></a>
+                                <a id="btnSettings" href="templateFaturamento.html" class="btn btn-sm btn-outline-dark " style="line-height: 4">Faturamento</a>
+                                <a id="btnSettings" href="templateAPI.html" class="btn btn-sm btn-outline-dark" style="line-height: 4">API</a>
+                            </div>
+                        </div>
                         <div class="col-xl-12">
-                            <div class="row pt-4">
-                                <img class="ml-5 mt-1" src="https://img.icons8.com/dotty/70/000000/business.png">
-                                <h5 class="pl-3 mt-3">Nome do app <span class="badge badge-secondary ml-5">Categoria</span></h5>
-                                <br>
-                                <p id="appInfo">Feito por:<strong> Nathan M.</strong></p>
-
-                                <div id="appBtn" class="col-xl-6 text-right">
-                                    <div class="row">
-                                        <h4><strong>R$19,90</strong>/mês</h4>
-                                        <button class="btn btn-outline-dark ml-2 mr-2">Teste gratuitamente</button>
-                                        <button class="btn btn-dark">Adquirir módulo</button>
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div id="searchMkt" class="input-group pb-4 pt-5"><input id="searchMktInput" class="form-control" type="search" placeholder="Pesquisar por Nome ou Email" aria-label="Search">
+                                        <div class="input-group-append"><span class="input-group-text" id="basic-text1"><button class="btn btn-sm"><i class="fas fa-search text-grey" aria-hidden="true"></i></span></div>
                                     </div>
+                                </div>
+                                <div class="col-xl-6 my-auto">
+                                    <button id="CompaniesBranchesButtons" class="btn btn-dark mt-4" data-toggle="modal" data-target="#myModal8">Cadastrar usuário</button>
+                                </div>
+                            </div>
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Tipo de perfil</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="clickable-row" data-href="templatePerfilUsuario.html">
+                                        <td>José Adilson Rodrigues dos Santos</td>
+                                        <td>welcome@maguila.com</td>
+                                        <td>Administrador</td>
+                                    </tr>
+                                    <tr class="clickable-row" data-href="templatePerfilUsuario.html">
+                                        <td>José Adilson Rodrigues dos Santos</td>
+                                        <td>welcome@maguila.com</td>
+                                        <td>Administrador</td>
+                                    </tr>
+                                    <tr class="clickable-row" data-href="templatePerfilUsuario.html">
+                                        <td>José Adilson Rodrigues dos Santos</td>
+                                        <td>welcome@maguila.com</td>
+                                        <td>Administrador</td>
+                                    </tr>
+                                    <tr class="clickable-row" data-href="templatePerfilUsuario.html">
+                                        <td>José Adilson Rodrigues dos Santos</td>
+                                        <td>welcome@maguila.com</td>
+                                        <td>Administrador</td>
+                                    </tr>
+                                    <tr class="clickable-row" data-href="templatePerfilUsuario.html">
+                                        <td>José Adilson Rodrigues dos Santos</td>
+                                        <td>welcome@maguila.com</td>
+                                        <td>Administrador</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            </div>
+            </main>
+        </div>
+        <div class="modal fade" id="myModal8">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Cadastrar usuário</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div id="modalBg">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xl-12 form-group">
+                                    <label for="inputEstabelecimento">Nome</label>
+                                    <input type="Estabelecimento" class="form-control" id="inputEstabelecimento">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xl-6">
-                                    <p class="text-justify pt-4 pl-4 ml-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> It has been the industry's standard dummy text ever since the 1500s.<br>It is a long established fact that a reader will be distracted by<br>                                        the readable content of a page when looking at its layout. <br>The point of using Lorem Ipsum is that it has a more-or-less<br> normal distribution of letters </p>
-                                    <p class="pl-4 ml-3 pt-4">- Lorem Ipsum <br> - Lorem Ipsum<br> - Lorem Ipsum<br> - Lorem Ipsum</p>
+                                <div class="col-xl-12 form-group">
+                                    <label for="inputEmail">Email</label>
+                                    <input type="Email" class="form-control" id="inputEmail">
                                 </div>
-                                <img class="mt-3 pt-2" src="https://dummyimage.com/532x280/000/fff">
                             </div>
-                            <div id="appInfoSmallImg" class="row mt-3">
-                                <img class="mr-2" src="https://dummyimage.com/170x100/000/fff">
-                                <img class="mr-2" src="https://dummyimage.com/170x100/000/fff">
-                                <img src="https://dummyimage.com/170x100/000/fff">
-
+                            <div class="row">
+                                <div class="col-xl-12 form-group">
+                                    <label for="inputPerfil">Tipo de perfil:</label>
+                                    <select id="inputPerfil" class="form-control">
+                                        <option selected>Admin</option>
+                                        <option>Senhor feudal</option>
+                                        <option>Vassalo</option>
+                                        <option>Plebeu</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-outline-dark ml-4 mr-3" data-dismiss="modal">Cancelar</button>
+                                    <button class="btn btn-dark" data-dismiss="modal">Cadastrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </main>
+                </div>
             </div>
         </div>
+        </div>
+        </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/datatables-demo.js"></script>
     </body>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js " crossorigin="anonymous "></script>
-    <script src="js/scripts.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js " crossorigin="anonymous "></script>
-    <script src="assets/demo/chart-area-demo.js "></script>
-    <script src="assets/demo/chart-bar-demo.js "></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js " crossorigin="anonymous "></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js " crossorigin="anonymous "></script>
-    <script src="assets/demo/datatables-demo.js "></script>
-
-
 
 </html>
