@@ -16,7 +16,6 @@
 
     <body class="sb-nav">
         <nav id="topnav" class="sb-topnav navbar navbar-expand navbar-light bg-light fixed-top">
-
             <a class="navbar-brand" href="index.html">BKPS Platform</a>
             <form class="mx-auto col-xl-4">
                 <div class="input-group w-100">
@@ -26,28 +25,6 @@
                 </span>
                 </div>
             </form>
-            <!-- <script>
-                $(window).on("load", function() {
-                    $(window).scroll(function() {
-                        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-                        $(".fade").each(function() {
-                            /* Check the location of each desired element */
-                            var objectBottom = $(this).offset().top + $(this).outerHeight();
-
-                            /* If the element is completely within bounds of the window, fade it in */
-                            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-                                if ($(this).css("opacity") == 0) {
-                                    $(this).fadeTo(500, 1);
-                                }
-                            } else { //object goes out of view (scrolling up)
-                                if ($(this).css("opacity") == 1) {
-                                    $(this).fadeTo(500, 0);
-                                }
-                            }
-                        });
-                    }).scroll(); //invoke scroll-handler on page-load
-                });
-            </script> -->
             <div id="iconsNav">
                 <div class="dropdown dropleft" style="float: right; padding: 13px">
                     <a href="#" onclick="return false;" role="button" data-toggle="dropdown" data-target="#" style="float: left" aria-expanded="true">
@@ -129,7 +106,7 @@
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion fixed-top">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div id="sidebarPrimary">
@@ -163,7 +140,6 @@
                         </div>
                     </div>
             </div>
-
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
@@ -221,13 +197,20 @@
                                         <td><strong>contato@bkps.com.br</strong></td>
                                         <td><strong>Válido - Vence em <br> 20/12/2020 - 13:04:00</strong></td>
                                     </tr>
+                                    <tr>
+                                        <td><strong>BOOKEEPERS LTDA.</strong></td>
+                                        <td><strong>68.417.539/0001-84</strong></td>
+                                        <td><strong>SP</strong></td>
+                                        <td><strong>0</strong></td>
+                                        <td><strong>contato@bkps.com.br</strong></td>
+                                        <td><strong>Válido - Vence em <br> 20/12/2020 - 13:04:00</strong></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </main>
             </div>
-        </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

@@ -10611,6 +10611,7 @@ a.dropdown-menu-header {
 
 #layoutSidenav_nav {
     max-width: 150px;
+    min-height: 600px;
     posit ion: fixed;
 }
 
