@@ -10251,6 +10251,7 @@ body {
 }
 
 .sb-sidenav-menu {
+    position: fixed;
     overflow: !important hidden;
 }
 
@@ -10610,7 +10611,7 @@ a.dropdown-menu-header {
 
 #layoutSidenav_nav {
     max-width: 150px;
-    /* position: fixed; */
+    posit ion: fixed;
 }
 
 .sb-topnav {
@@ -10742,4 +10743,12 @@ body {
 #btnSettings {
     min-width: 200px;
     max-width: 200px;
+}
+
+#layoutSidenav_nav {
+    margin-top: 70px;
+}
+
+.container-fluid {
+    margin-top: 100px;
 }
