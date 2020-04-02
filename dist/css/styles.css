@@ -10362,10 +10362,6 @@ body {
     margin-bottom: 4px;
 }
 
-#body {
-    overflow: hidden;
-}
-
 #nomeApp {
     padding-right: 37px;
 }
@@ -10611,8 +10607,7 @@ a.dropdown-menu-header {
 
 #layoutSidenav_nav {
     max-width: 150px;
-    min-height: 600px;
-    posit ion: fixed;
+    min-height: 800px;
 }
 
 .sb-topnav {
@@ -10746,10 +10741,12 @@ body {
     max-width: 200px;
 }
 
-#layoutSidenav_nav {
-    margin-top: 70px;
-}
 
-.container-fluid {
+/* #layoutSidenav_nav {
+    margin-top: 70px;
+} */
+
+
+/* .container-fluid {
     margin-top: 100px;
-}
+} */
